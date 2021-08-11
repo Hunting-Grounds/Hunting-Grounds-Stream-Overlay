@@ -1,6 +1,7 @@
 {
   "name": "hunting-grounds-stream-overlay",
   "version": "0.1.0",
+  "proxy": "http://localhost:5000",
   "description": "",
   "type": "module",
   "scripts": {
