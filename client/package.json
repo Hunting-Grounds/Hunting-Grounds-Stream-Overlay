@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
     "moment": "^2.29.1",
@@ -19,6 +20,7 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
     "babel-preset-nano-react-app": "^0.1.0",
     "parcel": "^2.0.0-alpha.3.2"
   },
