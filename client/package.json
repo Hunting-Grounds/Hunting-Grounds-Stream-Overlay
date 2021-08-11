@@ -2,14 +2,21 @@
   "name": "hunting-grounds-stream-overlay",
   "version": "0.1.0",
   "description": "",
+  "type": "module",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "cross-env PORT=3000 parcel index.html",
     "build": "parcel build index.html"
   },
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
+    "cross-env": "^7.0.3",
+    "moment": "^2.29.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-file-base64": "^1.0.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-preset-nano-react-app": "^0.1.0",
