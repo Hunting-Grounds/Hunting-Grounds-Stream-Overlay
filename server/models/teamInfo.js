@@ -4,10 +4,9 @@ const teamSchema = mongoose.Schema({
     fullName: String,
     displayName: String,
     tag: String,
-    themeColur: String,
+    themeColour: String,
     points: Number,
-    Record: String,
-    Logo: String,
+    record: String,
 });
 
 var TeamInfo = mongoose.model('TeamInfo', teamSchema);
