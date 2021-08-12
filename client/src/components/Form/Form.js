@@ -1,20 +1,24 @@
 import React, {useState} from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import FileBase from 'react-file-base64';
+import { useDispatch } from 'react-redux';
 
 // Styles
 import useStyles from './styles';
-import { teal } from '@material-ui/core/colors';
-import { typography } from '@material-ui/system';
+
+import { createTeam } from '../../actions/teams';
 
 function Form() {
     const [teamData, setTeamData] = useState({
         fullName: '', displayName: '', tag: '', themeColour: '', points: '', record: ''
     });
     const classes = useStyles();
+    const dispatch = useDispatch();
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
+        dispatch(createTeam(teamData));
     }
 
     const clear = () => {
@@ -56,7 +60,7 @@ function Form() {
                 <TextField
                     name="themeColour"
                     variant="outlined"
-                    label="Theme Colour"
+                    label="Theme Colour (HEX)"
                     fullWidth
                     value={teamData.themeColour}
                     onChange={(e) => setTeamData({ ...teamData, themeColour: e.target.value })}
@@ -86,7 +90,7 @@ function Form() {
                     <FileBase
                         type="file"
                         multiple={false}
-                        onDone={({base64}) => setTeamData({ ...teamData, selectedFile: base64 })}
+                        onDone={({ base64 }) => setTeamData({ ...teamData, selectedFile: base64 })}
                     />
                 </div>
 

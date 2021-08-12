@@ -5,7 +5,7 @@ const teamSchema = mongoose.Schema({
     displayName: String,
     tag: String,
     themeColour: String,
-    points: Number,
+    points: String,
     record: String,
 });
 
