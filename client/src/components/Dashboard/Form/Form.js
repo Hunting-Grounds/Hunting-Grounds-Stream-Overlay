@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import FileBase from 'react-file-base64';
 import { useDispatch } from 'react-redux';
@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 // Styles
 import useStyles from './styles';
 
-import { createTeam } from '../../actions/teams';
+import { createTeam } from '../../../actions/teams';
 
 function Form() {
     const [teamData, setTeamData] = useState({
@@ -64,6 +64,15 @@ function Form() {
                     fullWidth
                     value={teamData.themeColour}
                     onChange={(e) => setTeamData({ ...teamData, themeColour: e.target.value })}
+                />
+
+                <TextField
+                    name="players"
+                    variant="outlined"
+                    label="Players"
+                    fullWidth
+                    value={teamData.players}
+                    onChange={(e) => setTeamData({ ...teamData, players: e.target.value })}
                 />
 
                 <TextField
