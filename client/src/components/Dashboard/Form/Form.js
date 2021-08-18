@@ -1,34 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import FileBase from 'react-file-base64';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // Styles
 import useStyles from './styles';
 
-import { createTeam } from '../../../actions/teams';
+import { createTeam, updateTeam } from '../../../actions/teams';
 
-function Form() {
-    const [teamData, setTeamData] = useState({
-        fullName: '', displayName: '', tag: '', themeColour: '', points: '', record: ''
-    });
-    const classes = useStyles();
+const Form = ({ currentId, setCurrentId }) => {
+    const [teamData, setTeamData] = useState({ fullName: '', displayName: '', tag: '', themeColour: '', players: '', points: '', record: '' });
+    const team = useSelector((state) => (currentId ? state.teams.find((t) => t._id === currentId) : null));
     const dispatch = useDispatch();
+    const classes = useStyles();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        dispatch(createTeam(teamData));
-    }
+    useEffect(() => {
+        if (team) setTeamData(team);
+    }, [team]);
 
     const clear = () => {
+        setCurrentId(0);
+        setTeamData({ fullName: '', displayName: '', tag: '', themeColour: '', players: '', points: '', record: '' });
+    };
 
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (currentId === 0) {
+            dispatch(createTeam(teamData));
+            clear();
+        } else {
+            dispatch(updateTeam(currentId, teamData));
+            clear();
+        }
+    };
 
     return (
         <Paper className={classes.paper}>
             <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-                <Typography variant="h6">Create a Team</Typography>
+                <Typography variant="h6">{currentId ? `Editing "${team.fullName}"` : 'Create a Team'} </Typography>
 
                 <TextField
                     name="fullName"

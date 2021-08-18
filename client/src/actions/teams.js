@@ -17,6 +17,16 @@ export const createTeam = (team) => async (dispatch) => {
         
         dispatch({ type: 'CREATE', payload: data });
     } catch (error) {
-        console.log(error)
+        console.log(error.message)
+    }
+}
+
+export const updateTeam =  (id, team) => async (dispatch) => {
+    try {
+        const { data } = await api.updateTeam(id, team);
+
+        dispatch({ type: 'UPDATE', payload: data });
+    } catch (error) {
+        console.log(error.message)
     }
 }
