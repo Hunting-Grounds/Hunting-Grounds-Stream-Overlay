@@ -1,50 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
 
-import { getTeams } from "../../actions/teams"
-
-// Components
-import Teams from './Teams/Teams';
+import Posts from './Posts/Posts';
 import Form from './Form/Form';
-
-// Images
-import huntingGrounds from '../../assets/HuntingGrounds.png'
-
-// Styles
+import { getPosts } from '../../actions/posts';
 import useStyles from './styles';
+import huntingGroundsLogo from '../../images/HuntingGrounds.png';
 
-function Dashboard() {
-    const [currentId, setCurrentId] = useState(null);
-    const classes = useStyles();
-    const dispatch = useDispatch();
+const Dashboard = () => {
+  const [currentId, setCurrentId] = useState(0);
+  const dispatch = useDispatch();
+  const classes = useStyles();
 
-    useEffect(() => {
-        dispatch(getTeams());
-    }, []);
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [currentId, dispatch]);
 
-    return (
-        <div>
-            <Container maxWidth='lg'>
-                <AppBar className={classes.appBar} position="static" color="inherit">
-                    <Typography className={classes.heading} variant="h2" align="center">Hunting Grounds Stream Overlay</Typography>
-                    <img className={classes.image} src={huntingGrounds} alt="hunting grounds" height="60" />
-                </AppBar>
-                <Grow in>
-                    <Container>
-                        <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
-                            <Grid item xs={12} sm={7}>
-                                <Teams setCurrentId={setCurrentId}/>
-                            </Grid>
-                            <Grid item xs={12} sm={4}>
-                                <Form currentId={currentId} setCurrentId={setCurrentId}/>
-                            </Grid>
-                        </Grid>
-                    </Container>
-                </Grow>
-            </Container>
-        </div>
-    )
-}
+  return (
+    <Container maxWidth="lg">
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h3" align="center">Hunting Grounds | Team Management</Typography>
+        <img className={classes.image} src={huntingGroundsLogo} alt="icon" height="60" />
+      </AppBar>
+      <Grow in>
+        <Container>
+          <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+            <Grid item xs={12} sm={7}>
+              <Posts setCurrentId={setCurrentId} />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
+            </Grid>
+          </Grid>
+        </Container>
+      </Grow>
+    </Container>
+  );
+};
 
 export default Dashboard;
