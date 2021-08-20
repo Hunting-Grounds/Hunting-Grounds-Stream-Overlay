@@ -15,7 +15,7 @@ import {
 import { getPosts } from '../../actions/posts';
 
 import Teams from './Teams/Teams';
-import FormModal from '../Dashboard/Form/FormModal';
+import FormModal from './Form/FormModal';
 
 const { Header, Content, Sider } = Layout;
 

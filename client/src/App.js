@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from 'antd';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Navbar, DesignDashboard, Dashboard, Overlay } from "./components";
+import { Navbar, DesignDashboard, Dashboard, Overlay, OverlayTest } from "./components";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
             <Route path="/" exact component={() => <DesignDashboard />} />
             <Route path="/dashboard" exact component={() => <Dashboard/>} />
             <Route path="/overlay" exact component={() => <Overlay/>} />
+            <Route path="/overlaytest" exact component={() => <OverlayTest/>} />
           </Switch>
         </Layout>
       </Router>
