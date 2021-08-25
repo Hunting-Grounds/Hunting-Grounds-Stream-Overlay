@@ -1,30 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
-
-import huntingGroundsLogo from '../../images/HuntingGrounds.png';
 import './index.css'
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
-import {
-    UsergroupAddOutlined,
-    UserAddOutlined,
-} from '@ant-design/icons';
+import { UserAddOutlined } from '@ant-design/icons';
 
-import { getPosts } from '../../actions/posts';
+import { getTeams } from '../../actions/teams';
 
 import Teams from './Teams/Teams';
 import FormModal from './Form/FormModal';
 
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 const DesignDashboard = () => {
     const [currentId, setCurrentId] = useState(0);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getPosts());
+        dispatch(getTeams());
     }, [currentId, dispatch]);
 
     return (
@@ -48,7 +42,7 @@ const DesignDashboard = () => {
                 <Layout className="site-layout" style={{ marginLeft: 200 }}>
                     <Content className="site-layout-background" style={{ overflow: 'initial' }}>
                         <div style={{ justifyContent: 'space-evenly', padding: 24, textAlign: 'center'}}>
-                            <Teams setCurrentId={setCurrentId}/>
+                            <Teams currentId={currentId} setCurrentId={setCurrentId} />
                         </div>
                     </Content>
                 </Layout>
