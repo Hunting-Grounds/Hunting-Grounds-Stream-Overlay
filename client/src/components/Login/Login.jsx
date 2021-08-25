@@ -41,7 +41,7 @@ const Login = () => {
       <Row type="flex" align="bottom">
         <Col
           className="gutter-row"
-          lg={2}
+          lg={8}
           sm={24}
         />
         <Col className="gutter-row" lg={8} sm={24} xs={24}>
@@ -67,9 +67,6 @@ const Login = () => {
             </Card>
           </div>
         </Col>
-        <Col md={5} />
-        <Col md={5} />
-        <Col md={4} />
       </Row>
     </div>
   );
