@@ -1,21 +1,22 @@
-import React from 'react'
-import Player from './Player/Player'
+import React from 'react';
+import { Row, Col } from 'antd';
+import Player from './Player/Player';
 import { useSelector } from 'react-redux';
-import { Grid, CircularProgress } from '@material-ui/core';
+import { Spin } from 'antd';
 
 
 const Players = ({ currentId, setCurrentId }) => {
     const players = useSelector((state) => state.players);
 
     return (
-        !players.length ? <CircularProgress /> : (
-            <Grid container alignItems="stretch" spacing={2}>
+        !players.length ? <Spin size="large" /> : (
+            <Row justify="space-around" gutter={[24, 24]}>
               {players.map((player) => (
-                <Grid key={player._id} item xs={12} sm={4} md={3}>
+                <Col key={player._id}>
                   <Player currentId={currentId} player={player} setCurrentId={setCurrentId} />
-                </Grid>
+                </Col>
               ))}
-            </Grid>
+            </Row>
           )
     )
 }
