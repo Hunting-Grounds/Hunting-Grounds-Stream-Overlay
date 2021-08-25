@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 
-import posts from './posts';
+import teams from './teams';
+import players from "./players"
 
-export const reducers = combineReducers({ posts });
+export const reducers = combineReducers({ teams, players });

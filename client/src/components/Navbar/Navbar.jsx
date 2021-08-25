@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import { Layout, Menu } from 'antd';
@@ -12,9 +13,10 @@ function Navbar() {
                 <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                     <div className="logo" />
                     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                        <Menu.Item key="1">nav 1</Menu.Item>
-                        <Menu.Item key="2">nav 2</Menu.Item>
-                        <Menu.Item key="3">nav 3</Menu.Item>
+                        <Menu.Item key="1"><Link to="/db/teams">Manage Teams</Link></Menu.Item>
+                        <Menu.Item key="2"><Link to="/db/players">Manage Players</Link></Menu.Item>
+                        <Menu.Item key="3"><Link to="/controlpanel">Control Panel</Link></Menu.Item>
+                        <Menu.Item key="4"><Link to="/overlays">Overlays</Link></Menu.Item>
                     </Menu>
                 </Header>
             </Layout>
