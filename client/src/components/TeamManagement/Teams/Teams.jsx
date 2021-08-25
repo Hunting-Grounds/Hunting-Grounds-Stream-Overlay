@@ -1,7 +1,8 @@
-import React from 'react'
-import Team from './Team/Team'
+import React from 'react';
+import Team from './Team/Team';
+import { Row, Col } from 'antd';
 import { useSelector } from 'react-redux';
-import { Grid, CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@material-ui/core';
 
 
 const Teams = ({ currentId, setCurrentId }) => {
@@ -9,13 +10,13 @@ const Teams = ({ currentId, setCurrentId }) => {
 
     return (
         !teams.length ? <CircularProgress /> : (
-            <Grid container alignItems="stretch" spacing={2}>
+            <Row justify="space-around" gutter={[24, 24]}>
               {teams.map((team) => (
-                <Grid key={team._id} item xs={12} sm={4} md={3}>
+                <Col key={team._id}>
                   <Team currentId={currentId} team={team} setCurrentId={setCurrentId} />
-                </Grid>
+                </Col>
               ))}
-            </Grid>
+            </Row>
           )
     )
 }
