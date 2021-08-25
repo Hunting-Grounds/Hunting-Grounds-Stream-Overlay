@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
 import useStyles from './styles';
-import { createPlayer } from '../../../actions/players';
+import { updatePlayer } from '../../../../actions/players';
 
 const Form = ({ currentId, setCurrentId }) => {
   const [playerData, setPlayerData] = useState({ name: '', kd: '', hs: '', favops: '', selectedFile: '' });
@@ -23,8 +23,7 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(playerData);
-    dispatch(createPlayer(playerData));
+    dispatch(updatePlayer(currentId, playerData));
     clear();
   };
 

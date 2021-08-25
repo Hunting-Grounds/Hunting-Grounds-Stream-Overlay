@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Modal, Button, Menu } from 'antd';
 
-import { UsergroupAddOutlined } from '@ant-design/icons';
+import { UserAddOutlined } from '@ant-design/icons';
 
 import Form from './Form';
 
@@ -21,8 +21,8 @@ const FormModal = ({currentId, setCurrentId}) => {
     return (
         <>
             <a type="primary" onClick={showModal}>
-            <Menu.Item style={{marginLeft: '25px'}} key="1" icon={<UsergroupAddOutlined />}>
-                Create a Team
+            <Menu.Item style={{marginLeft: '25px'}} key="1" icon={<UserAddOutlined />}>
+                Create a Player
             </Menu.Item>
             </a>
             <Modal
