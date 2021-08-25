@@ -72,8 +72,29 @@ const Team = ({ team, currentId, setCurrentId }) => {
                     ]}
                 >
                     <Meta
-                        title={team.displayName}
-                        description={ team.players.map((player) => `${player} `) }
+                        title={team.fullName}
+                        description={team.displayName}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Tag: ' + team.tag}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Points: ' + team.points}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Record: ' + team.records}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Theme Colour: ' + team.themeColour}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Players: ' + team.players.map((player) => ` ${player}`)}
+                        style={{textAlign: 'left'}}
                     />
                 </Card>
             </>
