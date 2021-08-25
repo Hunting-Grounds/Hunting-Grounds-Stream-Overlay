@@ -3,7 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import postRoutes from './routes/posts.js';
+import postRoutes from './routes/teams.js';
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(express.json({ limit: '30mb', extended: true }))
 app.use(express.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
-app.use('/posts', postRoutes);
+app.use('/teams', postRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://HuntingGroundsDBAdmin:zHYRdt19zXK2x20Z@hunting-grounds-cluster.dpheu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
