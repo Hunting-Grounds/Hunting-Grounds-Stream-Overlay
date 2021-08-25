@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Overlay() {
+function OverlayMenu() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function Overlay() {
     )
 }
 
-export default Overlay
+export default OverlayMenu;
