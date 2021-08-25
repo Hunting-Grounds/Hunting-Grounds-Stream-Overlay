@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from 'antd';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Navbar, TeamManagement, PlayerManagement, OverlayMenu, LeagueTable, ControlPanel } from "./components";
+import { Navbar, TeamManagement, PlayerManagement, OverlayMenu, LeagueTable, ControlPanel, Login } from "./components";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
             <Route path="/controlpanel" exact component={() => <ControlPanel />} />
             <Route path="/overlays" exact component={() => <OverlayMenu/>} />
             <Route path="/overlays/leaguetable" exact component={() => <LeagueTable/>} />
+            <Route path="/login" exact component={() => <Login />} />
           </Switch>
         </Layout>
       </Router>
