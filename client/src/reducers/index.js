@@ -1,4 +1,6 @@
-import { combineReducers } from "redux";
-import teams from "./teams";
+import { combineReducers } from 'redux';
 
-export default combineReducers({ teams });
+import teams from './teams';
+import players from "./players"
+
+export const reducers = combineReducers({ teams, players });

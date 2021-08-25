@@ -1,0 +1,9 @@
+.logo {
+  float: left;
+  width: 48px;
+  height: 48px;
+  margin: 8px 76px 8px 24px;
+  background-image: url(../../images/HuntingGrounds.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

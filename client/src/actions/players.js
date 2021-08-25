@@ -2,9 +2,9 @@ import { FETCH_ALL, CREATE, UPDATE, DELETE, ADDSCORE, SUBSCORE } from '../consta
 
 import * as api from '../api/index.js';
 
-export const getTeams = () => async (dispatch) => {
+export const getPlayers = () => async (dispatch) => {
   try {
-    const { data } = await api.fetchTeams();
+    const { data } = await api.fetchPlayers();
 
     dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
@@ -12,9 +12,9 @@ export const getTeams = () => async (dispatch) => {
   }
 };
 
-export const createTeam = (team) => async (dispatch) => {
+export const createPlayer = (player) => async (dispatch) => {
   try {
-    const { data } = await api.createTeam(team);
+    const { data } = await api.createPlayer(player);
 
     dispatch({ type: CREATE, payload: data });
   } catch (error) {
@@ -22,9 +22,9 @@ export const createTeam = (team) => async (dispatch) => {
   }
 };
 
-export const updateTeam = (id, team) => async (dispatch) => {
+export const updatePlayer = (id, player) => async (dispatch) => {
   try {
-    const { data } = await api.updateTeam(id, team);
+    const { data } = await api.updatePlayer(id, player);
 
     dispatch({ type: UPDATE, payload: data });
   } catch (error) {
@@ -52,9 +52,9 @@ export const subScore = (id) => async (dispatch) => {
   }
 };
 
-export const deleteTeam = (id) => async (dispatch) => {
+export const deletePlayer = (id) => async (dispatch) => {
   try {
-    await api.deleteTeam(id);
+    await api.deletePlayer(id);
 
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
