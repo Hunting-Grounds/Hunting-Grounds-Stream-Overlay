@@ -4,15 +4,15 @@ import { useSelector } from 'react-redux';
 import { Grid, CircularProgress } from '@material-ui/core';
 
 
-const Teams = ({ setCurrentId }) => {
-    const posts = useSelector((state) => state.posts);
+const Teams = ({ currentId, setCurrentId }) => {
+    const teams = useSelector((state) => state.teams);
 
     return (
-        !posts.length ? <CircularProgress /> : (
+        !teams.length ? <CircularProgress /> : (
             <Grid container alignItems="stretch" spacing={2}>
-              {posts.map((post) => (
-                <Grid key={post._id} item xs={12} sm={4} md={3}>
-                  <Team post={post} setCurrentId={setCurrentId}/>
+              {teams.map((team) => (
+                <Grid key={team._id} item xs={12} sm={4} md={3}>
+                  <Team currentId={currentId} team={team} setCurrentId={setCurrentId} />
                 </Grid>
               ))}
             </Grid>
