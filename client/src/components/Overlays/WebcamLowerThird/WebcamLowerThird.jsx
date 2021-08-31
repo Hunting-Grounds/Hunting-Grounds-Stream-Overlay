@@ -8,13 +8,13 @@ function WebcamLowerThird() {
             <div className="LeftWebcam">
                 <h1 className="LeftWebcamText">WEBCAM HERE</h1>
                 <div className="LeftWebcamName">
-                    <h1 className="LeftWebcamNameText">TEAM 1 NAME</h1>
+                    <h1 className="LeftWebcamNameText">EBAC</h1>
                 </div>
             </div>
             <div className="RightWebcam">
                 <h1 className="RightWebcamText">WEBCAM HERE</h1>
                 <div className="RightWebcamName">
-                    <h1 className="RightWebcamNameText">TEAM 2 NAME</h1>
+                    <h1 className="RightWebcamNameText">ELDER BRAIN</h1>
                 </div>
             </div>
             <div className="LowerThird">
