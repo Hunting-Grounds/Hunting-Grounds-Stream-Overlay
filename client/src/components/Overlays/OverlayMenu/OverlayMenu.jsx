@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function OverlayMenu() {
     return (
-        <div className="OverlayBody">
+        <div className="OverlayMenuBody">
             <Row justify="space-around" gutter={[24, 24]} align="middle" style={{display: 'flex', height: '100vh'}}>
                 <Col>
                     <Card bordered={false} style={{textAlign: 'center', backgroundColor: 'transparent'}}>
@@ -19,7 +19,7 @@ function OverlayMenu() {
                         <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>Playday Upcoming Matches</p></Link>
                         <hr style={{color: 'white'}}/>
                         <br/>
-                        <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Lower Third</p></Link>
+                        <Link to="/overlays/webcamlowerthird"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Lower Third</p></Link>
                         <hr style={{color: 'white'}}/>
                         <br/>
                         <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Veto</p></Link>
