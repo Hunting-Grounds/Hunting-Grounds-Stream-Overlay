@@ -20,7 +20,7 @@ function WebcamLowerThird() {
             <div className="LowerThird">
                 <div className="LowerThirdBox">.</div>
                 <h1 className="LowerThirdTitle">PLAY DAY 7 - PREMIER DIVISION</h1>
-                <h3 className="LowerThirdSubtitle">A LONG SUBTITLE HERE</h3>
+                <h3 className="LowerThirdSubtitle">LIONSCREED AND AQUALIX BATTLE FOR SECOND PLACE</h3>
                 <div>
                     <div className="LowerThirdVsBox">
                         <div className="LowerThirdVsText">
