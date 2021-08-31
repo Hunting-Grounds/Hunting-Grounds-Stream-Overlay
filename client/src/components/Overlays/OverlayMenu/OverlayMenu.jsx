@@ -22,7 +22,7 @@ function OverlayMenu() {
                         <Link to="/overlays/webcamlowerthird"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Lower Third</p></Link>
                         <hr style={{color: 'white'}}/>
                         <br/>
-                        <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Veto</p></Link>
+                        <Link to="/overlays/webcamveto"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Veto</p></Link>
                         <hr style={{color: 'white'}}/>
                         <br/>
                         <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>HUD</p></Link>
