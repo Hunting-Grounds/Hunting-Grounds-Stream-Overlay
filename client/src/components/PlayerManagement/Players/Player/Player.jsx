@@ -35,7 +35,7 @@ const Player = ({ player, currentId, setCurrentId }) => {
     };
 
     return (
-        !player.favops ? <LoadingCard /> : (
+        !player.name ? <LoadingCard /> : (
             <>
                 {}
                 <Modal
@@ -73,7 +73,7 @@ const Player = ({ player, currentId, setCurrentId }) => {
                 >
                     <Meta
                         title={player.name}
-                        description={'Favorite Ops: ' + player.favops.map((op) => ` ${op}`)}
+                        description={'Rating: ' + player.rating}
                         style={{textAlign: 'left'}}
                     />
                     <Meta
@@ -81,7 +81,47 @@ const Player = ({ player, currentId, setCurrentId }) => {
                         style={{textAlign: 'left'}}
                     />
                     <Meta
+                        description={'Entry: ' + player.entry}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Maps: ' + player.maps}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'KOST: ' + player.kost}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'KPR: ' + player.kpr}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'SRV: ' + player.srv}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'1vX: ' + player.clutchwins}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Plant: ' + player.plant}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'Disable: ' + player.disable}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
                         description={'HS: ' + player.hs}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'ATK: ' + player.atk}
+                        style={{textAlign: 'left'}}
+                    />
+                    <Meta
+                        description={'DEF: ' + player.def}
                         style={{textAlign: 'left'}}
                     />
                 </Card>

@@ -28,9 +28,9 @@ export const getPlayer = async (req, res) => {
 }
 
 export const createPlayer = async (req, res) => {
-    const { name, kd, hs, favops, selectedFile } = req.body;
+    const { name, rating, kd, entry, maps, kost, kpr, srv, clutchwins, plant, disable, hs, atk, def, selectedFile } = req.body;
 
-    const newPlayer = new Player({ name, kd, hs, favops, selectedFile })
+    const newPlayer = new Player({ name, rating, kd, entry, maps, kost, kpr, srv, clutchwins, plant, disable, hs, atk, def, selectedFile })
 
     try {
         await newPlayer.save();
@@ -43,11 +43,11 @@ export const createPlayer = async (req, res) => {
 
 export const updatePlayer = async (req, res) => {
     const { id } = req.params;
-    const { name, kd, hs, favops, selectedFile } = req.body;
+    const { name, rating, kd, entry, maps, kost, kpr, srv, clutchwins, plant, disable, hs, atk, def, selectedFile } = req.body;
     
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No player with id: ${id}`);
 
-    const updatedPlayer = { name, kd, hs, favops, selectedFile, _id: id };
+    const updatedPlayer = { name, rating, kd, entry, maps, kost, kpr, srv, clutchwins, plant, disable, hs, atk, def, selectedFile, _id: id };
 
     await Player.findByIdAndUpdate(id, updatedPlayer, { new: true });
 

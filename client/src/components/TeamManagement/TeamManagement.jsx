@@ -42,7 +42,7 @@ const TeamManagement = () => {
                 <Layout className="site-layout" style={{ marginLeft: 200 }}>
                     <Content className="site-layout-background" style={{ overflow: 'initial' }}>
                         <div style={{ justifyContent: 'space-evenly', padding: 24, textAlign: 'center'}}>
-                            <Teams currentId={currentId} setCurrentId={setCurrentId} />
+                            <Teams currentId={currentId} setCurrentId={setCurrentId}/>
                         </div>
                     </Content>
                 </Layout>
