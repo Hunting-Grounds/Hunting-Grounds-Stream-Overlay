@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-function WebcamLowerThird() {
+function WebcamLowerThird(){
     return (
-        <div className="OverlayBody">
+        <div className="OverlayBodyWCLT">
             <div className="ecslogo" />
             <div className="LeftWebcam">
                 <h1 className="LeftWebcamText">WEBCAM HERE</h1>
