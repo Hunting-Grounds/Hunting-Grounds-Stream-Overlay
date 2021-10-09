@@ -6,6 +6,7 @@ export { default as PlayerManagement } from "./PlayerManagement/PlayerManagement
 
 export { default as ControlPanel } from "./ControlPanel/ControlPanel"
 
+export { default as HUD } from "./Overlays/HUD/HUD"
 export { default as OverlayMenu } from "./Overlays/OverlayMenu/OverlayMenu";
 export { default as LeagueTable } from "./Overlays/LeagueTable/LeagueTable";
 export { default as WebcamVeto } from "./Overlays/WebcamVeto/WebcamVeto";
