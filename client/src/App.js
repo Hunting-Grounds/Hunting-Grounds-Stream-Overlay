@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from 'antd';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Navbar, TeamManagement, PlayerManagement, OverlayMenu, LeagueTable, WebcamVeto, WebcamLowerThird, ControlPanel, Login } from "./components";
+import { Navbar, TeamManagement, PlayerManagement, OverlayMenu, HUD, LeagueTable, WebcamVeto, WebcamLowerThird, ControlPanel, Login } from "./components";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
             <Route path="/db/players" exact component={() => <><Navbar /><PlayerManagement /></>} />
             <Route path="/controlpanel" exact component={() => <><Navbar /><ControlPanel /></>} />
             <Route path="/overlays" exact component={() => <><Navbar /><OverlayMenu/></>} />
+            <Route path="/overlays/hud" exact component={() => <HUD/>} />
             <Route path="/overlays/leaguetable" exact component={() => <LeagueTable/>} />
             <Route path="/overlays/webcamveto" exact component={() => <WebcamVeto/>} />
             <Route path="/overlays/webcamlowerthird" exact component={() => <WebcamLowerThird/>} />

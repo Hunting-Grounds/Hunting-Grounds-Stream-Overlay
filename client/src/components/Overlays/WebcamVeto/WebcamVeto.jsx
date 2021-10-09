@@ -3,7 +3,7 @@ import './style.css';
 
 function WebcamVeto() {
     return (
-        <div className="OverlayBody">
+        <div className="OverlayBodyWV">
             <div className="ecslogo" />
             <div className="LeftWebcam">
                 <h1 className="LeftWebcamText">WEBCAM HERE</h1>
