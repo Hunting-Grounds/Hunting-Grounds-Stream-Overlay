@@ -4,7 +4,7 @@ import {
   Input, Form, Button, Checkbox,
 } from 'antd';
 
-const WebcamLowerThird = () => (
+const CurrentMatchup = () => (
   <>
     <Form.Item
                 //   required
@@ -56,4 +56,4 @@ const WebcamLowerThird = () => (
   </>
 );
 
-export default WebcamLowerThird;
+export default CurrentMatchup;

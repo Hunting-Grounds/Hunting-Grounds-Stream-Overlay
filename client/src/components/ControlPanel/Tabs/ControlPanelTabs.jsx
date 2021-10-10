@@ -2,23 +2,16 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Tabs } from 'antd';
 
-import WebcamLowerThird from './Forms/WebcamLowerThird';
-// import ProducerForm from './Forms/ProducerForm';
-// import AdminForm from './Forms/AdminForm';
+import WebcamLowerThird from './FormsOLD/WebcamLowerThird';
+import WebcamVeto from './FormsOLD/WebcamVeto';
+import HUD from './FormsOLD/HUD';
+import PlaydayUpcomingMatches from './FormsOLD/PlaydayUpcomingMatches';
+import CurrentMatchup from './FormsOLD/CurrentMatchup';
+import LeagueTable from './FormsOLD/LeagueTable';
 
 const { TabPane } = Tabs;
 
-const ControlPanelTabs = ({ changeAuthLevel }) => {
-  const handleChange = (key) => {
-    if (key === '1') {
-      changeAuthLevel('producer');
-    } else if (key === '2') {
-      changeAuthLevel('datamanager');
-    } else if (key === '3') {
-      changeAuthLevel('admin');
-    }
-  };
-
+const ControlPanelTabs = () => {
   return (
     <>
       <br />
@@ -26,16 +19,24 @@ const ControlPanelTabs = ({ changeAuthLevel }) => {
         defaultActiveKey="1"
         centered
         size="50%"
-        onChange={handleChange}
       >
-        <TabPane tab="Producer" key="1">
-          {/* <ProducerForm /> */}
+        <TabPane tab="League Table" key="1">
+          <LeagueTable/>
         </TabPane>
-        <TabPane tab="Webcam Lower Third" key="2">
+        <TabPane tab="Current Matchup" key="2">
+          <CurrentMatchup/>
+        </TabPane>
+        <TabPane tab="Playday Upcoming Matches" key="3">
+          <PlaydayUpcomingMatches/>
+        </TabPane>
+        <TabPane tab="Webcam Lower Third" key="4">
           <WebcamLowerThird />
         </TabPane>
-        <TabPane tab="Admin" key="3">
-          {/* <AdminForm /> */}
+        <TabPane tab="Webcam Veto" key="5">
+          <WebcamVeto/>
+        </TabPane>
+        <TabPane tab="HUD" key="6">
+          <HUD/>
         </TabPane>
       </Tabs>
     </>

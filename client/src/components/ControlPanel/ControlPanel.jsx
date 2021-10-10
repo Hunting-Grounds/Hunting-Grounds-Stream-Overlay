@@ -1,59 +1,50 @@
-import React, {useState} from 'react'
-import './ControlPanel.css';
-import 'antd/dist/antd.css';
-import {
-  Card, Form, Row, Col,
-} from 'antd';
-import axios from 'axios';
-import Logo from '../../images/HuntingGrounds.png';
-import ControlPanelTabs from './Tabs/ControlPanelTabs';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-// const BASE_URI = process.env.BASE_API_URI;
-const BASE_URI = 'http://localhost:5000/';
+import 'antd/dist/antd.css';
+import { Layout, Menu } from 'antd';
+
+import { getPanels } from '../../actions/panels.js';
+
+import Panels from './Panels/Panels';
+import FormModal from './Form/FormModal';
+
+const { Content, Sider } = Layout;
 
 const ControlPanel = () => {
+    const [currentId, setCurrentId] = useState(0);
+    const dispatch = useDispatch();
 
-    const [authLevel, setAuthLevel] = useState('producer');
-
-    const changeAuthLevel = (value) => {
-        setAuthLevel(value);
-    };
-
-    const handleSubmit = async (values) => {
-        const { email, password } = values;
-        const res = await axios.post(`${BASE_URI}/${authLevel}/signin`, {
-          email,
-          password,
-        });
-
-        console.log(authLevel);
-        console.log(res);
-        };
+    useEffect(() => {
+        dispatch(getPanels());
+    }, [currentId, dispatch]);
 
     return (
-        <div className="ControlPanelBody">
-            <Row type="flex" justify="center">
-              <Col className="gutter-row" lg={20} sm={24} xs={24}>
-                <div className="cardAlignment cardPadding">
-                  <Card className="controlPanelCardStyling" style={{ boxShadow: '5px 8px 24px 5px rgba(0, 0, 0, 0.2)' }}>
-                    <h1 className="centerText">Hunting Grounds Stream Overlay Control Panel</h1>
-                    <Form
-                        name="basic"
-                        type="flex"
-                        justify="center"
-                        align="middle"
-                        //validateMessages={validateMessages}
-                        initialValues={{
-                            remember: true,
-                        }}
-                        onFinish={handleSubmit}
-                    >
-                      <ControlPanelTabs changeAuthLevel={changeAuthLevel}/>
-                    </Form>
-                  </Card>
-                </div>
-              </Col>
-            </Row>
+        <div>
+            <Layout>
+                <Sider
+                    style={{
+                        overflow: 'auto',
+                        height: '100vh',
+                        position: 'fixed',
+                        left: 0,
+                    }}
+                >
+                    <Menu theme="dark" mode="inline">
+                        <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
+                        {/* <Menu.Item key="2" icon={<UserAddOutlined />}>
+                            Create a Panel
+                        </Menu.Item> */}
+                    </Menu>
+                </Sider>
+                <Layout className="site-layout" style={{ marginLeft: 200 }}>
+                    <Content className="site-layout-background" style={{ overflow: 'initial' }}>
+                        <div style={{ justifyContent: 'space-evenly', padding: 24, textAlign: 'center'}}>
+                            <Panels currentId={currentId} setCurrentId={setCurrentId} />
+                        </div>
+                    </Content>
+                </Layout>
+            </Layout>
         </div>
     )
 }
