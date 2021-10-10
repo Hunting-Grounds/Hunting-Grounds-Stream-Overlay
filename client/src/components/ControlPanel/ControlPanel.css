@@ -1,0 +1,75 @@
+.ControlPanelBody {
+    background-color: #C0C0C0;
+    background-image: url("../../images/BG.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.controlPanelCardStyling {
+    width: "100%";
+    height: "70%";
+}
+
+.cardPadding {
+    padding-left: 0%;
+    padding-top: 0%;
+}
+
+.cardAlignment {
+    justify-content: left;
+    vertical-align: middle;
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+
+.centerText {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .cardAlignment {
+        justify-content: center;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+
+    .cardPadding {
+        padding-left: 0%;
+        padding-top: 5%;
+    }
+
+    .cardStyling {
+        width: "10%";
+        height: "10%";
+    }
+  }
+
+
+@media only screen and (max-width: 575px) {
+
+    .cardAlignment {
+        justify-content: center;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10%;
+    }
+
+    .cardPadding {
+        padding-left: 0%;
+    }
+
+    .cardStyling {
+        width: "100%";
+        height: "100%";
+    }
+}
