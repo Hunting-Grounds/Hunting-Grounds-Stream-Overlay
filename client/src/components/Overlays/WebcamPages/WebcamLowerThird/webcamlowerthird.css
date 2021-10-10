@@ -1,0 +1,49 @@
+.LowerThirdBox{
+    left: 0;
+    height: 100%;
+    display: table;
+    color: black;
+    position: absolute;
+    background-color: black;
+    writing-mode: vertical-lr;
+}
+
+.LowerThirdTitle{
+    top: -15%;
+    left: 3%;
+    color: black;
+    text-align: left;
+    position: absolute;
+    font-size: 5vw;
+    font-family: 'Morganite-Black';
+}
+
+.LowerThirdSubtitle{
+    left: 3%;
+    bottom: -15%;
+    color: black;
+    text-align: left;
+    font-weight: 400;
+    position: absolute;
+    font-size: 2vw;
+}
+
+.LowerThirdVsBox{
+    height: 100%;
+    width: 4%;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+}
+
+.LowerThirdVsText{
+    position: absolute;
+    margin-top: -25%;
+    top: 45%;
+    color: black;
+    font-size: 1.75vw;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+}
