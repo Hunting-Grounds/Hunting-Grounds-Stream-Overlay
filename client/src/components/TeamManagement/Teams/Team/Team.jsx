@@ -51,10 +51,10 @@ const Team = ({ team, currentId, setCurrentId }) => {
                 </Modal>
                 {}
                 <Card
-                    style={{ width: 300 }}
+                    style={{ width: 400}}
                     cover={
                         <img
-                            style={{ height: '150px', objectFit: 'cover' }}
+                            style={{ height: '150px', objectFit: 'contain', backgroundColor: team.themeColour, }}
                             alt="example"
                             src={team.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'}
                         />
