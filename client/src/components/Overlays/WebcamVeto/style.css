@@ -21,9 +21,9 @@ Set Background
 
 @font-face {
     font-family:"purista-web";
-    src:url("../../../fonts/Purista-Web.ttf.woff2") format("woff2"),
-    url("../../../fonts/Purista-Web.ttf.woff") format("woff"),
-    url("'../../../fonts/Purista-Web.ttf.eot'") format("opentype");
+    src:url('../../../fonts/Purista-Web.ttf.woff2') format('woff2'),
+    url('../../../fonts/Purista-Web.ttf.woff') format('woff'),
+    url('../../../fonts/Purista-Web.ttf.eot') format('opentype');
     font-display:auto;
     font-style:normal;
     font-weight:700;
