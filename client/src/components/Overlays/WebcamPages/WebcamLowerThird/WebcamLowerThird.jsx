@@ -1,22 +1,12 @@
 import React from 'react';
 import './style.css';
+import Webcam from '../WebcamBox/Webcam'
 
 function WebcamLowerThird(){
     return (
         <div className="OverlayBodyWCLT">
             <div className="ecslogo" />
-            <div className="LeftWebcam">
-                <h1 className="LeftWebcamText">WEBCAM HERE</h1>
-                <div className="LeftWebcamName">
-                    <h1 className="LeftWebcamNameText">EBAC</h1>
-                </div>
-            </div>
-            <div className="RightWebcam">
-                <h1 className="RightWebcamText">WEBCAM HERE</h1>
-                <div className="RightWebcamName">
-                    <h1 className="RightWebcamNameText">ELDER BRAIN</h1>
-                </div>
-            </div>
+            <Webcam/>
             <div className="LowerThird">
                 <div className="LowerThirdBox">.</div>
                 <h1 className="LowerThirdTitle">PLAY DAY 7 - PREMIER DIVISION</h1>
@@ -32,8 +22,8 @@ function WebcamLowerThird(){
                         <div className="LowerThirdTeam1Name">LNSCRD</div>
                     </div>
                     <div className="LowerThirdTeam2">
-                    <div className="LowerThirdTeam2Logo"></div>
-                    <div className="LowerThirdTeam2Name">AQLX</div>
+                        <div className="LowerThirdTeam2Logo"></div>
+                        <div className="LowerThirdTeam2Name">AQLX</div>
                     </div>
                 </div>
             </div>

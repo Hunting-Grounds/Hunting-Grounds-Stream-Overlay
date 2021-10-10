@@ -9,10 +9,10 @@ Set Background
 
 @font-face {
     font-family: 'Morganite-Black';
-    src:url('../../../fonts/Morganite-Black.ttf.woff') format('woff'),
-        url('../../../fonts/Morganite-Black.ttf.svg#Morganite-Black') format('svg'),
-        url('../../../fonts/Morganite-Black.ttf.eot'),
-        url('../../../fonts/Morganite-Black.ttf.eot?#iefix') format('embedded-opentype'); 
+    src:url('../../../../fonts/Morganite-Black.ttf.woff') format('woff'),
+        url('../../../../fonts/Morganite-Black.ttf.svg#Morganite-Black') format('svg'),
+        url('../../../../fonts/Morganite-Black.ttf.eot'),
+        url('../../../../fonts/Morganite-Black.ttf.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -21,8 +21,8 @@ Set Background
     
 @font-face {
     font-family:"purista-web";
-    src:url("../../../fonts/Purista-Web.ttf.woff2") format("woff2"),
-    url("../../../fonts/Purista-Web.ttf.woff") format("woff"),
+    src:url("../../../../fonts/Purista-Web.ttf.woff2") format("woff2"),
+    url("../../../../fonts/Purista-Web.ttf.woff") format("woff"),
     url("https://use.typekit.net/af/6bd97c/0000000000000000773598f2/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
     font-display:auto;
     font-style:normal;
@@ -33,7 +33,7 @@ Set Background
 
 .OverlayBodyWCLT{
     background-color: #C0C0C0;
-    background-image: url("../../../images/BG.png");
+    background-image: url("../../../../images/BG.png");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -116,7 +116,7 @@ Set Background
     position: absolute;
     left: 5%;
     top: 4%;
-    background-image: url(../../../images/faceitecs.png);
+    background-image: url(../../../../images/faceitecs.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -147,7 +147,7 @@ Set Background
     position: absolute;
     left: 5%;
     top: 4%;
-    background-image: url(../../../images/faceitecs.png);
+    background-image: url(../../../../images/faceitecs.png);
     background-repeat: no-repeat;
     background-size: contain;
 }

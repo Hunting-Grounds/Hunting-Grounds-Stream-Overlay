@@ -1,0 +1,80 @@
+
+.LeftWebcam{
+    position: fixed;
+    bottom: 40%;
+    left: 5%;
+    width: 44.5%;
+    height: 40%;
+    background-color: rgb(20, 20, 20);
+}
+
+.LeftWebcamText{
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 7vw;
+    top: 25%;
+    right: 20%;
+    font-family: 'Morganite-Black';
+}
+
+.LeftWebcamName{
+    height: 100%;
+    width: 7.5%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+}
+
+.LeftWebcamNameText{
+    position: absolute;
+    margin-top: -25%;
+    top: 45%;
+    color: #f5bd0e;
+    font-size: 3vw;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    font-family: "purista-web",sans-serif;
+}
+
+.RightWebcam{
+    position: fixed;
+    bottom: 40%;
+    right: 5%;
+    width: 44.5%;
+    height: 40%;
+    background-color: rgb(20, 20, 20);
+}
+
+.RightWebcamText{
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 7vw;
+    top: 25%;
+    left: 20%;
+    font-family: 'Morganite-Black';
+}
+
+.RightWebcamName{
+    height: 100%;
+    width: 7.5%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+}
+
+.RightWebcamNameText{
+    position: absolute;
+    margin-top: -25%;
+    top: 45%;
+    color: #f5bd0e;
+    font-size: 3vw;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    font-family: "purista-web",sans-serif;
+}
