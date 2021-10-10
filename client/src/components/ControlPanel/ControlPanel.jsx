@@ -22,7 +22,7 @@ const ControlPanel = () => {
     return (
         <div>
             <Layout>
-                <Sider
+                {/* <Sider
                     style={{
                         overflow: 'auto',
                         height: '100vh',
@@ -32,12 +32,9 @@ const ControlPanel = () => {
                 >
                     <Menu theme="dark" mode="inline">
                         <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
-                        {/* <Menu.Item key="2" icon={<UserAddOutlined />}>
-                            Create a Panel
-                        </Menu.Item> */}
                     </Menu>
-                </Sider>
-                <Layout className="site-layout" style={{ marginLeft: 200 }}>
+                </Sider> */}
+                <Layout className="site-layout">
                     <Content className="site-layout-background" style={{ overflow: 'initial' }}>
                         <div style={{ justifyContent: 'space-evenly', padding: 24, textAlign: 'center'}}>
                             <Panels currentId={currentId} setCurrentId={setCurrentId} />
