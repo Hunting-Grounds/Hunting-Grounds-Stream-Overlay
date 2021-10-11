@@ -7,7 +7,14 @@ import useStyles from './styles';
 import { createPanel } from '../../../../actions/panels';
 
 const WebcamVetoTab = ({ currentId, setCurrentId }) => {
-  const [panelData, setPanelData] = useState({ name: '', rating: '', kd: '', entry: '', maps: '', kost: '', kpr: '', srv: '', clutchwins: '', plant: '', disable: '', hs: '', atk: '', def: '', selectedFile: '' });
+  const [panelData, setPanelData] = useState({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
+  lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '',
+  vetoMap1Icon: '', vetoMap1Logo: '', vetoMap1Status: '', 
+  vetoMap2Icon: '', vetoMap2Logo: '', vetoMap2Status: '',
+  vetoMap3Icon: '', vetoMap3Logo: '', vetoMap3Status: '',
+  vetoMap4Icon: '', vetoMap4Logo: '', vetoMap4Status: '',
+  vetoMap5Icon: '', vetoMap5Logo: '', vetoMap5Status: '',
+  vetoMap6Icon: '', vetoMap6Logo: '', vetoMap6Status: '' });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -18,7 +25,14 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
   const clear = () => {
     setCurrentId(0);
-    setPanelData({ name: '', rating: '', kd: '', entry: '', maps: '', kost: '', kpr: '', srv: '', clutchwins: '', plant: '', disable: '', hs: '', atk: '', def: '', selectedFile: '' });
+    setPanelData({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
+    lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '',
+    vetoMap1Icon: '', vetoMap1Logo: '', vetoMap1Status: '', 
+    vetoMap2Icon: '', vetoMap2Logo: '', vetoMap2Status: '',
+    vetoMap3Icon: '', vetoMap3Logo: '', vetoMap3Status: '',
+    vetoMap4Icon: '', vetoMap4Logo: '', vetoMap4Status: '',
+    vetoMap5Icon: '', vetoMap5Logo: '', vetoMap5Status: '',
+    vetoMap6Icon: '', vetoMap6Logo: '', vetoMap6Status: '' });
   };
 
   const handleSubmit = async (e) => {

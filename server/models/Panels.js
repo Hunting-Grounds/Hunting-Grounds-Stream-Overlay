@@ -69,7 +69,7 @@ const panelSchema = mongoose.Schema({
 
     currentMatchupLogo2: String,
     currentMatchupName2: String,
-    currentMatchupTColor2: String,
+    currentMatchupColor2: String,
 
     //PLAYDAY UPCOMING MATCHES
     upcomingMatchesName1Row1: String,

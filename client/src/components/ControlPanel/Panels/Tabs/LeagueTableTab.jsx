@@ -7,7 +7,15 @@ import useStyles from './styles';
 import { createPanel } from '../../../../actions/panels';
 
 const LeagueTableTab = ({ currentId, setCurrentId }) => {
-  const [panelData, setPanelData] = useState({ name: '', rating: '', kd: '', entry: '', maps: '', kost: '', kpr: '', srv: '', clutchwins: '', plant: '', disable: '', hs: '', atk: '', def: '', selectedFile: '' });
+  const [panelData, setPanelData] = useState({ upperThirdTitle: '', upperThirdSubtitle: '',
+    leagueTableNameRow1: '', leagueTableWLRow1: '', leagueTablePTSRow1: '',
+    leagueTableNameRow2: '', leagueTableWLRow2: '', leagueTablePTSRow2: '',
+    leagueTableNameRow3: '', leagueTableWLRow3: '', leagueTablePTSRow3: '',
+    leagueTableNameRow4: '', leagueTableWLRow4: '', leagueTablePTSRow4: '',
+    leagueTableNameRow5: '', leagueTableWLRow5: '', leagueTablePTSRow5: '',
+    leagueTableNameRow6: '', leagueTableWLRow6: '', leagueTablePTSRow6: '',
+    leagueTableNameRow7: '', leagueTableWLRow7: '', leagueTablePTSRow7: '',
+    leagueTableNameRow8: '', leagueTableWLRow8: '', leagueTablePTSRow8: '' });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -18,7 +26,15 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
 
   const clear = () => {
     setCurrentId(0);
-    setPanelData({ name: '', rating: '', kd: '', entry: '', maps: '', kost: '', kpr: '', srv: '', clutchwins: '', plant: '', disable: '', hs: '', atk: '', def: '', selectedFile: '' });
+    setPanelData({ upperThirdTitle: '', upperThirdSubtitle: '',
+    leagueTableNameRow1: '', leagueTableWLRow1: '', leagueTablePTSRow1: '',
+    leagueTableNameRow2: '', leagueTableWLRow2: '', leagueTablePTSRow2: '',
+    leagueTableNameRow3: '', leagueTableWLRow3: '', leagueTablePTSRow3: '',
+    leagueTableNameRow4: '', leagueTableWLRow4: '', leagueTablePTSRow4: '',
+    leagueTableNameRow5: '', leagueTableWLRow5: '', leagueTablePTSRow5: '',
+    leagueTableNameRow6: '', leagueTableWLRow6: '', leagueTablePTSRow6: '',
+    leagueTableNameRow7: '', leagueTableWLRow7: '', leagueTablePTSRow7: '',
+    leagueTableNameRow8: '', leagueTableWLRow8: '', leagueTablePTSRow8: '' });
   };
 
   const handleSubmit = async (e) => {

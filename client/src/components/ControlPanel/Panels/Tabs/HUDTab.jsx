@@ -7,7 +7,9 @@ import useStyles from './styles';
 import { createPanel } from '../../../../actions/panels';
 
 const HUDTab = ({ currentId, setCurrentId }) => {
-  const [panelData, setPanelData] = useState({ name: '', rating: '', kd: '', entry: '', maps: '', kost: '', kpr: '', srv: '', clutchwins: '', plant: '', disable: '', hs: '', atk: '', def: '', selectedFile: '' });
+  const [panelData, setPanelData] = useState({ 
+  hudLeftText: '', hudRightText: '', hudLeftOperatorIcon1: '',hudLeftOperatorIcon2: '', hudRightOperatorIcon1: '', 
+  hudRightOperatorIcon2: '', hudLeftTeamLogo: '', hudRightTeamLogo: '' });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -18,7 +20,8 @@ const HUDTab = ({ currentId, setCurrentId }) => {
 
   const clear = () => {
     setCurrentId(0);
-    setPanelData({ name: '', rating: '', kd: '', entry: '', maps: '', kost: '', kpr: '', srv: '', clutchwins: '', plant: '', disable: '', hs: '', atk: '', def: '', selectedFile: '' });
+    setPanelData({ hudLeftText: '', hudRightText: '', hudLeftOperatorIcon1: '',hudLeftOperatorIcon2: '', hudRightOperatorIcon1: '', 
+    hudRightOperatorIcon2: '', hudLeftTeamLogo: '', hudRightTeamLogo: '' });
   };
 
   const handleSubmit = async (e) => {
