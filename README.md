@@ -6,8 +6,8 @@
 
 ## Code Samples
 
-> <h4> yo </h4>
+> <h4>  </h4>
 
 ## Installation
 
-> Download it onto an abrhosting server
+> 
