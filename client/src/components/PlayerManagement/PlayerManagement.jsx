@@ -24,7 +24,7 @@ const PlayerManagement = () => {
     return (
         <div>
             <Layout>
-                <Sider
+                {/* <Sider
                     style={{
                         overflow: 'auto',
                         height: '100vh',
@@ -34,13 +34,14 @@ const PlayerManagement = () => {
                 >
                     <Menu theme="dark" mode="inline">
                         <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
-                        {/* <Menu.Item key="2" icon={<UserAddOutlined />}>
+                        <Menu.Item key="2" icon={<UserAddOutlined />}>
                             Create a Player
-                        </Menu.Item> */}
+                        </Menu.Item>
                     </Menu>
-                </Sider>
-                <Layout className="site-layout" style={{ marginLeft: 200 }}>
-                    <Content className="site-layout-background" style={{ overflow: 'initial' }}>
+                </Sider> */}
+                <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
+                <Layout className="site-layout">
+                    <Content className="site-layout-background" style={{ overflow: 'auto' }}>
                         <div style={{ justifyContent: 'space-evenly', padding: 24, textAlign: 'center'}}>
                             <Players currentId={currentId} setCurrentId={setCurrentId} />
                         </div>

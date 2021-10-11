@@ -51,7 +51,7 @@ const Player = ({ player, currentId, setCurrentId }) => {
                 </Modal>
                 {}
                 <Card
-                    style={{ width: 300 }}
+                    style={{ width: '22vw'}}
                     cover={
                         <img
                             style={{ height: '150px', objectFit: 'cover' }}

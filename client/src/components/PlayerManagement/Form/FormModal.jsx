@@ -21,9 +21,9 @@ const FormModal = ({currentId, setCurrentId}) => {
     return (
         <>
             <a type="primary" onClick={showModal}>
-            <Menu.Item style={{marginLeft: '25px'}} key="1" icon={<UserAddOutlined />}>
-                Create a Player
-            </Menu.Item>
+            <Button type="primary" shape="round" icon={<UserAddOutlined />} size='large' style={{backgroundColor: '#001428', borderColor: '#001428', zIndex: '1', position: 'absolute', bottom: '5%', right: '5%'}}>
+                Create a Team
+            </Button>
             </a>
             <Modal
                 visible={visible}
