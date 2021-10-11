@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Morganite-Black';
+    src:url('../../../fonts/Morganite-Black.ttf.woff') format('woff'),
+        url('../../../fonts/Morganite-Black.ttf.svg#Morganite-Black') format('svg'),
+        url('../../../fonts/Morganite-Black.ttf.eot'),
+        url('../../../fonts/Morganite-Black.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("https://p.typekit.net/p.css?s=1&k=ujp0ifo&ht=tk&f=1807&a=20216185&app=typekit&e=css");
+
+@font-face {
+    font-family:"purista-web";
+    src:url('../../../fonts/Purista-Web.ttf.woff2') format('woff2'),
+    url('../../../fonts/Purista-Web.ttf.woff') format('woff'),
+    url('../../../fonts/Purista-Web.ttf.eot') format('opentype');
+    font-display:auto;
+    font-style:normal;
+    font-weight:700;
+}
+
+.tk-purista-web { font-family: "purista-web",sans-serif; }
+
+.OverlayBodyWebcam{
+    background-color: #C0C0C0;
+    background-image: url("../../../images/BG.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.ecslogo {
+    width: 17.5%;
+    height: 17.5%;
+    position: absolute;
+    left: 45.25%;
+    top: 1.5%;
+    background-image: url(../../../images/faceitecs.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}

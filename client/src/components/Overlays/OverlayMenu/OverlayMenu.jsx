@@ -10,22 +10,22 @@ function OverlayMenu() {
             <Row justify="space-around" gutter={[24, 24]} align="middle" style={{display: 'flex', height: '100vh'}}>
                 <Col>
                     <Card bordered={false} style={{textAlign: 'center', backgroundColor: 'transparent'}}>
-                        <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>League Table</p></Link>
-                        <hr style={{color: 'white'}}/>
+                        <Link to="/overlays/leaguetable"><p style={{color: 'black', fontSize: 'x-large'}}>League Table</p></Link>
+                        <hr style={{color: 'black'}}/>
                         <br/>
-                        <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>Current Matchup</p></Link>
-                        <hr style={{color: 'white'}}/>
+                        <Link to="/overlays/leaguetable"><p style={{color: 'black', fontSize: 'x-large'}}>Current Matchup</p></Link>
+                        <hr style={{color: 'black'}}/>
                         <br/>
-                        <Link to="/overlays/leaguetable"><p style={{color: 'white', fontSize: 'x-large'}}>Playday Upcoming Matches</p></Link>
-                        <hr style={{color: 'white'}}/>
+                        <Link to="/overlays/leaguetable"><p style={{color: 'black', fontSize: 'x-large'}}>Playday Upcoming Matches</p></Link>
+                        <hr style={{color: 'black'}}/>
                         <br/>
-                        <Link to="/overlays/webcamlowerthird"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Lower Third</p></Link>
-                        <hr style={{color: 'white'}}/>
+                        <Link to="/overlays/webcamlowerthird"><p style={{color: 'black', fontSize: 'x-large'}}>Webcam & Lower Third</p></Link>
+                        <hr style={{color: 'black'}}/>
                         <br/>
-                        <Link to="/overlays/webcamveto"><p style={{color: 'white', fontSize: 'x-large'}}>Webcam & Veto</p></Link>
-                        <hr style={{color: 'white'}}/>
+                        <Link to="/overlays/webcamveto"><p style={{color: 'black', fontSize: 'x-large'}}>Webcam & Veto</p></Link>
+                        <hr style={{color: 'black'}}/>
                         <br/>
-                        <Link to="/overlays/hud"><p style={{color: 'white', fontSize: 'x-large'}}>HUD</p></Link>
+                        <Link to="/overlays/hud"><p style={{color: 'black', fontSize: 'x-large'}}>HUD</p></Link>
                     </Card>
                 </Col>
             </Row>

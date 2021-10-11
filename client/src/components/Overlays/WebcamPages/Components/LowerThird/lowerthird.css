@@ -1,0 +1,69 @@
+.LowerThird{
+    position: fixed;
+    bottom: 10%;
+    left: 10%;
+    width: 80%;
+    height: 15%;
+    background-color: #e3c431;
+}
+
+.LowerThirdTeam1{
+    height: 50%;
+    width: 15%;
+    right: 0%;
+    position: absolute;
+    background-color: #ee6205;
+}
+
+.LowerThirdTeam1Logo{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    background-image: url(../../../../../images/faceitecs.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.LowerThirdTeam1Name{
+    top: 15%;
+    right: 5%;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    font-size: 2vw;
+    font-family: "purista-web",sans-serif;
+}
+
+.LowerThirdTeam2{
+    top: 50%;
+    right: 0%;
+    width: 15%;
+    height: 50%;
+    position: absolute;
+    background-color: #1898d8;
+}
+
+.LowerThirdTeam2Logo{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    background-image: url(../../../../../images/faceitecs.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.LowerThirdTeam2Name{
+    top: 15%;
+    right: 5%;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    font-size: 2vw;
+    font-family: "purista-web",sans-serif;
+}

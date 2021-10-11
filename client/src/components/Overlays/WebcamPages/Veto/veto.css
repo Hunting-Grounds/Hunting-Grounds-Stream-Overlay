@@ -1,0 +1,21 @@
+.VetoTextBox{
+    height: 100%;
+    width: 4%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: #e3c431;
+}
+
+.VetoBoxVetoText{
+    position: absolute;
+    margin-top: -25%;
+    top: 50%;
+    color: white;
+    font-weight: 900;
+    font-family: "purista-web";
+    font-size: x-large;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+}
