@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 
-import { getPanels } from '../../actions/panels.js';
+import { getPanels } from '../../actions/panels';
 
 import Panels from './Panels/Panels';
-import FormModal from './Form/FormModal';
+//import FormModal from './Form/FormModal';
 
 const { Content, Sider } = Layout;
 
