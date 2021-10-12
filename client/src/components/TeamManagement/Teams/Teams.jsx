@@ -10,7 +10,7 @@ const Teams = ({ currentId, setCurrentId }) => {
 
     return (
         !teams.length ? <Spin size="large" /> : (
-            <Row justify="space-around" gutter={[24, 24]}>
+            <Row justify="space-around" gutter={[24, 24]} style={{paddingBottom : '10vh'}}>
               {teams.map((team) => (
                 <Col key={team._id}>
                   <Team currentId={currentId} team={team} setCurrentId={setCurrentId} />

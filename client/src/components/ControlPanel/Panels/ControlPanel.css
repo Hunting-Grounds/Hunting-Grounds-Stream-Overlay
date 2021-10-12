@@ -1,6 +1,6 @@
 .ControlPanelBody {
     background-color: #C0C0C0;
-    background-image: url("../../images/BG.png");
+    background-image: url("../../../images/BG.png");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,14 +18,14 @@
 
 .controlPanelCardPadding {
     padding-left: 0%;
-    padding-top: 8%;
+    padding-top: 0%;
 }
 
 .controlPanelCardAlignment {
     justify-content: left;
     vertical-align: middle;
-    padding-top: 2.5%;
-    margin-top: 6%;
+    padding-top: 0%;
+    margin-top: 0%;
 }
 
 .centerText {
