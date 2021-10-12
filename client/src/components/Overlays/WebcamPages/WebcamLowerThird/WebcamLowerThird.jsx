@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
 import './webcamlowerthird.css';
 import '../style.css';
 import '../Components/LowerThird/lowerthird.css'
 import Webcam from '../Components/WebcamBox/Webcam'
 import LowerThird from '../Components/LowerThird/LowerThird'
 
-const WebcamLowerThird = ({webcamLowerThirdData}) => {
+import { getPanels } from '../../../../actions/panels';
+
+const WebcamLowerThird = () => {
+    const [currentId, setCurrentId] = useState(0);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getPanels());
+    }, [currentId, dispatch]);
+
+    var panels = getPanels(panels)
     return (
         <div className="OverlayBodyWebcam">
             <div className="ecslogo" />
-            <Webcam/>
-            <LowerThird webcamLowerThirdData={webcamLowerThirdData}/>
+            <Webcam currentId={currentId} setCurrentId={setCurrentId}/>
+            <LowerThird currentId={currentId} setCurrentId={setCurrentId}/>
         </div>
     )
 }
