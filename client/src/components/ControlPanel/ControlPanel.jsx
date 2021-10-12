@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import 'antd/dist/antd.css';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 
 import { getPanels } from '../../actions/panels';
 
 import Panels from './Panels/Panels';
-//import FormModal from './Form/FormModal';
 
-const { Content, Sider } = Layout;
+const { Content } = Layout;
 
 const ControlPanel = () => {
     const [currentId, setCurrentId] = useState(0);
