@@ -24,21 +24,6 @@ const PlayerManagement = () => {
     return (
         <div>
             <Layout>
-                {/* <Sider
-                    style={{
-                        overflow: 'auto',
-                        height: '100vh',
-                        position: 'fixed',
-                        left: 0,
-                    }}
-                >
-                    <Menu theme="dark" mode="inline">
-                        <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
-                        <Menu.Item key="2" icon={<UserAddOutlined />}>
-                            Create a Player
-                        </Menu.Item>
-                    </Menu>
-                </Sider> */}
                 <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
                 <Layout className="site-layout">
                     <Content className="site-layout-background" style={{ overflow: 'auto' }}>

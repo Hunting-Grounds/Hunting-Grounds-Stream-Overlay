@@ -22,7 +22,7 @@ const FormModal = ({currentId, setCurrentId}) => {
         <>
             <a type="primary" onClick={showModal}>
             <Button type="primary" shape="round" icon={<UserAddOutlined />} size='large' style={{backgroundColor: '#001428', borderColor: '#001428', zIndex: '1', position: 'absolute', bottom: '5%', right: '5%'}}>
-                Create a Team
+                Create a Player
             </Button>
             </a>
             <Modal

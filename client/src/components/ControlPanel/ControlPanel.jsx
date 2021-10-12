@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 
-import { getPanels } from '../../actions/panels.js';
+import { getPanels } from '../../actions/panels';
 
 import Panels from './Panels/Panels';
-import FormModal from './Form/FormModal';
+//import FormModal from './Form/FormModal';
 
 const { Content, Sider } = Layout;
 
@@ -22,18 +22,6 @@ const ControlPanel = () => {
     return (
         <div>
             <Layout>
-                {/* <Sider
-                    style={{
-                        overflow: 'auto',
-                        height: '100vh',
-                        position: 'fixed',
-                        left: 0,
-                    }}
-                >
-                    <Menu theme="dark" mode="inline">
-                        <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
-                    </Menu>
-                </Sider> */}
                 <Layout className="site-layout">
                     <Content className="site-layout-background" style={{ overflow: 'initial' }}>
                         <div style={{ justifyContent: 'space-evenly', padding: 24, textAlign: 'center'}}>
