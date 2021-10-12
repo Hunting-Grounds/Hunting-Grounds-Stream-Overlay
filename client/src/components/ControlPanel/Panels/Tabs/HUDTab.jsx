@@ -33,7 +33,7 @@ const HUDTab = ({ currentId, setCurrentId }) => {
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${panelData._id}"` : 'Editing Webcam & Lower Third'}</Typography>
+        <Typography variant="h6">Editing HUD</Typography>
 
         <TextField name="hudLeftText" variant="outlined" label="HUD Left Text" fullWidth value={panelData.hudLeftText} onChange={(e) => setPanelData({ ...panelData, hudLeftText: e.target.value })} />
         <TextField name="hudRightText" variant="outlined" label="HUD Right Text" fullWidth value={panelData.hudRightText} onChange={(e) => setPanelData({ ...panelData, hudRightText: e.target.value })} />

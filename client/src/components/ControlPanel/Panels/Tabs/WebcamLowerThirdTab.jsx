@@ -35,7 +35,7 @@ const WebcamLowerThirdTab = ({ currentId, setCurrentId }) => {
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${panelData._id}"` : 'Editing Webcam & Lower Third'}</Typography>
+        <Typography variant="h6">Editing Webcam & Lower Third</Typography>
         <TextField name="webcamCasterName1" variant="outlined" label="Webcam Caster Name 1" fullWidth value={panelData.webcamCasterName1} onChange={(e) => setPanelData({ ...panelData, webcamCasterName1: e.target.value })} />
         <TextField name="webcamCasterName2" variant="outlined" label="Webcam Caster Name 2" fullWidth value={panelData.webcamCasterName2} onChange={(e) => setPanelData({ ...panelData, webcamCasterName2: e.target.value })} />
         <TextField name="lowerThirdTitle" variant="outlined" label="Lower Third Title" fullWidth value={panelData.lowerThirdTitle} onChange={(e) => setPanelData({ ...panelData, lowerThirdTitle: e.target.value })} />
