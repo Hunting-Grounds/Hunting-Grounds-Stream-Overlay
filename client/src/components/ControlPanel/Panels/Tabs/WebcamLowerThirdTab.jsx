@@ -4,10 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
 import useStyles from './styles';
-import { createPanel } from '../../../../actions/panels';
+import { updatePanel } from '../../../../actions/panels';
 
 const WebcamLowerThirdTab = ({ currentId, setCurrentId }) => {
-  //console.log(currentId);
   const [panelData, setPanelData] = useState({ webcamCasterName1: '', webcamCasterName2: '', 
   lowerThirdTitle: '', lowerThirdSubtitle: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
   lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '' });
@@ -20,6 +19,7 @@ const WebcamLowerThirdTab = ({ currentId, setCurrentId }) => {
   }, [panel]);
 
   const clear = () => {
+    setCurrentId(0);
     setPanelData({ webcamCasterName1: '', webcamCasterName2: '', 
     lowerThirdTitle: '', lowerThirdSubtitle: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
     lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '' });
@@ -28,14 +28,14 @@ const WebcamLowerThirdTab = ({ currentId, setCurrentId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(panelData);
-    dispatch(createPanel(panelData));
+    dispatch(updatePanel(panelData._id, panelData));
     clear();
   };
 
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${panelData.webcamCasterName1}"` : 'Editing Webcam & Lower Third'}</Typography>
+        <Typography variant="h6">{currentId ? `Editing "${panelData._id}"` : 'Editing Webcam & Lower Third'}</Typography>
         <TextField name="webcamCasterName1" variant="outlined" label="Webcam Caster Name 1" fullWidth value={panelData.webcamCasterName1} onChange={(e) => setPanelData({ ...panelData, webcamCasterName1: e.target.value })} />
         <TextField name="webcamCasterName2" variant="outlined" label="Webcam Caster Name 2" fullWidth value={panelData.webcamCasterName2} onChange={(e) => setPanelData({ ...panelData, webcamCasterName2: e.target.value })} />
         <TextField name="lowerThirdTitle" variant="outlined" label="Lower Third Title" fullWidth value={panelData.lowerThirdTitle} onChange={(e) => setPanelData({ ...panelData, lowerThirdTitle: e.target.value })} />

@@ -37,13 +37,13 @@ const Panels = ({ currentId, setCurrentId }) => {
                      <PlaydayUpcomingMatchesTab currentId={currentId} setCurrentId={setCurrentId}/>
                   </TabPane>
                   <TabPane tab='Webcam & Lower Third' key='4'>
-                     <WebcamLowerThirdTab/>
+                     <WebcamLowerThirdTab currentId={currentId} setCurrentId={setCurrentId}/>
                   </TabPane>
                   <TabPane tab='Webcam & Veto' key='5'>
-                     <WebcamVetoTab/>
+                     <WebcamVetoTab currentId={currentId} setCurrentId={setCurrentId}/>
                   </TabPane>
                   <TabPane tab='HUD' key='6'>
-                     <HUDTab/>
+                     <HUDTab currentId={currentId} setCurrentId={setCurrentId}/>
                   </TabPane>
                   {/* {panels.map((panel) => (
                     <TabPane tab={panel.name} key={panel._id}>

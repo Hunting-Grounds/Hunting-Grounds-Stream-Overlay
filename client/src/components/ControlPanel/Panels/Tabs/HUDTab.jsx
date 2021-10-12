@@ -4,12 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
 import useStyles from './styles';
-import { createPanel } from '../../../../actions/panels';
+import { updatePanel } from '../../../../actions/panels';
 
 const HUDTab = ({ currentId, setCurrentId }) => {
-  const [panelData, setPanelData] = useState({ 
-  hudLeftText: '', hudRightText: '', hudLeftOperatorIcon1: '',hudLeftOperatorIcon2: '', hudRightOperatorIcon1: '', 
-  hudRightOperatorIcon2: '', hudLeftTeamLogo: '', hudRightTeamLogo: '' });
+  const [panelData, setPanelData] = useState({ hudLeftText: '', hudRightText: '', hudLeftOperatorIcon1: '',hudLeftOperatorIcon2: '', hudRightOperatorIcon1: '', 
+  hudRightOperatorIcon2: '', hudLeftTeamLogo: '', hudRightTeamLogo: ''});
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -21,24 +20,30 @@ const HUDTab = ({ currentId, setCurrentId }) => {
   const clear = () => {
     setCurrentId(0);
     setPanelData({ hudLeftText: '', hudRightText: '', hudLeftOperatorIcon1: '',hudLeftOperatorIcon2: '', hudRightOperatorIcon1: '', 
-    hudRightOperatorIcon2: '', hudLeftTeamLogo: '', hudRightTeamLogo: '' });
+    hudRightOperatorIcon2: '', hudLeftTeamLogo: '', hudRightTeamLogo: ''});
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(panelData);
-    dispatch(createPanel(panelData));
+    dispatch(updatePanel(panelData._id, panelData));
     clear();
   };
 
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${panel.name}"` : 'Create a Panel'}</Typography>
-        <TextField name="name" variant="outlined" label="Name" fullWidth value={panelData.name} onChange={(e) => setPanelData({ ...panelData, name: e.target.value })} />
-        <TextField name="rating" variant="outlined" label="Rating" fullWidth value={panelData.rating} onChange={(e) => setPanelData({ ...panelData, rating: e.target.value })} />
-        <TextField name="kd" variant="outlined" label="K/D Ratio" fullWidth value={panelData.kd} onChange={(e) => setPanelData({ ...panelData, kd: e.target.value })} />
-        <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, selectedFile: base64 })} /></div>
+        <Typography variant="h6">{currentId ? `Editing "${panelData._id}"` : 'Editing Webcam & Lower Third'}</Typography>
+
+        <TextField name="hudLeftText" variant="outlined" label="HUD Left Text" fullWidth value={panelData.hudLeftText} onChange={(e) => setPanelData({ ...panelData, hudLeftText: e.target.value })} />
+        <TextField name="hudRightText" variant="outlined" label="HUD Right Text" fullWidth value={panelData.hudRightText} onChange={(e) => setPanelData({ ...panelData, hudRightText: e.target.value })} />
+        <div className={classes.fileInput}>Left Operator Icon 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudLeftOperatorIcon1: base64 })} /></div>
+        <div className={classes.fileInput}>Left Operator Icon 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudLeftOperatorIcon2: base64 })} /></div>
+        <div className={classes.fileInput}>Right Operator Icon 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudRightOperatorIcon1: base64 })} /></div>
+        <div className={classes.fileInput}>Right Operator Icon 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudRightOperatorIcon2: base64 })} /></div>
+        <div className={classes.fileInput}>Left Team Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudLeftTeamLogo: base64 })} /></div>
+        <div className={classes.fileInput}>Right Team Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudRightTeamLogo: base64 })} /></div>
+
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
       </form>

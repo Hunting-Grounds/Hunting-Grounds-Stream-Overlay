@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
 import useStyles from './styles';
-import { createPanel } from '../../../../actions/panels';
+import { updatePanel } from '../../../../actions/panels';
 
 const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
   const [panelData, setPanelData] = useState({ upperThirdTitle: '', upperThirdSubtitle: '',
   upcomingMatchesName1Row1: '', upcomingMatchesLogo1Row1: '', upcomingMatchesName2Row1: '', upcomingMatchesLogo2Row1: '',
   upcomingMatchesName1Row2: '', upcomingMatchesLogo1Row2: '', upcomingMatchesName2Row2: '', upcomingMatchesLogo2Row2: '',
   upcomingMatchesName1Row3: '', upcomingMatchesLogo1Row3: '', upcomingMatchesName2Row3: '', upcomingMatchesLogo2Row3: '',
-  upcomingMatchesName1Row4: '', upcomingMatchesLogo1Row4: '', upcomingMatchesName2Row4: '', upcomingMatchesLogo2Row4: '' });
+  upcomingMatchesName1Row4: '', upcomingMatchesLogo1Row4: '', upcomingMatchesName2Row4: '', upcomingMatchesLogo2Row4: ''});
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -26,35 +26,51 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
     upcomingMatchesName1Row1: '', upcomingMatchesLogo1Row1: '', upcomingMatchesName2Row1: '', upcomingMatchesLogo2Row1: '',
     upcomingMatchesName1Row2: '', upcomingMatchesLogo1Row2: '', upcomingMatchesName2Row2: '', upcomingMatchesLogo2Row2: '',
     upcomingMatchesName1Row3: '', upcomingMatchesLogo1Row3: '', upcomingMatchesName2Row3: '', upcomingMatchesLogo2Row3: '',
-    upcomingMatchesName1Row4: '', upcomingMatchesLogo1Row4: '', upcomingMatchesName2Row4: '', upcomingMatchesLogo2Row4: '' });
+    upcomingMatchesName1Row4: '', upcomingMatchesLogo1Row4: '', upcomingMatchesName2Row4: '', upcomingMatchesLogo2Row4: ''});
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(panelData);
-    dispatch(createPanel(panelData));
+    dispatch(updatePanel(panelData._id, panelData));
     clear();
   };
 
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${panel.name}"` : 'Create a Panel'}</Typography>
-        <TextField name="name" variant="outlined" label="Name" fullWidth value={panelData.name} onChange={(e) => setPanelData({ ...panelData, name: e.target.value })} />
-        <TextField name="rating" variant="outlined" label="Rating" fullWidth value={panelData.rating} onChange={(e) => setPanelData({ ...panelData, rating: e.target.value })} />
-        <TextField name="kd" variant="outlined" label="K/D Ratio" fullWidth value={panelData.kd} onChange={(e) => setPanelData({ ...panelData, kd: e.target.value })} />
-        <TextField name="entry" variant="outlined" label="Entry K/D" fullWidth value={panelData.entry} onChange={(e) => setPanelData({ ...panelData, entry: e.target.value })} />
-        <TextField name="maps" variant="outlined" label="Maps Won" fullWidth value={panelData.maps} onChange={(e) => setPanelData({ ...panelData, maps: e.target.value })} />
-        <TextField name="kost" variant="outlined" label="KOST" fullWidth value={panelData.kost} onChange={(e) => setPanelData({ ...panelData, kost: e.target.value })} />
-        <TextField name="kpr" variant="outlined" label="Kills Per Round" fullWidth value={panelData.kpr} onChange={(e) => setPanelData({ ...panelData, kpr: e.target.value })} />
-        <TextField name="srv" variant="outlined" label="Rounds Survived" fullWidth value={panelData.srv} onChange={(e) => setPanelData({ ...panelData, srv: e.target.value })} />
-        <TextField name="clutchwins" variant="outlined" label="1vX (Rounds Clutched)" fullWidth value={panelData.clutchwins} onChange={(e) => setPanelData({ ...panelData, clutchwins: e.target.value })} />
-        <TextField name="plant" variant="outlined" label="Plants" fullWidth value={panelData.plant} onChange={(e) => setPanelData({ ...panelData, plant: e.target.value })} />
-        <TextField name="disable" variant="outlined" label="Disable" fullWidth value={panelData.disable} onChange={(e) => setPanelData({ ...panelData, disable: e.target.value })} />
-        <TextField name="hs" variant="outlined" label="Headshot Percentage" fullWidth value={panelData.hs} onChange={(e) => setPanelData({ ...panelData, hs: e.target.value })} />
-        <TextField name="atk" variant="outlined" label="Attack Operator" fullWidth value={panelData.atk} onChange={(e) => setPanelData({ ...panelData, atk: e.target.value })} />
-        <TextField name="def" variant="outlined" label="Defence Operator" fullWidth value={panelData.def} onChange={(e) => setPanelData({ ...panelData, def: e.target.value })} />
-        <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, selectedFile: base64 })} /></div>
+        <Typography variant="h6">{currentId ? `Editing "${panelData._id}"` : 'Editing Webcam & Lower Third'}</Typography>
+
+        <TextField name="upperThirdTitle" variant="outlined" label="Upper Third Title" fullWidth value={panelData.upperThirdTitle} onChange={(e) => setPanelData({ ...panelData, upperThirdTitle: e.target.value })} />
+        <TextField name="upperThirdSubtitle" variant="outlined" label="Upper Third Subtitle" fullWidth value={panelData.upperThirdSubtitle} onChange={(e) => setPanelData({ ...panelData, upperThirdSubtitle: e.target.value })} />
+
+        <TextField name="upcomingMatchesName1Row1" variant="outlined" label="Name 1 Row 1" fullWidth value={panelData.upcomingMatchesName1Row1} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row1: e.target.value })} />
+        <div className={classes.fileInput}>Logo 1 Row 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1Row1: base64 })} /></div>
+
+        <TextField name="upcomingMatchesName2Row1" variant="outlined" label="Name 2 Row 1" fullWidth value={panelData.upcomingMatchesName2Row1} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row1: e.target.value })} />
+        <div className={classes.fileInput}>Logo 2 Row 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2Row1: base64 })} /></div>
+        
+
+        <TextField name="upcomingMatchesName1Row2" variant="outlined" label="Name 1 Row 2" fullWidth value={panelData.upcomingMatchesName1Row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row2: e.target.value })} />
+        <div className={classes.fileInput}>Logo 1 row 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1row2: base64 })} /></div>
+
+        <TextField name="upcomingMatchesName2row2" variant="outlined" label="Name 2 row 2" fullWidth value={panelData.upcomingMatchesName2row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2row2: e.target.value })} />
+        <div className={classes.fileInput}>Logo 2 row 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2row2: base64 })} /></div>
+                
+        
+        <TextField name="upcomingMatchesName1row3" variant="outlined" label="Name 1 row 3" fullWidth value={panelData.upcomingMatchesName1row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1row3: e.target.value })} />
+        <div className={classes.fileInput}>Logo 1 row 3 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1row3: base64 })} /></div>
+
+        <TextField name="upcomingMatchesName2row3" variant="outlined" label="Name 2 row 3" fullWidth value={panelData.upcomingMatchesName2row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2row3: e.target.value })} />
+        <div className={classes.fileInput}>Logo 2 row 3 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2row3: base64 })} /></div>
+                
+        
+        <TextField name="upcomingMatchesName1row4" variant="outlined" label="Name 1 row 4" fullWidth value={panelData.upcomingMatchesName1row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1row4: e.target.value })} />
+        <div className={classes.fileInput}>Logo 1 row 4 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1row4: base64 })} /></div>
+
+        <TextField name="upcomingMatchesName2row4" variant="outlined" label="Name 2 row 4" fullWidth value={panelData.upcomingMatchesName2row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2row4: e.target.value })} />
+        <div className={classes.fileInput}>Logo 2 row 4 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2row4: base64 })} /></div>
+
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
       </form>
