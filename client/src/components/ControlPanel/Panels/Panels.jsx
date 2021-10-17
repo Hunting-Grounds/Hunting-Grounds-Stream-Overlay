@@ -1,7 +1,6 @@
 import React from 'react';
 import './ControlPanel.css';
-import Panel from './Panel/Panel';
-import { Row, Col, Form, Card, Tabs } from 'antd';
+import { Row, Col, Card, Tabs } from 'antd';
 import { useSelector } from 'react-redux';
 import { Spin } from 'antd';
 
