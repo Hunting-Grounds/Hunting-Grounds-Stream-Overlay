@@ -12,7 +12,6 @@
     width: 15%;
     right: 0%;
     position: absolute;
-    background-color: #ee6205;
 }
 
 .LowerThirdTeam1Logo{
@@ -21,7 +20,6 @@
     position: absolute;
     left: 3%;
     top: 10%;
-    background-image: url(../../../../../images/faceitecs.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -31,7 +29,7 @@
     right: 5%;
     color: black;
     font-weight: 700;
-    text-align: center;
+    text-align: right;
     position: absolute;
     font-size: 2vw;
     font-family: "purista-web",sans-serif;
@@ -43,7 +41,6 @@
     width: 15%;
     height: 50%;
     position: absolute;
-    background-color: #1898d8;
 }
 
 .LowerThirdTeam2Logo{
@@ -52,7 +49,6 @@
     position: absolute;
     left: 3%;
     top: 10%;
-    background-image: url(../../../../../images/faceitecs.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -62,7 +58,7 @@
     right: 5%;
     color: black;
     font-weight: 700;
-    text-align: center;
+    text-align: right;
     position: absolute;
     font-size: 2vw;
     font-family: "purista-web",sans-serif;

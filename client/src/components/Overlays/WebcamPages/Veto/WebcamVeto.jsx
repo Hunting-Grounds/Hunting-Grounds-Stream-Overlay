@@ -1,32 +1,28 @@
-import React from 'react';
-import '../style.css';
-import './veto.css';
-import Webcam from '../Components/WebcamBox/Webcam'
-import VetoMap from './Maps/VetoMap';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-function WebcamVeto() {
+import '../style.css';
+
+import '../Components/LowerThird/lowerthird.css'
+import Webcam from '../Components/WebcamBox/Webcam'
+import VetoThird from '../Components/VetoThird/VetoThird';
+
+import { getPanels } from '../../../../actions/panels';
+
+const WebcamVeto = () => {
+
+    const [currentId, setCurrentId] = useState(0);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getPanels());
+    }, [currentId, dispatch]);
+
     return (
         <div className="OverlayBodyWebcam">
             <div className="ecslogo" />
-            <Webcam/>
-            <div className="LowerThird">
-                <div>
-                    <div className="VetoTextBox">
-                        <div className="VetoBoxVetoText">
-                            VETO
-                        </div>
-                    </div>
-                    <VetoMap/>
-                    <div className="LowerThirdTeam1">
-                        <div className="LowerThirdTeam1Logo"></div>
-                        <div className="LowerThirdTeam1Name">LNSCRD</div>
-                    </div>
-                    <div className="LowerThirdTeam2">
-                        <div className="LowerThirdTeam2Logo"></div>
-                        <div className="LowerThirdTeam2Name">AQLX</div>
-                    </div>
-                </div>
-            </div>
+            <Webcam currentId={currentId} setCurrentId={setCurrentId} />
+            <VetoThird currentId={currentId} setCurrentId={setCurrentId}/>
         </div>
     )
 }

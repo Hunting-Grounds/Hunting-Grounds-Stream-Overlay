@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import './index.css'
 import 'antd/dist/antd.css';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 // import { UserAddOutlined } from '@ant-design/icons';
 
 import { getPlayers } from '../../actions/players';
@@ -11,7 +11,7 @@ import { getPlayers } from '../../actions/players';
 import Players from './Players/Players';
 import FormModal from './Form/FormModal';
 
-const { Content, Sider } = Layout;
+const { Content } = Layout;
 
 const PlayerManagement = () => {
     const [currentId, setCurrentId] = useState(0);

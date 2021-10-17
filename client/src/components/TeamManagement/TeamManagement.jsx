@@ -3,15 +3,14 @@ import { useDispatch } from 'react-redux';
 
 import './index.css'
 import 'antd/dist/antd.css';
-import { Layout, Menu } from 'antd';
-// import { UserAddOutlined } from '@ant-design/icons';
+import { Layout } from 'antd';
 
 import { getTeams } from '../../actions/teams';
 
 import Teams from './Teams/Teams';
 import FormModal from './Form/FormModal';
 
-const { Content, Sider } = Layout;
+const { Content } = Layout;
 
 const TeamManagement = () => {
     const [currentId, setCurrentId] = useState(0);
@@ -24,18 +23,6 @@ const TeamManagement = () => {
     return (
         <div>
             <Layout>
-                {/* <Sider
-                    style={{
-                        overflow: 'auto',
-                        height: '100vh',
-                        position: 'fixed',
-                        left: 0,
-                    }}
-                >
-                    <Menu theme="dark" mode="inline">
-                        <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
-                    </Menu>
-                </Sider> */}
                 <FormModal currentId={currentId} setCurrentId={setCurrentId}/>
                 <Layout className="site-layout">
                     <Content className="site-layout-background" style={{ overflow: 'auto' }}>

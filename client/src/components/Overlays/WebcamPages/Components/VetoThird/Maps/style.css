@@ -1,0 +1,34 @@
+.VetoMapWhite{
+    background-color: white;
+    display: flex;
+    position: fixed;
+    width: 10.55%;
+    height: 15%;
+}
+
+.VetoMapGrey{
+    background-color: whitesmoke;
+    display: flex;
+    position: fixed;
+    width: 10.55%;
+    height: 15%;
+}
+
+.VetoMapTeam{
+
+}
+
+.VetoMapText{
+    display: flex;
+    font-weight: lighter;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    font-family: "purista-web",sans-serif;
+    font-size: 1.15vw;
+    background-color: rgb(31, 31, 31);
+}
+
+.VetoMapImage{
+
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Modal, Button, Menu } from 'antd';
+import { Modal, Button } from 'antd';
 
 import { UsergroupAddOutlined } from '@ant-design/icons';
 

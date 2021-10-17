@@ -17,7 +17,6 @@ const WebcamLowerThird = () => {
         dispatch(getPanels());
     }, [currentId, dispatch]);
 
-    var panels = getPanels(panels)
     return (
         <div className="OverlayBodyWebcam">
             <div className="ecslogo" />
