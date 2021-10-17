@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { getPanels } from '../../../actions/panels';
-import UpperThird from '../Components/UpperThird/UpperThird'
-import MatchupBody from './MatchupBody';
 
-import "./CurrentMatchup.css"
+import UpperThird from '../Components/UpperThird/UpperThird';
+import UpcomingMatchesBody from './UpcomingMatchesBody';
 
-function CurrentMatchup() {
+import './PlaydayUpcomingMatches.css';
+
+const PlaydayUpcomingMatches = () => {
 
     const [currentId, setCurrentId] = useState(0);
     const dispatch = useDispatch();
@@ -17,11 +18,11 @@ function CurrentMatchup() {
     }, [currentId, dispatch]);
 
     return (
-        <div className="OverlayBodyCurrentMatchup">
+        <div className="OverlayBodyUpcoming">
             <UpperThird currentId={currentId} setCurrentId={setCurrentId} />
-            <MatchupBody currentId={currentId} setCurrentId={setCurrentId}/>
+            <UpcomingMatchesBody currentId={currentId} setCurrentId={setCurrentId}/>
         </div>
     )
 }
 
-export default CurrentMatchup
+export default PlaydayUpcomingMatches

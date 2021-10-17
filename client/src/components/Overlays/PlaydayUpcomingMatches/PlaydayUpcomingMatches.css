@@ -1,0 +1,113 @@
+.OverlayBodyUpcoming{
+    background-color: #C0C0C0;
+    background-image: url("../../../images/BG.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.Upcoming{
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    font-family: "purista-web",sans-serif;
+    width: 10%;
+    height: 3.5%;
+    font-size: x-large;
+    left: 45%;
+    top: 25%;
+    position: absolute;
+}
+
+.UpcomingRow{
+    position: absolute;
+    height: 10%;
+    width: 50%;
+    left: 25%;
+    top: 40%;
+    background-color: white;
+}
+
+.UpcomingRowTag{
+    left: 0;
+    height: 100%;
+    display: table;
+    color: #f5bc10;
+    position: absolute;
+    background-color: #f5bc10;
+    writing-mode: vertical-lr;
+}
+
+.UpcomingRowTeamName1{
+    position: absolute;
+    top: 15%;
+    left: 7.5%;
+    text-align: center;
+    color: black;
+    font-size: 2.25vw;
+    white-space: nowrap;
+    font-family: "purista-web",sans-serif;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.UpcomingRowVsText{
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    width: 11%;
+    text-align: center;
+    color: orange;
+    font-size: 3.5vw;
+    white-space: nowrap;
+    font-family: "purista-web",sans-serif;
+    font-weight: 700;
+    background-color: rgb(28, 28, 28);
+}
+
+.UpcomingRowTeamName2{
+    position: absolute;
+    top: 15%;
+    left: 57.5%;
+    text-align: center;
+    color: black;
+    font-size: 2.25vw;
+    white-space: nowrap;
+    font-family: "purista-web",sans-serif;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.UpcomingRowTeamLogoBackground1{
+    
+}
+
+.UpcomingRowTeamLogo1{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 10%;
+    top: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    z-index: 1;
+    background-color: yellow;
+}
+
+.UpcomingRowTeamLogo2{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    background-color: lightskyblue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    z-index: 1;
+}

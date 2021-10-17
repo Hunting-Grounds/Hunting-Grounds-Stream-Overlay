@@ -7,27 +7,6 @@ import './UpperThird.css'
 
 const UpperThird = ({ currentId, setCurrentId }) => {
 
-    //////////////////////////////////////
-    setInterval(showTime, 4000);
-    function showTime() {
-
-        let time = new Date();
-        let hour = time.getHours();
-        let min = time.getMinutes();
-
-        hour = hour < 10 ? "0" + hour : hour;
-        min = min < 10 ? "0" + min : min;
-
-        let currentTime = hour + ":" 
-            + min;
-
-        console.log(currentTime)
-
-    }
-
-    var Time = showTime();
-    //////////////////////////////////////
-
     const panels = useSelector((state) => state.panels);
 
     const [panelData, setPanelData] = useState({

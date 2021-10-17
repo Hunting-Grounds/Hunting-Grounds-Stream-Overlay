@@ -9,3 +9,123 @@
     height: 100%;
     width: 100%;
 }
+
+.CurrentMatchupBox{
+    position: fixed;
+    bottom: 20%;
+    right: 25%;
+    width: 50%;
+    height: 50%;
+}
+    
+.leftTeam{
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.rightTeam{
+    height: 100%;
+    width: 50%;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.RightTeamName{
+    height: 100%;
+    width: 8%;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+}
+
+.RightTeamNameText{
+    position: absolute;
+    margin-top: -25%;
+    top: 45%;
+    color: black;
+    font-size: 2vw;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    font-family: "purista-web",sans-serif;
+    font-weight: 700;
+}
+
+.LeftTeamName{
+    height: 100%;
+    width: 8%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+}
+
+.LeftTeamNameText{
+    position: absolute;
+    margin-top: -25%;
+    top: 45%;
+    color: black;
+    font-size: 2vw;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    font-family: "purista-web",sans-serif;
+    font-weight: 700;
+}
+
+.LeftTeamLogo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 5%;
+    top: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    z-index: 1;
+}
+
+.RightTeamLogo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    z-index: 1;
+}
+
+.UpNext{
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    font-family: "purista-web",sans-serif;
+    width: 10%;
+    height: 3.5%;
+    font-size: x-large;
+    left: 45%;
+    top: 25%;
+    position: absolute;
+}
+
+.ClockText{
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    font-family: "purista-web",sans-serif;
+    width: 10%;
+    height: 3.5%;
+    font-size: x-large;
+    left: 45%;
+    bottom: 16.5%;
+    position: absolute;
+}
