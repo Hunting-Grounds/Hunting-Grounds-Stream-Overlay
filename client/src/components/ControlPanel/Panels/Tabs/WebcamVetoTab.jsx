@@ -9,12 +9,9 @@ import { updatePanel } from '../../../../actions/panels';
 const WebcamVetoTab = ({ currentId, setCurrentId }) => {
   const [panelData, setPanelData] = useState({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
   lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '',
-  vetoMap1Icon: '', vetoMap1Logo: '', vetoMap1Status: '', 
-  vetoMap2Icon: '', vetoMap2Logo: '', vetoMap2Status: '',
-  vetoMap3Icon: '', vetoMap3Logo: '', vetoMap3Status: '',
-  vetoMap4Icon: '', vetoMap4Logo: '', vetoMap4Status: '',
-  vetoMap5Icon: '', vetoMap5Logo: '', vetoMap5Status: '',
-  vetoMap6Icon: '', vetoMap6Logo: '', vetoMap6Status: ''});
+  vetoMap1Icon: '', vetoMap2Icon: '', vetoMap3Icon: '',
+    vetoMap4Icon: '', vetoMap5Icon: '', vetoMap6Icon: ''
+  });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -27,12 +24,9 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
     setCurrentId(0);
     setPanelData({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
     lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '',
-    vetoMap1Icon: '', vetoMap1Logo: '', vetoMap1Status: '', 
-    vetoMap2Icon: '', vetoMap2Logo: '', vetoMap2Status: '',
-    vetoMap3Icon: '', vetoMap3Logo: '', vetoMap3Status: '',
-    vetoMap4Icon: '', vetoMap4Logo: '', vetoMap4Status: '',
-    vetoMap5Icon: '', vetoMap5Logo: '', vetoMap5Status: '',
-    vetoMap6Icon: '', vetoMap6Logo: '', vetoMap6Status: ''});
+    vetoMap1Icon: '', vetoMap2Icon: '', vetoMap3Icon: '',
+    vetoMap4Icon: '', vetoMap5Icon: '', vetoMap6Icon: ''
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -58,28 +52,16 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
         <TextField name="lowerThirdTeamColor2" variant="outlined" label="Lower Third Team Color 2" fullWidth value={panelData.lowerThirdTeamColor2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamColor2: e.target.value })} />
 
         <div className={classes.fileInput}>Map 1 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo1: base64 })} /></div>
-        <div className={classes.fileInput}>Team 1 Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo1: base64 })} /></div>
-        <TextField name="vetoMap1Status" variant="outlined" label="Map 1 Status" fullWidth value={panelData.vetoMap1Status} onChange={(e) => setPanelData({ ...panelData, vetoMap1Status: e.target.value })} />
 
         <div className={classes.fileInput}>Map 2 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo2: base64 })} /></div>
-        <div className={classes.fileInput}>Team 2 Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo2: base64 })} /></div>
-        <TextField name="vetoMap2Status" variant="outlined" label="Map 2 Status" fullWidth value={panelData.vetoMap2Status} onChange={(e) => setPanelData({ ...panelData, vetoMap2Status: e.target.value })} />
 
         <div className={classes.fileInput}>Map 3 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo3: base64 })} /></div>
-        <div className={classes.fileInput}>Team 3 Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo3: base64 })} /></div>
-        <TextField name="vetoMap3Status" variant="outlined" label="Map 3 Status" fullWidth value={panelData.vetoMap3Status} onChange={(e) => setPanelData({ ...panelData, vetoMap3Status: e.target.value })} />
 
         <div className={classes.fileInput}>Map 4 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo4: base64 })} /></div>
-        <div className={classes.fileInput}>Team 4 Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo4: base64 })} /></div>
-        <TextField name="vetoMap4Status" variant="outlined" label="Map 4 Status" fullWidth value={panelData.vetoMap4Status} onChange={(e) => setPanelData({ ...panelData, vetoMap4Status: e.target.value })} />
 
         <div className={classes.fileInput}>Map 5 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo5: base64 })} /></div>
-        <div className={classes.fileInput}>Team 5 Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo5: base64 })} /></div>
-        <TextField name="vetoMap5Status" variant="outlined" label="Map 5 Status" fullWidth value={panelData.vetoMap5Status} onChange={(e) => setPanelData({ ...panelData, vetoMap5Status: e.target.value })} />
 
         <div className={classes.fileInput}>Map 6 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo6: base64 })} /></div>
-        <div className={classes.fileInput}>Team 6 Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo6: base64 })} /></div>
-        <TextField name="vetoMap6Status" variant="outlined" label="Map 6 Status" fullWidth value={panelData.vetoMap6Status} onChange={(e) => setPanelData({ ...panelData, vetoMap6Status: e.target.value })} />
 
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>

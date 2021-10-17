@@ -38,28 +38,11 @@ const panelSchema = mongoose.Schema({
     //VETO
 
     vetoMap1Icon: String,
-    vetoMap1Logo: String,
-    vetoMap1Status: String,
-
     vetoMap2Icon: String,
-    vetoMap2Logo: String,
-    vetoMap2Status: String,
-
     vetoMap3Icon: String,
-    vetoMap3Logo: String,
-    vetoMap3Status: String,
-
     vetoMap4Icon: String,
-    vetoMap4Logo: String,
-    vetoMap4Status: String,
-
     vetoMap5Icon: String,
-    vetoMap5Logo: String,
-    vetoMap5Status: String,
-
     vetoMap6Icon: String,
-    vetoMap6Logo: String,
-    vetoMap6Status: String,
 
     //CURRENT MATCHUP
 
