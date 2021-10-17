@@ -1,0 +1,34 @@
+.LandingPageBackground{
+    background-color: #C0C0C0;
+    background-image: url("../../images/BG.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.LandingPageTitle{
+    position: absolute;
+    text-align: center;
+    font-size: 6vh;
+    top: 20%;
+    left: 15%;
+    line-height: 120%;
+    font-family: "purista-web",sans-serif;
+    font-weight: 600;
+}
+
+.LandingPageButton{
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 45%;
+    line-height: 120%;
+    font-family: "purista-web",sans-serif;
+    font-weight: 500;
+    background-color: grey;
+    border-color: grey;
+}

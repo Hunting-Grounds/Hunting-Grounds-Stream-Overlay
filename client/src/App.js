@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Layout>
           <Switch>
-            <Route path="/" exact component={() => <><Navbar /><LandingPage /></>} />
+            <Route path="/" exact component={() => <><LandingPage /></>} />
             <Route path="/db/teams" exact component={() => <><Navbar /><TeamManagement /></>} />
             <Route path="/db/players" exact component={() => <><Navbar /><PlayerManagement /></>} />
             <Route path="/controlpanel" exact component={() => <><Navbar /><ControlPanel /></>} />
