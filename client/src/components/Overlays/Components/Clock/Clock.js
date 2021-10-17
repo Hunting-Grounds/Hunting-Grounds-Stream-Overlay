@@ -16,8 +16,8 @@ componentWillUnmount(){
     }
 render(){
         return( 
-            <div class="clock">
-                <div class="timer">{this.state.date.toLocaleTimeString()} (BST)</div>
+            <div className="clock">
+                <div className="timer">{this.state.date.toLocaleTimeString()} (BST)</div>
             </div>
         )
     }
