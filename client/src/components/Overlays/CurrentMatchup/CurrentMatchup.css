@@ -1,0 +1,11 @@
+.OverlayBodyCurrentMatchup{
+    background-color: #C0C0C0;
+    background-image: url("../../../images/BG.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}

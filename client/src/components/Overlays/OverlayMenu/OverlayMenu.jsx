@@ -13,7 +13,7 @@ function OverlayMenu() {
                         <Link to="/overlays/leaguetable"><p style={{color: 'black', fontSize: 'x-large'}}>League Table</p></Link>
                         <hr style={{color: 'black'}}/>
                         <br/>
-                        <Link to="/overlays/leaguetable"><p style={{color: 'black', fontSize: 'x-large'}}>Current Matchup</p></Link>
+                        <Link to="/overlays/currentmatchup"><p style={{color: 'black', fontSize: 'x-large'}}>Current Matchup</p></Link>
                         <hr style={{color: 'black'}}/>
                         <br/>
                         <Link to="/overlays/leaguetable"><p style={{color: 'black', fontSize: 'x-large'}}>Playday Upcoming Matches</p></Link>

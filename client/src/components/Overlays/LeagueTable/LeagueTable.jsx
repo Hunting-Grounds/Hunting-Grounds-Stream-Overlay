@@ -1,6 +1,8 @@
 import React from 'react'
 
-function LeagueTable() {
+import './LeagueTable.css'
+
+const LeagueTable = () => {
     return (
         <div>
             
