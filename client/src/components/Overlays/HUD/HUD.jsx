@@ -1,38 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import './hud.css';
 
-function HUD() {
+import HUDComponents from './HUDComponents';
+
+import { getPanels } from '../../../actions/panels';
+
+const HUD = () => {
+
+    const [currentId, setCurrentId] = useState(0);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getPanels());
+    }, [currentId, dispatch]);
+
     return (
-        <div className="HUDOverlayBody">
-            <div className="HUDlogobox"></div>
-
-            <div className="HUDlefttextbox">
-                <div className="HUDlefttext">
-                PLAY DAY 7
-                </div>
-            </div>
-
-            <div className="HUDlefticon1"></div>
-            <div className="HUDlefticon2"></div>
-
-            <div className="HUDleftdiamond1"></div>
-            <div className="HUDleftdiamond2"></div>
-
-            <div className="HUDleftteamlogo"></div>
-            
-            <div className="HUDrightteamlogo"></div>
-
-            <div className="HUDrightdiamond1"></div>
-            <div className="HUDrightdiamond2"></div>
-
-            <div className="HUDrighticon1"></div>
-            <div className="HUDrighticon2"></div>
-
-            <div className="HUDrighttextbox">
-                <div className="HUDrighttext">
-                    OFL PLAY
-                </div>
-            </div> 
+        <div>
+            <HUDComponents currentId={currentId} setCurrentId={setCurrentId}/>
         </div>
     )
 }

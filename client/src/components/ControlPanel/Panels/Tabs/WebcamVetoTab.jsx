@@ -50,18 +50,12 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
         <TextField name="lowerThirdTeamName2" variant="outlined" label="Lower Third Team Name 2" fullWidth value={panelData.lowerThirdTeamName2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamName2: e.target.value })} />
         <div className={classes.fileInput}>Lower Third Team Logo 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo2: base64 })} /></div>
         <TextField name="lowerThirdTeamColor2" variant="outlined" label="Lower Third Team Color 2" fullWidth value={panelData.lowerThirdTeamColor2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamColor2: e.target.value })} />
-
-        <div className={classes.fileInput}>Map 1 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo1: base64 })} /></div>
-
-        <div className={classes.fileInput}>Map 2 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo2: base64 })} /></div>
-
-        <div className={classes.fileInput}>Map 3 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo3: base64 })} /></div>
-
-        <div className={classes.fileInput}>Map 4 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo4: base64 })} /></div>
-
-        <div className={classes.fileInput}>Map 5 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo5: base64 })} /></div>
-
-        <div className={classes.fileInput}>Map 6 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, lowerThirdTeamLogo6: base64 })} /></div>
+        <div className={classes.fileInput}>Map 1 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, vetoMap1Icon: base64 })} /></div>
+        <div className={classes.fileInput}>Map 2 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, vetoMap2Icon: base64 })} /></div>
+        <div className={classes.fileInput}>Map 3 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, vetoMap3Icon: base64 })} /></div>
+        <div className={classes.fileInput}>Map 4 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, vetoMap4Icon: base64 })} /></div>
+        <div className={classes.fileInput}>Map 5 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, vetoMap5Icon: base64 })} /></div>
+        <div className={classes.fileInput}>Map 6 Icon <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, vetoMap6Icon: base64 })} /></div>
 
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>

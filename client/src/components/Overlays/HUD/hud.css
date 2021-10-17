@@ -45,8 +45,6 @@ body{
     top: 0%;
     height: 100%;
     width: 9%;
-    background-color: #00BBFF;
-    background-image: url(../../../images/RCTIC.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -58,7 +56,6 @@ body{
     top: 0%;
     height: 100%;
     width: 4%;
-    background-image: url(../../../images/clash.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -70,7 +67,6 @@ body{
     top: 0%;
     height: 100%;
     width: 4%;
-    background-image: url(../../../images/flores.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -128,8 +124,6 @@ body{
     top: 0%;
     height: 100%;
     width: 9%;
-    background-color: #FFCF57;
-    background-image: url(../../../images/jagers.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -141,7 +135,6 @@ body{
     top: 0%;
     height: 100%;
     width: 4%;
-    background-image: url(../../../images/mira.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -153,7 +146,6 @@ body{
     top: 0%;
     height: 100%;
     width: 4%;
-    background-image: url(../../../images/jackal.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

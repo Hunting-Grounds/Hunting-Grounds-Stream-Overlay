@@ -37,6 +37,7 @@
     white-space: nowrap;
     transform: rotate(-90deg);
     font-family: "purista-web",sans-serif;
+    font-weight: 700;
 }
 
 .RightWebcam{
@@ -77,4 +78,5 @@
     white-space: nowrap;
     transform: rotate(-90deg);
     font-family: "purista-web",sans-serif;
+    font-weight: 700;
 }

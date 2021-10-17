@@ -30,11 +30,11 @@ const LowerThird = ({ currentId, setCurrentId }) => {
                             </div>
                         </div>
                         <div className="LowerThirdTeam1" style={{backgroundColor: panelData.lowerThirdTeamColor1}}>
-                            <div className="LowerThirdTeam1Logo" style={{ backgroundImage: panelData.lowerThirdTeamLogo1}}></div>
+                            <div className="LowerThirdTeam1Logo" style={{ backgroundImage: `url(${panelData.lowerThirdTeamLogo1})`}}></div>
                             <div className="LowerThirdTeam1Name">{panelData.lowerThirdTeamName1}</div>
                         </div>
                         <div className="LowerThirdTeam2" style={{backgroundColor: panelData.lowerThirdTeamColor2}}>
-                            <div className="LowerThirdTeam2Logo"></div>
+                            <div className="LowerThirdTeam2Logo" style={{ backgroundImage: `url(${panelData.lowerThirdTeamLogo2})`}}></div>
                             <div className="LowerThirdTeam2Name">{panelData.lowerThirdTeamName2}</div>
                         </div>
                     </div>

@@ -18,3 +18,18 @@
     white-space: nowrap;
     transform: rotate(-90deg);
 }
+
+.VetoThirdTeam1{
+    height: 50%;
+    width: 19.2%;
+    right: 1.7%;
+    position: absolute;
+}
+
+.VetoThirdTeam2{
+    top: 50%;
+    right: 1.7%;
+    width: 19.2%;
+    height: 50%;
+    position: absolute;
+}

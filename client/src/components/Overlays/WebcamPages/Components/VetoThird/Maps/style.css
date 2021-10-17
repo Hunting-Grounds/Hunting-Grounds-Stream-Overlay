@@ -2,7 +2,7 @@
     background-color: white;
     display: flex;
     position: fixed;
-    width: 10.55%;
+    width: 10%;
     height: 15%;
 }
 
@@ -10,12 +10,20 @@
     background-color: whitesmoke;
     display: flex;
     position: fixed;
-    width: 10.55%;
+    width: 10%;
     height: 15%;
 }
 
 .VetoMapTeam{
-
+    width: 20%;
+    height: 22%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
 }
 
 .VetoMapText{
@@ -30,5 +38,13 @@
 }
 
 .VetoMapImage{
-
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 2;
 }
