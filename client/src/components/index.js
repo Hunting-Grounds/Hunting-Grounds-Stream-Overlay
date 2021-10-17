@@ -6,6 +6,8 @@ export { default as PlayerManagement } from "./PlayerManagement/PlayerManagement
 
 export { default as ControlPanel } from "./ControlPanel/ControlPanel"
 
+export { default as LandingPage } from "./LandingPage/LandingPage"
+
 export { default as HUD } from "./Overlays/HUD/HUD"
 export { default as OverlayMenu } from "./Overlays/OverlayMenu/OverlayMenu";
 export { default as CurrentMatchup } from "./Overlays/CurrentMatchup/CurrentMatchup";

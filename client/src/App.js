@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from 'antd';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Navbar, TeamManagement, PlayerManagement, OverlayMenu, HUD, LeagueTable, WebcamVeto, WebcamLowerThird, ControlPanel, Login, CurrentMatchup, PlaydayUpcomingMatches } from "./components";
+import { Navbar, TeamManagement, PlayerManagement, OverlayMenu, HUD, LeagueTable, WebcamVeto, WebcamLowerThird, ControlPanel, Login, CurrentMatchup, PlaydayUpcomingMatches, LandingPage } from "./components";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Router>
         <Layout>
           <Switch>
+            <Route path="/" exact component={() => <><Navbar /><LandingPage /></>} />
             <Route path="/db/teams" exact component={() => <><Navbar /><TeamManagement /></>} />
             <Route path="/db/players" exact component={() => <><Navbar /><PlayerManagement /></>} />
             <Route path="/controlpanel" exact component={() => <><Navbar /><ControlPanel /></>} />

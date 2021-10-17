@@ -23,12 +23,39 @@
     position: absolute;
 }
 
-.UpcomingRow{
+.UpcomingRow1{
     position: absolute;
-    height: 10%;
+    height: 9%;
     width: 50%;
     left: 25%;
-    top: 40%;
+    top: 32.5%;
+    background-color: white;
+}
+
+.UpcomingRow2{
+    position: absolute;
+    height: 9%;
+    width: 50%;
+    left: 25%;
+    top: 47.5%;
+    background-color: white;
+}
+
+.UpcomingRow3{
+    position: absolute;
+    height: 9%;
+    width: 50%;
+    left: 25%;
+    top: 62.5%;
+    background-color: white;
+}
+
+.UpcomingRow4{
+    position: absolute;
+    height: 9%;
+    width: 50%;
+    left: 25%;
+    top: 77.5%;
     background-color: white;
 }
 
@@ -60,6 +87,7 @@
     top: 0%;
     left: 35%;
     width: 11%;
+    height: 100%;
     text-align: center;
     color: orange;
     font-size: 3.5vw;
@@ -83,31 +111,45 @@
 }
 
 .UpcomingRowTeamLogoBackground1{
-    
+    background-color: orange;
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    right: 10%;
+    top: 0%;
+    z-index: 1;
+}
+
+.UpcomingRowTeamLogoBackground2{
+    background-color: lightskyblue;
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    right: 0%;
+    top: 0%;
+    z-index: 1;
 }
 
 .UpcomingRowTeamLogo1{
-    width: 10%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
+    left: 15%;
+    top: 15%;
     position: absolute;
-    right: 10%;
-    top: 0%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: contain;
     z-index: 1;
-    background-color: yellow;
 }
 
 .UpcomingRowTeamLogo2{
-    width: 10%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
+    left: 15%;
+    top: 15%;
     position: absolute;
-    right: 0%;
-    top: 0%;
-    background-color: lightskyblue;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: contain;
     z-index: 1;
 }
