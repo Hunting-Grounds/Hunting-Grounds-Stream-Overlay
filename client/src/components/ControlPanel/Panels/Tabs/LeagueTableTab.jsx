@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
-//import FileBase from 'react-file-base64';
 
 import { Row, Col } from 'antd';
 
@@ -9,6 +8,7 @@ import useStyles from './styles';
 import { updatePanel } from '../../../../actions/panels';
 
 const LeagueTableTab = ({ currentId, setCurrentId }) => {
+
   const [panelData, setPanelData] = useState({
     upperThirdTitle: '', upperThirdSubtitle: '',
     leagueTableNameRow1: '', leagueTableWLRow1: '', leagueTablePTSRow1: '',
@@ -55,7 +55,7 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
         <Typography variant="h6">Editing League Table</Typography>
 
-        <Row style={{width: '100%'}}>
+        <Row style={{ width: '100%' }}>
           <Col span={12}>
             <TextField name="upperThirdSubtitle" variant="outlined" label="Upper Third Subtitle" fullWidth value={panelData.upperThirdSubtitle} onChange={(e) => setPanelData({ ...panelData, upperThirdSubtitle: e.target.value })} />
           </Col>

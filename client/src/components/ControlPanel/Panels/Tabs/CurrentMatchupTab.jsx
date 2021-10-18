@@ -7,7 +7,29 @@ import { Row, Col } from 'antd';
 import useStyles from './styles';
 import { updatePanel } from '../../../../actions/panels';
 
+import FileUploadScreen from './FileUploadScreen';
+import { getSingleFiles } from '../../../../api/index.js';
+
 const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
+
+  /////// IMAGE STUFF ////////
+
+  const [singleFiles, setSingleFiles] = useState([]);
+
+  const getSingleFileslist = async () => {
+    try {
+      const fileslist = await getSingleFiles();
+      setSingleFiles(fileslist);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    getSingleFileslist();
+  }, []);
+
+  ///////////////////////////
+
   const [panelData, setPanelData] = useState({
     upperThirdTitle: '', upperThirdSubtitle: '',
     currentMatchupLogo1: '', currentMatchupName1: '', currentMatchupColor1: '',
@@ -43,21 +65,37 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
         <Typography variant="h6">Editing Current Matchup</Typography>
         <TextField name="upperThirdTitle" variant="outlined" label="Upper Third Title" fullWidth value={panelData.upperThirdTitle} onChange={(e) => setPanelData({ ...panelData, upperThirdTitle: e.target.value })} />
         <TextField name="upperThirdSubtitle" variant="outlined" label="Upper Third Subtitle" fullWidth value={panelData.upperThirdSubtitle} onChange={(e) => setPanelData({ ...panelData, upperThirdSubtitle: e.target.value })} />
-        <Row style={{width: '100%'}}>
+        <Row style={{ width: '100%' }}>
           <Col span={12}>
             <TextField name="currentMatchupName1" variant="outlined" label="Name 1" fullWidth value={panelData.currentMatchupName1} onChange={(e) => setPanelData({ ...panelData, currentMatchupName1: e.target.value })} />
             <TextField name="currentMatchupColor1" variant="outlined" label="Color 1" fullWidth value={panelData.currentMatchupColor1} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor1: e.target.value })} />
             <div className={classes.fileInput}>Logo 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, currentMatchupLogo1: base64 })} /></div>
+            <FileUploadScreen getsingle={() => getSingleFileslist()} />
+            {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
+              <div className="col-6">
+                <div className="card mb-2 border-0 p-0">
+                  <img src={`http://localhost:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
+                </div>
+              </div>
+            )}
           </Col>
           <Col span={12}>
             <TextField name="currentMatchupName2" variant="outlined" label="Name 2" fullWidth value={panelData.currentMatchupName2} onChange={(e) => setPanelData({ ...panelData, currentMatchupName2: e.target.value })} />
             <TextField name="currentMatchupColor2" variant="outlined" label="Color 2" fullWidth value={panelData.currentMatchupColor2} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor2: e.target.value })} />
             <div className={classes.fileInput}>Logo 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, currentMatchupLogo2: base64 })} /></div>
+            <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2"/>
+            {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
+              <div className="col-6">
+                <div className="card mb-2 border-0 p-0">
+                  <img src={`http://localhost:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
+                </div>
+              </div>
+            )}
           </Col>
         </Row>
-      <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
-      <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
-    </form>
+        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
+        <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
+      </form>
     </Paper >
   );
 };

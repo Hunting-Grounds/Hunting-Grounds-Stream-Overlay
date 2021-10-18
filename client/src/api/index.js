@@ -1,8 +1,10 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/teams';
-const url2 = 'http://localhost:5000/players';
-const url3 = 'http://localhost:5000/panels';
+const url = 'http://http://195.22.157.230/:5000/teams';
+const url2 = 'http://http://195.22.157.230/:5000/players';
+const url3 = 'http://http://195.22.157.230/:5000/panels';
+const url4 = 'http://http://195.22.157.230/:5000/api/'
+
 
 // Team Management
 export const fetchTeams = () => axios.get(url);
@@ -25,6 +27,7 @@ export const createPlayer = (newPlayer) => {
 export const updatePlayer = (id, updatedPlayer) => axios.patch(`${url2}/${id}`, updatedPlayer);
 export const deletePlayer = (id) => axios.delete(`${url2}/${id}`);
 
+
 // Control Panel Management
 export const fetchPanels = () => axios.get(url3);
 export const createPanel = (newPanel) => {
@@ -33,3 +36,22 @@ export const createPanel = (newPanel) => {
 };
 export const updatePanel = (id, updatedPanel) => axios.patch(`${url3}/${id}`, updatedPanel);
 export const deletePanel = (id) => axios.delete(`${url3}/${id}`);
+
+
+// Image Upload Handling
+export const singleFileUpload = async (data, options, fileParent) => {
+    console.log(data, options, fileParent)
+    try {
+        await axios.post(url4 + "upload", data, options, fileParent);
+    } catch (error) {
+        throw error;
+    }
+}
+export const getSingleFiles = async () => {
+    try {
+            const {data} = await axios.get(url4);
+            return data;
+    } catch (error) {
+        throw error;
+    }
+}
