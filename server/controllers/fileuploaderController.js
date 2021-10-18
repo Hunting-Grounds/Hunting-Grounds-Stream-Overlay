@@ -12,7 +12,7 @@ export const singleFileUpload = async (req, res, next) => {
             fileParent: req.fileParent,
         });
         await file.save();
-        res.status(201).send('File Uploaded Successfully' + file);
+        res.status(201).send(file.fileName + ' Uploaded Successfully' + file._id);
     }catch(error) {
         res.status(400).send(error.message);
     }
