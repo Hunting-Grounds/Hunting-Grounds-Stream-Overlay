@@ -11,6 +11,7 @@ export const singleFileUpload = async (req, res, next) => {
             fileSize: fileSizeFormatter(req.fileSize, 2), // 0.00
             fileParent: req.fileParent,
         });
+        console.log(file)
         await file.save();
         res.status(201).send(file.fileName + ' Uploaded Successfully! File UID is ' + file._id);
     }catch(error) {
@@ -58,7 +59,7 @@ export const updateFile = async (req, res) => {
         fileSize: fileSizeFormatter(req.file.size, 2) // 0.00
     });
 
-    await File.findByIdAndUpdate(id, updatedFile, { new: true });
+    await SingleFile.findByIdAndUpdate(id, updatedFile, { new: true });
 }
 
 export const deleteFile = async (req, res) => {
