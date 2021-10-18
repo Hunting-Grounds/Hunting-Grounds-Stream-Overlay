@@ -3,9 +3,10 @@ import mongoose from 'mongoose';
 import SingleFile from '../models/singlefile.js';
 
 export const singleFileUpload = async (req, res, next) => {
+    console.log(req)
     try{
         const file = new SingleFile({
-            fileName: req.file.fileName,
+            fileName: req.fileName,
             filePath: req.filepath,
             fileType: req.fileType,
             fileSize: fileSizeFormatter(req.fileSize, 2), // 0.00
