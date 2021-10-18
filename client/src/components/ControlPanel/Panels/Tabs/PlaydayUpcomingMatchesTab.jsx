@@ -66,43 +66,43 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
             <TextField name="upcomingMatchesName1Row2" variant="outlined" label="Name 1 Row 2" fullWidth value={panelData.upcomingMatchesName1Row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row2: e.target.value })} />
           </Col>
           <Col span={5}>
-            <div className={classes.fileInput}>Logo 1 row 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1row2: base64 })} /></div>
+            <div className={classes.fileInput}>Logo 1 Row 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1Row2: base64 })} /></div>
           </Col>
           <Col span={7}>
-          <TextField name="upcomingMatchesName2row2" variant="outlined" label="Name 2 row 2" fullWidth value={panelData.upcomingMatchesName2row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2row2: e.target.value })} />
+          <TextField name="upcomingMatchesName2Row2" variant="outlined" label="Name 2 Row 2" fullWidth value={panelData.upcomingMatchesName2Row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row2: e.target.value })} />
           </Col>
           <Col span={5}>
-          <div className={classes.fileInput}>Logo 2 row 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2row2: base64 })} /></div>
+          <div className={classes.fileInput}>Logo 2 Row 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2Row2: base64 })} /></div>
           </Col>
         </Row>
 
         <Row style={{width: '100%'}}>
           <Col span={7}>
-            <TextField name="upcomingMatchesName1row3" variant="outlined" label="Name 1 row 3" fullWidth value={panelData.upcomingMatchesName1row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1row3: e.target.value })} />
+            <TextField name="upcomingMatchesName1Row3" variant="outlined" label="Name 1 Row 3" fullWidth value={panelData.upcomingMatchesName1Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row3: e.target.value })} />
           </Col>
           <Col span={5}>
-            <div className={classes.fileInput}>Logo 1 row 3 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1row3: base64 })} /></div>
+            <div className={classes.fileInput}>Logo 1 Row 3 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1Row3: base64 })} /></div>
           </Col>
           <Col span={7}>
-            <TextField name="upcomingMatchesName2row3" variant="outlined" label="Name 2 row 3" fullWidth value={panelData.upcomingMatchesName2row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2row3: e.target.value })} />
+            <TextField name="upcomingMatchesName2Row3" variant="outlined" label="Name 2 Row 3" fullWidth value={panelData.upcomingMatchesName2Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row3: e.target.value })} />
           </Col>
           <Col span={5}>
-            <div className={classes.fileInput}>Logo 2 row 3 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2row3: base64 })} /></div>
+            <div className={classes.fileInput}>Logo 2 Row 3 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2Row3: base64 })} /></div>
           </Col>
         </Row>
 
         <Row style={{width: '100%'}}>
           <Col span={7}>
-            <TextField name="upcomingMatchesName1row4" variant="outlined" label="Name 1 row 4" fullWidth value={panelData.upcomingMatchesName1row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1row4: e.target.value })} />
+            <TextField name="upcomingMatchesName1Row4" variant="outlined" label="Name 1 Row 4" fullWidth value={panelData.upcomingMatchesName1Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row4: e.target.value })} />
           </Col>
           <Col span={5}>
-          <div className={classes.fileInput}>Logo 1 row 4 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1row4: base64 })} /></div>
+          <div className={classes.fileInput}>Logo 1 Row 4 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo1Row4: base64 })} /></div>
           </Col>
           <Col span={7}>
-            <TextField name="upcomingMatchesName2row4" variant="outlined" label="Name 2 row 4" fullWidth value={panelData.upcomingMatchesName2row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2row4: e.target.value })} />
+            <TextField name="upcomingMatchesName2Row4" variant="outlined" label="Name 2 Row 4" fullWidth value={panelData.upcomingMatchesName2Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row4: e.target.value })} />
           </Col>
           <Col span={5}>
-            <div className={classes.fileInput}>Logo 2 row 4 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2row4: base64 })} /></div>
+            <div className={classes.fileInput}>Logo 2 Row 4 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, upcomingMatchesLogo2Row4: base64 })} /></div>
           </Col>
         </Row>
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
