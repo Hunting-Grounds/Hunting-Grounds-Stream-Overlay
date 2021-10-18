@@ -1,10 +1,10 @@
 import axios from 'axios';
 import axiosConfig from '../helpers/axiosConfig.js'
 
-const url = 'http://195.22.157.230/:5000/teams';
-const url2 = 'http://195.22.157.230/:5000/players';
-const url3 = 'http://195.22.157.230/:5000/panels';
-const url4 = 'http://195.22.157.230/:5000/api/'
+const url = 'http://195.22.157.230:5000/teams';
+const url2 = 'http://195.22.157.230:5000/players';
+const url3 = 'http://195.22.157.230:5000/panels';
+const url4 = 'http://195.22.157.230:5000/api/'
 
 
 // Team Management
