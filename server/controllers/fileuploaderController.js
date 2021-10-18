@@ -5,9 +5,9 @@ import SingleFile from '../models/singlefile.js';
 export const singleFileUpload = async (req, res, next) => {
     try{
         const file = new SingleFile({
-            fileName: req.file.fileName,
-            filePath: req.file.path,
-            fileType: req.file.fileType,
+            fileName: req.fileName,
+            filePath: req.filepath,
+            fileType: req.fileType,
             fileSize: fileSizeFormatter(req.file.size, 2), // 0.00
             fileParent: req.fileParent,
         });
