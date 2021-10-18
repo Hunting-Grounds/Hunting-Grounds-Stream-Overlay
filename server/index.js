@@ -14,9 +14,8 @@ const __dirname = path.resolve();
 
 const app = express();
 
-app.use(bodyParser.json());
-app.use(express.json({ limit: '30mb', extended: true }))
-app.use(express.urlencoded({ limit: '30mb', extended: true }))
+app.use(express.json({ limit: '100mb', extended: true }))
+app.use(express.urlencoded({ limit: '100mb', extended: true }))
 app.use(cors());
 
 app.use('/teams', teamRoutes);
