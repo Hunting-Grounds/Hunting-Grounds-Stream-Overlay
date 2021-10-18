@@ -17,6 +17,7 @@ const FileUploadScreen = (props) => {
             fileName: e.target.files[0].name,
             filePath: '',
             fileType: e.target.files[0].type,
+            fileSize: e.target.files[0].size,
             fileParent: fileParent});
         setSingleProgress(0);
     }
