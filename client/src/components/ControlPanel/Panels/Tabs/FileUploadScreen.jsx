@@ -5,8 +5,6 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const FileUploadScreen = (props) => {
 
-    console.log(props.fileParent)
-
     const [singleFile, setSingleFile] = useState({
         fileName: '', filePath: '', fileType: '', fileSize: '', fileParent: ''
     });
@@ -28,7 +26,7 @@ const FileUploadScreen = (props) => {
     const uploadSingleFile = async (fileParent) => {
         const formData = new FormData();
         formData.append('file', singleFile);
-        console.log(formData.file)
+        console.log(formData.fileName)
         await singleFileUpload(formData, singleFileOptions, fileParent);
         props.getsingle();
     }
