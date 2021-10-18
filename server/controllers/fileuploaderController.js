@@ -3,7 +3,14 @@ import mongoose from 'mongoose';
 import SingleFile from '../models/singlefile.js';
 
 export const singleFileUpload = async (req, res, next) => {
-    console.log(req.data)
+    var body = "";
+    req.on('data', function (chunk) {
+      body += chunk;
+    });
+    req.on('end', function () {
+      console.log('POSTed: ' + body);
+      console.log(req.data);
+    });
     try{
         const file = new SingleFile({
             fileName: req.fileName,
