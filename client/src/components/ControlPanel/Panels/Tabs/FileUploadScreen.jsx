@@ -10,7 +10,7 @@ const FileUploadScreen = (props) => {
     });
     const [singleProgress, setSingleProgress] = useState(0);
 
-    const SingleFileChange = (e) => {
+    const SingleFileChange = (e, fileParent) => {
         setSingleFile(e.target.files[0]);
         setSingleFile({...singleFile, fileParent: fileParent});
         setSingleProgress(0);
@@ -24,7 +24,7 @@ const FileUploadScreen = (props) => {
         }
     }
 
-    const uploadSingleFile = async (fileParent) => {
+    const uploadSingleFile = async () => {
         const formData = new FormData();
         console.log('file', singleFile);
         formData.append('file', singleFile);
@@ -37,11 +37,11 @@ const FileUploadScreen = (props) => {
             <div className="col-6">
                 <div className="form-group">
                     <label>Select Single File</label>
-                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
+                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e, props.fileParent)} />
                 </div>
                 <div className="row">
                     <div className="col-10">
-                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
+                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile()} >Upload</button>
                     </div>
                     {/* <div className="col-2">
                         <CircularProgressbar
