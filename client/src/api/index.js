@@ -41,7 +41,7 @@ export const deletePanel = (id) => axios.delete(`${url3}/${id}`);
 
 // Image Upload Handling
 export const singleFileUpload = async (data, options, fileParent) => {
-    console.log(data, options, fileParent)
+    console.log(data.orignalname)
     try {
         await axios.post(url4 + "upload", data, options, fileParent);
     } catch (error) {
