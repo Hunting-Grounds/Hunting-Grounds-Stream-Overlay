@@ -5,9 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const FileUploadScreen = (props) => {
 
-    const [singleFile, setSingleFile] = useState({
-        file: '', fileParent: ''
-    });
+    const [singleFile, setSingleFile] = useState({});
     const [singleProgress, setSingleProgress] = useState(0);
 
     const SingleFileChange = (e, fileParent) => {
