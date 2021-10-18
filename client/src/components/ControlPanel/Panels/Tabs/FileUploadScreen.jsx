@@ -11,8 +11,8 @@ const FileUploadScreen = (props) => {
     const SingleFileChange = (e, fileParent) => {
         //setSingleFile(e.target.files[0]);
         console.log(e.target.files[0]);
-        let parentOfFile = {fileParent: fileParent};
-        let uploadData = [...e.target.files[0],...parentOfFile];
+        var parentOfFile = {fileParent: fileParent};
+        var uploadData = [...e.target.files[0],...parentOfFile];
         setSingleFile({uploadData});
         setSingleProgress(0);
     }
