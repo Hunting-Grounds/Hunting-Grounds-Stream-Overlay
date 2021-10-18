@@ -74,7 +74,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
               <div className="col-6">
                 <div className="card mb-2 border-0 p-0">
-                  <img src={`http://localhost:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
+                  <img src={`http://195.22.157.230:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
                 </div>
               </div>
             )}
@@ -87,7 +87,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
               <div className="col-6">
                 <div className="card mb-2 border-0 p-0">
-                  <img src={`http://localhost:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
+                  <img src={`http://195.22.157.230:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
                 </div>
               </div>
             )}
