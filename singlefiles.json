@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "616d86ac8904ad9ca4a33ddb"
+  },
+  "fileName": "4K_HaloInfinite_ConceptArt_059.jpg",
+  "filePath": "uploads\\2021-10-18T14-37-32.352Z-4K_HaloInfinite_ConceptArt_059.jpg",
+  "fileType": "image/jpeg",
+  "fileSize": "5.4 MB",
+  "createdAt": {
+    "$date": "2021-10-18T14:37:32.387Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-18T14:37:32.387Z"
+  },
+  "__v": 0,
+  "fileParent": "currentMatchupLogo2"
+},{
+  "_id": {
+    "$oid": "616d8b6e8904ad9ca4a33ddc"
+  },
+  "fileName": "4K_HaloInfinite_ConceptArt_058.jpg",
+  "filePath": "uploads\\2021-10-18T14-57-50.610Z-4K_HaloInfinite_ConceptArt_058.jpg",
+  "fileType": "image/jpeg",
+  "fileSize": "7.45 MB",
+  "createdAt": {
+    "$date": "2021-10-18T14:57:50.696Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-18T14:57:50.696Z"
+  },
+  "__v": 0,
+  "fileParent": "currentMatchupLogo1"
+}]
