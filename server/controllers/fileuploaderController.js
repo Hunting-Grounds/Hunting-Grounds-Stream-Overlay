@@ -8,7 +8,7 @@ export const singleFileUpload = async (req, res, next) => {
             fileName: req.fileName,
             filePath: req.filepath,
             fileType: req.fileType,
-            fileSize: fileSizeFormatter(req.file.size, 2), // 0.00
+            fileSize: fileSizeFormatter(req.fileSize, 2), // 0.00
             fileParent: req.fileParent,
         });
         await file.save();
