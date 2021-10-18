@@ -26,7 +26,7 @@ const FileUploadScreen = (props) => {
     const uploadSingleFile = async (fileParent) => {
         const formData = new FormData();
         formData.append('file', singleFile);
-        console.log(formData.fileName)
+        console.log(formData, singleFileOptions, fileParent)
         await singleFileUpload(formData, singleFileOptions, fileParent);
         props.getsingle();
     }
