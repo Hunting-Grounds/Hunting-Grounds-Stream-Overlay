@@ -9,7 +9,7 @@ export const singleFileUpload = async (req, res, next) => {
     });
     req.on('end', function () {
       console.log('POSTed: ' + body);
-      console.log(req.data);
+      console.log(req.body);
     });
     try{
         const file = new SingleFile({
