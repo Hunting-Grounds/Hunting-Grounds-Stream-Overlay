@@ -1,0 +1,63 @@
+.OverlayBodyLeagueTable{
+    background-color: #C0C0C0;
+    background-image: url("../../../images/BG.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.LeagueTableTitleRow{
+    position: absolute;
+    width: 50%;
+    height: 6%;
+    left: 25%;
+    top: 25%;
+    background-color: white;
+    text-align: center;
+    font-family: "purista-web",sans-serif;
+    font-weight: 700;
+    font-size: 4vh;
+    color: #000 !important;
+}
+
+.LeagueTableRow{
+    position: absolute;
+    height: 6%;
+    width: 50%;
+    left: 25%;
+    top: 31%;
+    background-color: white;
+    text-align: center;
+    font-family: "purista-web",sans-serif;
+    font-weight: 500;
+    font-size: 4vh;
+}
+
+.LeagueTableTeamTitle{
+    text-align: left;
+    padding-left: 2.5%;
+}
+
+.LeagueTableCol1{
+    text-align: left;
+    padding-left: 2.5%;
+    color: white;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.LeagueTableCol2Black{
+    color: white;
+    background-color: rgb(31, 31, 31);
+}
+
+.LeagueTableCol2Grey{
+    color: white;
+    background-color: rgb(53, 53, 53);
+}
