@@ -3,23 +3,14 @@ import mongoose from 'mongoose';
 import SingleFile from '../models/singlefile.js';
 
 export const singleFileUpload = async (req, res, next) => {
-    var body = "";
-    req.on('data', function (chunk) {
-      body += chunk;
-    });
-    req.on('end', function () {
-      console.log('POSTed: ' + body);
-      console.log(req.file);
-    });
     try{
         const file = new SingleFile({
-            fileName: req.fileName,
-            filePath: req.filepath,
-            fileType: req.fileType,
-            fileSize: fileSizeFormatter(req.fileSize, 2), // 0.00
+            fileName: req.file.originalname,
+            filePath: req.file.path,
+            fileType: req.file.mimetype,
+            fileSize: fileSizeFormatter(req.file.size, 2), // 0.00
             fileParent: req.fileParent,
         });
-        console.log(file)
         await file.save();
         res.status(201).send(file.fileName + ' Uploaded Successfully! File UID is ' + file._id);
     }catch(error) {

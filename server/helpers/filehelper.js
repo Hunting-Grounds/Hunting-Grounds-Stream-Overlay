@@ -6,12 +6,12 @@ const storage = multer.diskStorage({
         cb(null, 'uploads');
     },
     filename: (req, file, cb) => {
-        cb(null, new Date().toISOString().replace(/:/g, '-') + '-' + file.fileName);
+        cb(null, new Date().toISOString().replace(/:/g, '-') + '-' + file.originalname);
     }
 });
 const filefilter = (req, file, cb) => {
-    if (file.fileType === 'image/png' || file.fileType === 'image/jpg' 
-        || file.fileType === 'image/jpeg'){
+    if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' 
+        || file.mimetype === 'image/jpeg'){
             cb(null, true);
         }else {
             cb(null, false);
