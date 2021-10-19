@@ -11,7 +11,7 @@ import { updatePanel } from '../../../../actions/panels';
 
 import FileUploadScreen from './FileUploadScreen';
 import { getSingleFiles } from '../../../../api/index.js';
-import deleteFile from '../../../../actions/file.js'
+import { deleteFile } from '../../../../actions/file.js'
 
 const { Meta } = Card;
 
