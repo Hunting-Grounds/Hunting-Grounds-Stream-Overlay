@@ -52,13 +52,23 @@ const HUDComponents = ({ currentId, setCurrentId }) => {
                     {singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon1").map((file, index) =>
                         <DBImage cName="HUDlefticon1" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
-                    
-                    <div className="HUDlefticon2" style={{ backgroundImage: `url(${panelData.hudLeftOperatorIcon2})` }}></div>
+
+                    {singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon2").map((file, index) =>
+                        <DBImage cName="HUDlefticon2" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                    )}
 
                     <div className="HUDleftdiamond1"></div>
                     <div className="HUDleftdiamond2"></div>
 
-                    <div className="HUDleftteamlogo" style={{ backgroundColor: panelData.lowerThirdTeamColor2, backgroundImage: `url(${panelData.hudLeftTeamLogo})` }}></div>
+                    {singleFiles.filter(file => file.fileParent === "hudLeftTeamLogo").map((file, index) =>
+                        <DBImage style={{ backgroundColor: panelData.lowerThirdTeamColor2}} cName="HUDleftteamlogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                    )}
+
+                    {singleFiles.filter(file => file.fileParent === "hudRightTeamLogo").map((file, index) =>
+                        <DBImage cName="HUDrightteamlogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                    )}
+
+                    <div style={{ backgroundColor: panelData.lowerThirdTeamColor2,}}></div>
 
                     <div className="HUDrightteamlogo" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.hudRightTeamLogo})` }}></div>
 
