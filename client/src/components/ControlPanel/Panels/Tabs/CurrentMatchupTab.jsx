@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
-import FileBase from 'react-file-base64';
+
 import { Row, Col } from 'antd';
+import { Card, Avatar } from "antd";
+import { DeleteOutlined } from "@ant-design/icons";
 
 import useStyles from './styles';
 import { updatePanel } from '../../../../actions/panels';
 
 import FileUploadScreen from './FileUploadScreen';
 import { getSingleFiles } from '../../../../api/index.js';
+
+const { Meta } = Card;
 
 const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
 
@@ -71,17 +75,33 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <TextField name="currentMatchupColor1" variant="outlined" label="Color 1" fullWidth value={panelData.currentMatchupColor1} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor1: e.target.value })} />
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo1" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
-              <div className="col-6">
-                <div className="card mb-2 border-0 p-0">
-                  <img src={`http://195.22.157.230:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
-                </div>
-              </div>
+              <Card
+              style={{ width: 300 }}
+              cover={
+                <img
+                  alt="example"
+                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                />
+              }
+              actions={[<DeleteOutlined key="delete" />]}
+            >
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Card title"
+                description="This is the description"
+              />
+            </Card>
+              // <div className="col-6">
+              //   <div className="card mb-2 border-0 p-0">
+              //     <img src={`http://195.22.157.230:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
+              //   </div>
+              // </div>
             )}
           </Col>
           <Col span={12}>
             <TextField name="currentMatchupName2" variant="outlined" label="Name 2" fullWidth value={panelData.currentMatchupName2} onChange={(e) => setPanelData({ ...panelData, currentMatchupName2: e.target.value })} />
             <TextField name="currentMatchupColor2" variant="outlined" label="Color 2" fullWidth value={panelData.currentMatchupColor2} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor2: e.target.value })} />
-            <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2"/>
+            <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
               <div className="col-6">
                 <div className="card mb-2 border-0 p-0">
