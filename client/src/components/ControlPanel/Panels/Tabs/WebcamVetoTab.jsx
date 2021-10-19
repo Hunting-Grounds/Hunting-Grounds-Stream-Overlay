@@ -72,13 +72,11 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
             <TextField name="lowerThirdTeamName1" variant="outlined" label="Lower Third Team Name 1" fullWidth value={panelData.lowerThirdTeamName1} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamName1: e.target.value })} />
             <TextField name="lowerThirdTeamColor1" variant="outlined" label="Lower Third Team Color 1" fullWidth value={panelData.lowerThirdTeamColor1} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamColor1: e.target.value })} />
             <Row justify="space-around" align="middle" style={{ width: '100%' }}>
-              <Col span={12} offset={6}>
                 {!singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="lowerThirdTeamLogo1" fieldName={"Lower Third Team Logo 1"} /> : (
                   singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").map((file, index) =>
                     <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Lower Third Team Logo 1"} />
                   )
                 )}
-              </Col>
             </Row>
           </Col>
           <Col span={12}>
@@ -87,13 +85,11 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
             <TextField name="lowerThirdTeamName2" variant="outlined" label="Lower Third Team Name 2" fullWidth value={panelData.lowerThirdTeamName2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamName2: e.target.value })} />
             <TextField name="lowerThirdTeamColor2" variant="outlined" label="Lower Third Team Color 2" fullWidth value={panelData.lowerThirdTeamColor2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamColor2: e.target.value })} />
             <Row justify="space-around" align="middle" style={{ width: '100%' }}>
-              <Col span={12} offset={6}>
                 {!singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="lowerThirdTeamLogo2" fieldName={"Lower Third Team Logo 2"} /> : (
                   singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").map((file, index) =>
                     <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Lower Third Team Logo 2"} />
                   )
                 )}
-              </Col>
             </Row>
           </Col>
         </Row>
