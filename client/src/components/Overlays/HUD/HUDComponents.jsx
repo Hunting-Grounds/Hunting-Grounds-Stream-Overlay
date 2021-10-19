@@ -65,16 +65,19 @@ const HUDComponents = ({ currentId, setCurrentId }) => {
                     )}
 
                     {singleFiles.filter(file => file.fileParent === "hudRightTeamLogo").map((file, index) =>
-                        <DBImage bgColor='inherit' cName="HUDrightteamlogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                        <DBImage bgColor={panelData.lowerThirdTeamColor1} cName="HUDrightteamlogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
-
-                    <div className="HUDrightteamlogo" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.hudRightTeamLogo})` }}></div>
 
                     <div className="HUDrightdiamond1"></div>
                     <div className="HUDrightdiamond2"></div>
 
-                    <div className="HUDrighticon1" style={{ backgroundImage: `url(${panelData.hudRightOperatorIcon1})` }}></div>
-                    <div className="HUDrighticon2" style={{ backgroundImage: `url(${panelData.hudRightOperatorIcon2})` }}></div>
+                    {singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon1").map((file, index) =>
+                        <DBImage bgColor='inherit' cName="HUDrighticon1" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                    )}
+
+                    {singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon2").map((file, index) =>
+                        <DBImage bgColor='inherit' cName="HUDrighticon2" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                    )}
 
                     <div className="HUDrighttextbox">
                         <div className="HUDrighttext">
