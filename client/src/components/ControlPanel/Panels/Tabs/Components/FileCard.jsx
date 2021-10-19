@@ -1,4 +1,10 @@
 import React from 'react'
+
+import { useDispatch } from 'react-redux';
+
+import { Card, Avatar } from "antd";
+import { DeleteOutlined } from "@ant-design/icons";
+
 import { deleteFile } from '../../../../actions/file.js'
 
 const FileCard = (props, file) => {

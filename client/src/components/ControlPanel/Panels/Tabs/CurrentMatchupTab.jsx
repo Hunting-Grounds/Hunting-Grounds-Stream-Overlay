@@ -3,8 +3,6 @@ import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Row, Col } from 'antd';
-import { Card, Avatar } from "antd";
-import { DeleteOutlined } from "@ant-design/icons";
 
 import useStyles from './styles';
 import { updatePanel } from '../../../../actions/panels';
@@ -13,8 +11,6 @@ import FileUploadScreen from './Components/FileUploadScreen';
 import FileCard from './Components/FileCard';
 
 import { getSingleFiles } from '../../../../api/index.js';
-
-const { Meta } = Card;
 
 const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
 
