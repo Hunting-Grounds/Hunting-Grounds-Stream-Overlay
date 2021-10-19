@@ -36,12 +36,12 @@ const FileUploadScreen = (props) => {
             <Row>
                 <Col span={12} offset={6}>
                     <label>Upload Image</label>
-                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
+                    <input type="file" onChange={(e) => SingleFileChange(e)} />
                 </Col>
             </Row>
             <Row>
                 <Col span={12} offset={6}>
-                    <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
+                    <button type="button" style={{margin: 'auto', display: 'flex', justifyContent: 'center'}} onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
                 </Col>
             </Row>
             <Row>
