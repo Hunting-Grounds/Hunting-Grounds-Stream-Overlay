@@ -33,7 +33,7 @@ const FileUploadScreen = (props) => {
         <div>
             <Row>
                 <Col span={12} offset={6}>
-                    <label>Upload Image</label>
+                    <label>Upload {props.fieldName}</label>
                     <input type="file" onChange={(e) => SingleFileChange(e)} />
                 </Col>
             </Row>
