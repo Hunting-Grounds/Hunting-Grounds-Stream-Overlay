@@ -26,7 +26,7 @@ const FileCard = (props) => {
                     />
                 }
             />
-            <Card actions={[<a onClick={() => deleteSingleFile(props.file._id) } style={{zIndex: '3'}}><DeleteOutlined style={{zIndex: '3'}} key="delete" /></a>]}/>
+            <Card actions={[<a onClick={() => deleteSingleFile(props.file._id) }><DeleteOutlined key="delete" /></a>]}/>
         </div>
     )
 }
