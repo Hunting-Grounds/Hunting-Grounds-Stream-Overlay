@@ -66,8 +66,8 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
     clear();
   };
 
-  const deleteSingleFile = async => {
-    dispatch(deleteFile(file._id));
+  const deleteSingleFile = async (fileId) => {
+    dispatch(deleteFile(fileId));
     getSingleFileslist();
   }
 
@@ -91,7 +91,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
                   src={`http://195.22.157.230:5000/${file.filePath}`}
                 />
               }
-              actions={[<a onClick={() => deleteSingleFile()}><DeleteOutlined key="delete" /></a>]}
+              actions={[<a onClick={() => deleteSingleFile(file._id)}><DeleteOutlined key="delete" /></a>]}
             >
             </Card>
             )}
