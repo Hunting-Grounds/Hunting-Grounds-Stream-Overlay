@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import './index.css';
 import { Upload, Modal } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 
