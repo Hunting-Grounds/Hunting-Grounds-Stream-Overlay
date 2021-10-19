@@ -1,7 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
+import DBImage from '../../../Components/DBImage/DBImage';
+import { getSingleFiles } from '../../../../../api/index.js';
+
 const LowerThird = ({ currentId, setCurrentId }) => {
+
+    /////// IMAGE STUFF ////////
+
+    const [singleFiles, setSingleFiles] = useState([]);
+
+    const getSingleFileslist = async () => {
+        try {
+            const fileslist = await getSingleFiles();
+            setSingleFiles(fileslist);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getSingleFileslist();
+    }, []);
+
+    ///////////////////////////
 
     const panels = useSelector((state) => state.panels);
 
@@ -29,12 +51,16 @@ const LowerThird = ({ currentId, setCurrentId }) => {
                                 VERSUS
                             </div>
                         </div>
-                        <div className="LowerThirdTeam1" style={{backgroundColor: panelData.lowerThirdTeamColor1}}>
-                            <div className="LowerThirdTeam1Logo" style={{ backgroundImage: `url(${panelData.lowerThirdTeamLogo1})`}}></div>
+                        <div className="LowerThirdTeam1" style={{ backgroundColor: panelData.lowerThirdTeamColor1 }}>
+                            {singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").map((file, index) =>
+                                <DBImage bgColor='inherit' cName="LowerThirdTeam1Logo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                            )}
                             <div className="LowerThirdTeam1Name">{panelData.lowerThirdTeamName1}</div>
                         </div>
-                        <div className="LowerThirdTeam2" style={{backgroundColor: panelData.lowerThirdTeamColor2}}>
-                            <div className="LowerThirdTeam2Logo" style={{ backgroundImage: `url(${panelData.lowerThirdTeamLogo2})`}}></div>
+                        <div className="LowerThirdTeam2" style={{ backgroundColor: panelData.lowerThirdTeamColor2 }}>
+                            {singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").map((file, index) =>
+                                <DBImage bgColor='inherit' cName="LowerThirdTeam2Logo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                            )}
                             <div className="LowerThirdTeam2Name">{panelData.lowerThirdTeamName2}</div>
                         </div>
                     </div>
