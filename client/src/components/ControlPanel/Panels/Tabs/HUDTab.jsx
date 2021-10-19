@@ -63,34 +63,40 @@ const HUDTab = ({ currentId, setCurrentId }) => {
         <TextField name="hudLeftText" variant="outlined" label="HUD Left Text" fullWidth value={panelData.hudLeftText} onChange={(e) => setPanelData({ ...panelData, hudLeftText: e.target.value })} />
         <TextField name="hudRightText" variant="outlined" label="HUD Right Text" fullWidth value={panelData.hudRightText} onChange={(e) => setPanelData({ ...panelData, hudRightText: e.target.value })} />
 
-        <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudLeftOperatorIcon1" fieldName={"Left Operator Icon 1"}/>
-        {singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon1").map((file, index) =>
-          <FileCard getsingle={() => getSingleFileslist()} file={file} />
+        {!singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon1").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudLeftOperatorIcon1" fieldName={"Left Operator Icon 1"} /> : (
+          singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon1").map((file, index) =>
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Left Operator Icon 1"} />
+          )
         )}
 
-        <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudLeftOperatorIcon2" fieldName={"Left Operator Icon 2"}/>
-        {singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon2").map((file, index) =>
-          <FileCard getsingle={() => getSingleFileslist()} file={file} />
+        {!singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudLeftOperatorIcon2" fieldName={"Left Operator Icon 2"} /> : (
+          singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon2").map((file, index) =>
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Left Operator Icon 2"} />
+          )
         )}
 
-        <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudRightOperatorIcon1" fieldName={"Right Operator Icon 1"}/>
-        {singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon1").map((file, index) =>
-          <FileCard getsingle={() => getSingleFileslist()} file={file} />
+        {!singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon1").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudRightOperatorIcon1" fieldName={"Right Operator Icon 1"} /> : (
+          singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon1").map((file, index) =>
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Right Operator Icon 1"} />
+          )
         )}
 
-        <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudRightOperatorIcon2" fieldName={"Right Operator Icon 2"}/>
-        {singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon2").map((file, index) =>
-          <FileCard getsingle={() => getSingleFileslist()} file={file} />
+        {!singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudRightOperatorIcon2" fieldName={"Right Operator Icon 2"} /> : (
+          singleFiles.filter(file => file.fileParent === "hudRightOperatorIcon2").map((file, index) =>
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Right Operator Icon 2"} />
+          )
         )}
 
-        <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudLeftTeamLogo" fieldName={"Left Team Logo"}/>
-        {singleFiles.filter(file => file.fileParent === "hudLeftTeamLogo").map((file, index) =>
-          <FileCard getsingle={() => getSingleFileslist()} file={file} />
+        {!singleFiles.filter(file => file.fileParent === "hudLeftTeamLogo").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudLeftTeamLogo" fieldName={"Left Team Logo"} /> : (
+          singleFiles.filter(file => file.fileParent === "hudLeftTeamLogo").map((file, index) =>
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Left Team Logo"} />
+          )
         )}
 
-        <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudRightTeamLogo" fieldName={"Right Team Logo"}/>
-        {singleFiles.filter(file => file.fileParent === "hudRightTeamLogo").map((file, index) =>
-          <FileCard getsingle={() => getSingleFileslist()} file={file} />
+        {!singleFiles.filter(file => file.fileParent === "hudRightTeamLogo").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudRightTeamLogo" fieldName={"Right Team Logo"} /> : (
+          singleFiles.filter(file => file.fileParent === "hudRightTeamLogo").map((file, index) =>
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Right Team Logo"} />
+          )
         )}
 
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
