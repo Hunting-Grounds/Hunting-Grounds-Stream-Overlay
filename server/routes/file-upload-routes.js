@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 //router.post('/upload', upload.single('file'), singleFileUpload);
-router.post('/upload', upload.any(), singleFileUpload);
+router.post('/upload', upload.any('file'), singleFileUpload);
 router.get('/', getallSingleFiles);
 router.get('/:id', getFile);
 router.patch('/:id', updateFile)
