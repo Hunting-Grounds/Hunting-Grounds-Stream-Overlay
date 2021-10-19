@@ -104,7 +104,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
                   src={`http://195.22.157.230:5000/${file.filePath}`}
                 />
               }
-              actions={[<a onClick={() => dispatch(deleteFile(file._id)), getSingleFileslist()}><DeleteOutlined key="delete" /></a>]}
+              actions={[<a onClick={() => dispatch(deleteFile(file._id)) && getSingleFileslist()}><DeleteOutlined key="delete" /></a>]}
             >
             </Card>
             )}
