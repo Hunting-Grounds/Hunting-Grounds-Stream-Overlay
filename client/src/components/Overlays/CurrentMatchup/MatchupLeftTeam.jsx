@@ -8,7 +8,7 @@ const MatchupLeftTeam = (props) => {
 
     return (
         <div className="leftTeam" style={{ backgroundColor: props.panelData.currentMatchupColor1 }}>
-            <DBImage cName="LeftTeamLogo" file={props.file}/>
+            <DBImage bgColor='inherit' cName="LeftTeamLogo" file={props.file}/>
             <div className="LeftTeamName">
                 <h1 className="LeftTeamNameText">{props.panelData.currentMatchupName1}</h1>
             </div>
