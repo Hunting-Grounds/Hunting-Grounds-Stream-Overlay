@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {singleFileUpload} from '../../../../../api/index';
 import {CircularProgressbar, buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { Progress } from 'antd';
 
 const FileUploadScreen = (props) => {
 
@@ -42,21 +43,7 @@ const FileUploadScreen = (props) => {
                         <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
                     </div>
                     <div className="col-2">
-                        <CircularProgressbar
-                            value={singleProgress}
-                            text={`${singleProgress}%`}
-                            styles={buildStyles({
-                                width: '10%',
-                                rotation: 0.25,
-                                strokeLinecap: 'butt',
-                                textSize: '16px',
-                                pathTransitionDuration: 0.5,
-                                pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
-                                textColor: '#f88',
-                                trailColor: '#d6d6d6',
-                                backgroundColor: '#3e98c7',
-                            })}
-                        />
+                        <Progress percent={singleProgress} />
                     </div>
                 </div>
             </div>
