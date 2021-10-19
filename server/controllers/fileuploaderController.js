@@ -9,7 +9,7 @@ export const singleFileUpload = async (req, res, next) => {
             filePath: req.file.path,
             fileType: req.file.mimetype,
             fileSize: fileSizeFormatter(req.file.size, 2), // 0.00
-            fileParent: req.file.fileParent,
+            fileParent: req.body.fileParent,
         });
         await file.save();
         res.status(201).send(file.fileName + ' Uploaded Successfully! File UID is ' + file._id);
