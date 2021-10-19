@@ -64,7 +64,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
   };
 
   return (
-    <Paper className={classes.paper} style={{whiteSpace: 'nowrap'}}>
+    <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
         <Typography variant="h6">Editing Current Matchup</Typography>
         <TextField name="upperThirdTitle" variant="outlined" label="Upper Third Title" fullWidth value={panelData.upperThirdTitle} onChange={(e) => setPanelData({ ...panelData, upperThirdTitle: e.target.value })} />
@@ -76,7 +76,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo1" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
               <Card
-              style={{ width: '20vw', position: 'absolute', left: '20%' }}
+              style={{ width: '20vw', right: '20%' }}
               cover={
                 <img
                   alt={file.fileParent}
@@ -94,7 +94,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
               <Card
-              style={{ width: '20vw', position: 'absolute', left: '20%' }}
+              style={{ width: '20vw', left: '20%' }}
               cover={
                 <img
                   alt={file.fileParent}
