@@ -6,7 +6,6 @@ const MatchupLeftTeam = (props) => {
 
     return (
         <div className="leftTeam" style={{ backgroundColor: props.panelData.currentMatchupColor1 }}>
-            {console.log(props.file.filePath)}
             <div className="LeftTeamLogo" style={{ backgroundImage: LogoURL }} />
             <div className="LeftTeamName">
                 <h1 className="LeftTeamNameText">{props.panelData.currentMatchupName1}</h1>
