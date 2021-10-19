@@ -20,11 +20,11 @@ const FileCard = (props) => {
         <Card
             style={{ width: '20vw', height: '20vh', overflow: 'hidden'}}
             cover={
-                <img style={{height: '10vh', width: '10vw'}}
+                <img style={{height: '10vh', width: ''}}
                     src={`http://195.22.157.230:5000/${props.file.filePath}`}
                 />
             }
-            actions={[<a onClick={() => deleteSingleFile(props.file._id)}><DeleteOutlined key="delete" /></a>]}
+            actions={[<a onClick={() => deleteSingleFile(props.file._id) } style={{zIndex: '3'}}><DeleteOutlined style={{zIndex: '3'}} key="delete" /></a>]}
         >
         </Card>
     )
