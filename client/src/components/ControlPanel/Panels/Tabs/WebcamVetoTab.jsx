@@ -72,7 +72,7 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
         {!singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="lowerThirdTeamLogo1" fieldName={"Lower Third Team Logo 1"} /> : (
           singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Lower Third Team Logo 1"}/>
           )
         )}
 
@@ -81,7 +81,7 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
         {!singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="lowerThirdTeamLogo2" fieldName={"Lower Third Team Logo 2"} /> : (
           singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Lower Third Team Logo 2"}/>
           )
         )}
 
@@ -89,37 +89,37 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
         {!singleFiles.filter(file => file.fileParent === "vetoMap1Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap1Icon" fieldName={"Map 1 Icon"} /> : (
           singleFiles.filter(file => file.fileParent === "vetoMap1Icon").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Map 1 Icon"}/>
           )
         )}
 
         {!singleFiles.filter(file => file.fileParent === "vetoMap2Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap2Icon" fieldName={"Map 2 Icon"} /> : (
           singleFiles.filter(file => file.fileParent === "vetoMap2Icon").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Map 2 Icon"}/>
           )
         )}
 
         {!singleFiles.filter(file => file.fileParent === "vetoMap3Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap3Icon" fieldName={"Map 3 Icon"} /> : (
           singleFiles.filter(file => file.fileParent === "vetoMap3Icon").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Map 3 Icon"}/>
           )
         )}
 
         {!singleFiles.filter(file => file.fileParent === "vetoMap4Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap4Icon" fieldName={"Map 4 Icon"} /> : (
           singleFiles.filter(file => file.fileParent === "vetoMap4Icon").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Map 4 Icon"}/>
           )
         )}
 
         {!singleFiles.filter(file => file.fileParent === "vetoMap5Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap5Icon" fieldName={"Map 5 Icon"} /> : (
           singleFiles.filter(file => file.fileParent === "vetoMap5Icon").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Map 5 Icon"}/>
           )
         )}
 
         {!singleFiles.filter(file => file.fileParent === "vetoMap6Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap6Icon" fieldName={"Map 6 Icon"} /> : (
           singleFiles.filter(file => file.fileParent === "vetoMap6Icon").map((file, index) =>
-            <FileCard getsingle={() => getSingleFileslist()} file={file} />
+            <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Map 6 Icon"}/>
           )
         )}
 

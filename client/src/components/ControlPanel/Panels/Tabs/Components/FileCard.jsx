@@ -19,8 +19,8 @@ const FileCard = (props) => {
     return (
         <div>
             <Card
-                title={props.file.fileParent}
-                style={{ width: '20vw', height: '20vh', overflow: 'hidden'}}
+                title={props.fieldName}
+                style={{ width: '20vw', height: '25vh', overflow: 'hidden'}}
                 cover={
                     <img style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', height: '100%', width: '100%', zIndex: '2'}}
                         src={`http://195.22.157.230:5000/${props.file.filePath}`}
