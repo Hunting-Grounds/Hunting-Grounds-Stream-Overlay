@@ -5,7 +5,7 @@ import { Row, Col } from 'antd';
 import './veto.css';
 import VetoMap from './Maps/VetoMap';
 
-import DBImage from '../Components/DBImage/DBImage';
+import DBImage from '../../../Components/DBImage/DBImage';
 import {getSingleFiles} from '../../../../../api/index.js';
 
 const VetoThird = ({ currentId, setCurrentId }) => {
