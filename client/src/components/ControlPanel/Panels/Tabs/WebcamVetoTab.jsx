@@ -65,13 +65,13 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
         <Typography variant="h6">Editing Veto</Typography>
 
-        <Row style={{ width: '100%' }}>
+        <Row justify="space-around" align="middle" style={{ width: '100%' }}>
           <Col span={12}>
             <TextField name="webcamCasterName1" variant="outlined" label="Webcam Caster Name 1" fullWidth value={panelData.webcamCasterName1} onChange={(e) => setPanelData({ ...panelData, webcamCasterName1: e.target.value })} />
             <TextField name="webcamCasterName2" variant="outlined" label="Webcam Caster Name 2" fullWidth value={panelData.webcamCasterName2} onChange={(e) => setPanelData({ ...panelData, webcamCasterName2: e.target.value })} />
             <TextField name="lowerThirdTeamName1" variant="outlined" label="Lower Third Team Name 1" fullWidth value={panelData.lowerThirdTeamName1} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamName1: e.target.value })} />
             <TextField name="lowerThirdTeamColor1" variant="outlined" label="Lower Third Team Color 1" fullWidth value={panelData.lowerThirdTeamColor1} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamColor1: e.target.value })} />
-            <Row style={{ width: '100%' }}>
+            <Row justify="space-around" align="middle" style={{ width: '100%' }}>
               <Col span={12} offset={6}>
                 {!singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="lowerThirdTeamLogo1" fieldName={"Lower Third Team Logo 1"} /> : (
                   singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").map((file, index) =>
@@ -86,7 +86,7 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
             <TextField name="lowerThirdSubtitle" variant="outlined" label="Lower Third Subtitle" fullWidth value={panelData.lowerThirdSubtitle} onChange={(e) => setPanelData({ ...panelData, lowerThirdSubtitle: e.target.value })} />
             <TextField name="lowerThirdTeamName2" variant="outlined" label="Lower Third Team Name 2" fullWidth value={panelData.lowerThirdTeamName2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamName2: e.target.value })} />
             <TextField name="lowerThirdTeamColor2" variant="outlined" label="Lower Third Team Color 2" fullWidth value={panelData.lowerThirdTeamColor2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamColor2: e.target.value })} />
-            <Row style={{ width: '100%' }}>
+            <Row justify="space-around" align="middle" style={{ width: '100%' }}>
               <Col span={12} offset={6}>
                 {!singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="lowerThirdTeamLogo2" fieldName={"Lower Third Team Logo 2"} /> : (
                   singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").map((file, index) =>
@@ -97,7 +97,7 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
             </Row>
           </Col>
         </Row>
-        <Row style={{ width: '100%' }}>
+        <Row justify="space-around" align="middle" style={{ width: '100%' }}>
           <Col span={8}>
             {!singleFiles.filter(file => file.fileParent === "vetoMap1Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap1Icon" fieldName={"Map 1 Icon"} /> : (
               singleFiles.filter(file => file.fileParent === "vetoMap1Icon").map((file, index) =>
@@ -120,7 +120,7 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
             )}
           </Col>
         </Row>
-        <Row style={{ width: '100%' }}>
+        <Row justify="space-around" align="middle" style={{ width: '100%' }}>
           <Col span={8}>
             {!singleFiles.filter(file => file.fileParent === "vetoMap4Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap4Icon" fieldName={"Map 4 Icon"} /> : (
               singleFiles.filter(file => file.fileParent === "vetoMap4Icon").map((file, index) =>
