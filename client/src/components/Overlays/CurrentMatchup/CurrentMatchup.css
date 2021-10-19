@@ -20,7 +20,7 @@
     
 .leftTeam{
     height: 100%;
-    width: 50%;
+    width: 47.6%;
     left: 0;
     z-index: 1;
     position: absolute;
@@ -28,7 +28,7 @@
 
 .rightTeam{
     height: 100%;
-    width: 50%;
+    width: 47.6%;
     right: 0;
     z-index: 1;
     position: absolute;
