@@ -34,11 +34,11 @@ const FileUploadScreen = (props) => {
             <div className="col-6">
                 <div className="form-group">
                     <label>Select Single File</label>
-                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e, props.fileParent)} />
+                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
                 </div>
                 <div className="row">
                     <div className="col-10">
-                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile()} >Upload</button>
+                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
                     </div>
                     {/* <div className="col-2">
                         <CircularProgressbar
