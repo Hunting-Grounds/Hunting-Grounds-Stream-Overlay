@@ -69,8 +69,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
           <Col span={12}>
             <TextField name="currentMatchupName1" variant="outlined" label="Name 1" fullWidth value={panelData.currentMatchupName1} onChange={(e) => setPanelData({ ...panelData, currentMatchupName1: e.target.value })} />
             <TextField name="currentMatchupColor1" variant="outlined" label="Color 1" fullWidth value={panelData.currentMatchupColor1} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor1: e.target.value })} />
-            <div className={classes.fileInput}>Logo 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, currentMatchupLogo1: base64 })} /></div>
-            <FileUploadScreen getsingle={() => getSingleFileslist()} />
+            <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo1" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
               <div className="col-6">
                 <div className="card mb-2 border-0 p-0">
@@ -82,7 +81,6 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
           <Col span={12}>
             <TextField name="currentMatchupName2" variant="outlined" label="Name 2" fullWidth value={panelData.currentMatchupName2} onChange={(e) => setPanelData({ ...panelData, currentMatchupName2: e.target.value })} />
             <TextField name="currentMatchupColor2" variant="outlined" label="Color 2" fullWidth value={panelData.currentMatchupColor2} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor2: e.target.value })} />
-            <div className={classes.fileInput}>Logo 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, currentMatchupLogo2: base64 })} /></div>
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2"/>
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
               <div className="col-6">
