@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { Card } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 
-import { deleteFile } from '../../../../actions/file.js'
+import { deleteFile } from '../../../../../actions/file.js'
 
 const FileCard = (props, file) => {
 
