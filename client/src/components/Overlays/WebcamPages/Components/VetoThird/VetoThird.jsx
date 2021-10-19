@@ -6,7 +6,7 @@ import './veto.css';
 import VetoMap from './Maps/VetoMap';
 
 import DBImage from '../Components/DBImage/DBImage';
-import { getSingleFiles } from '../../../api/index.js';
+import {getSingleFiles} from '../../../../../api/index.js';
 
 const VetoThird = ({ currentId, setCurrentId }) => {
 
