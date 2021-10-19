@@ -27,7 +27,7 @@ const FileCard = (props) => {
                     />
                 }
             />
-            <Card><a onClick={() => deleteSingleFile(props.file._id) }><DeleteOutlined key="delete" /></a></Card>
+            <Card style={{ width: '20vw'}}><a onClick={() => deleteSingleFile(props.file._id) }><DeleteOutlined key="delete" /></a></Card>
         </div>
     )
 }
