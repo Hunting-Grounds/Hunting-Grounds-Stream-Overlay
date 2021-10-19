@@ -16,7 +16,7 @@ const FileUploadScreen = (props) => {
             </Row>
             <Row>
                 <Col>
-                    <Progress percent={singleProgress} />
+                    <Progress percent={0} />
                 </Col>
             </Row>
         </div>
