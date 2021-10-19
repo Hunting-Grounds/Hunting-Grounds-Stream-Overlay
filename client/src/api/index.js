@@ -58,3 +58,5 @@ export const getSingleFiles = async () => {
         throw error;
     }
 }
+
+export const deleteFile = (id) => axios.delete(`${url4}/${id}`);

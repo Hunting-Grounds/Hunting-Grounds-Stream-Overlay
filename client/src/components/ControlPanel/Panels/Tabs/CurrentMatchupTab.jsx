@@ -11,6 +11,7 @@ import { updatePanel } from '../../../../actions/panels';
 
 import FileUploadScreen from './FileUploadScreen';
 import { getSingleFiles } from '../../../../api/index.js';
+import deleteFile from '../../../../actions/file.js'
 
 const { Meta } = Card;
 
@@ -103,7 +104,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
                   src={`http://195.22.157.230:5000/${file.filePath}`}
                 />
               }
-              actions={[<a onClick={() => dispatch(deleteTeam(file._id))}><DeleteOutlined key="delete" /></a>]}
+              actions={[<a onClick={() => dispatch(deleteFile(file._id))}><DeleteOutlined key="delete" /></a>]}
             >
             </Card>
             )}
