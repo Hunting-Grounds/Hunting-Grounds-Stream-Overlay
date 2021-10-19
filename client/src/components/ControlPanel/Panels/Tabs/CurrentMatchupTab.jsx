@@ -93,11 +93,17 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <TextField name="currentMatchupColor2" variant="outlined" label="Color 2" fullWidth value={panelData.currentMatchupColor2} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor2: e.target.value })} />
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
-              <div className="col-6">
-                <div className="card mb-2 border-0 p-0">
-                  <img src={`http://195.22.157.230:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
-                </div>
-              </div>
+              <Card
+              style={{ width: '20vw', position: 'absolute', left: '20%' }}
+              cover={
+                <img
+                  alt={file.fileParent}
+                  src={`http://195.22.157.230:5000/${file.filePath}`}
+                />
+              }
+              actions={[<DeleteOutlined key="delete" />]}
+            >
+            </Card>
             )}
           </Col>
         </Row>
