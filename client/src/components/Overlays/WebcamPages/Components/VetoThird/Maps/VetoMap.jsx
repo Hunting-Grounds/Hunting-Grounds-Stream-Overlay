@@ -4,8 +4,8 @@ import { Row, Col } from 'antd';
 
 import './style.css'
 
-import DBImage from '../Components/DBImage/DBImage';
-import { getSingleFiles } from '../../../api/index.js';
+import DBImage from '../../../../Components/DBImage/DBImage';
+import {getSingleFiles} from '../../../../../../api/index.js';
 
 const VetoMap = ({ currentId, setCurrentId }) => {
 
