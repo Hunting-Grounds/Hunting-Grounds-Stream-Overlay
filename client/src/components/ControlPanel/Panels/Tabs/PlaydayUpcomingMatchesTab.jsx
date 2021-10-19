@@ -125,14 +125,23 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
             <TextField name="upcomingMatchesName1Row3" variant="outlined" label="Name 1 Row 3" fullWidth value={panelData.upcomingMatchesName1Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row3: e.target.value })} />
           </Col>
           <Col span={6}>
+            <TextField name="upcomingMatchesName2Row3" variant="outlined" label="Name 2 Row 3" fullWidth value={panelData.upcomingMatchesName2Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row3: e.target.value })} />
+          </Col>
+          <Col span={6}>
+            <TextField name="upcomingMatchesName1Row4" variant="outlined" label="Name 1 Row 4" fullWidth value={panelData.upcomingMatchesName1Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row4: e.target.value })} />
+          </Col>
+          <Col span={6}>
+            <TextField name="upcomingMatchesName2Row4" variant="outlined" label="Name 2 Row 4" fullWidth value={panelData.upcomingMatchesName2Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row4: e.target.value })} />
+          </Col>
+        </Row>
+
+        <Row style={{ width: '100%' }}>
+        <Col span={6}>
             {!singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row3").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="upcomingMatchesLogo1Row3" fieldName={"Logo 1 Row 3"} /> : (
               singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row3").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Logo 1 Row 3"} />
               )
             )}
-          </Col>
-          <Col span={6}>
-            <TextField name="upcomingMatchesName2Row3" variant="outlined" label="Name 2 Row 3" fullWidth value={panelData.upcomingMatchesName2Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row3: e.target.value })} />
           </Col>
           <Col span={6}>
             {!singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo2Row3").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="upcomingMatchesLogo2Row1" fieldName={"Logo 2 Row 3"} /> : (
@@ -141,21 +150,12 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
               )
             )}
           </Col>
-        </Row>
-
-        <Row style={{ width: '100%' }}>
-          <Col span={6}>
-            <TextField name="upcomingMatchesName1Row4" variant="outlined" label="Name 1 Row 4" fullWidth value={panelData.upcomingMatchesName1Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row4: e.target.value })} />
-          </Col>
           <Col span={6}>
             {!singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row4").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="upcomingMatchesLogo1Row4" fieldName={"Logo 1 Row 4"} /> : (
               singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row4").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Logo 1 Row 4"} />
               )
             )}
-          </Col>
-          <Col span={6}>
-            <TextField name="upcomingMatchesName2Row4" variant="outlined" label="Name 2 Row 4" fullWidth value={panelData.upcomingMatchesName2Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row4: e.target.value })} />
           </Col>
           <Col span={6}>
             {!singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo2Row4").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="upcomingMatchesLogo2Row4" fieldName={"Logo 2 Row 4"} /> : (
