@@ -8,11 +8,11 @@ import { Select } from 'antd';
 import useStyles from './styles';
 import { updatePanel } from '../../../../actions/panels';
 
-const { Option } = Select;
-
 import FileUploadScreen from './Components/FileUploadScreen';
 import FileCard from './Components/FileCard';
 import { getSingleFiles } from '../../../../api/index.js';
+
+const { Option } = Select;
 
 const WebcamLowerThirdTab = ({ currentId, setCurrentId, currentTeamId, setCurrentTeamId }) => {
 
