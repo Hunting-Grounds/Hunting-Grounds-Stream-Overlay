@@ -34,15 +34,15 @@ const FileUploadScreen = (props) => {
     return (
         <div>
             <Row>
-                <Col>
-                    <label>Select Single File</label>
+                <Col span={12} offset={6}>
+                    <label>Upload Image</label>
                     <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
                     <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <Progress style={{ width: '50%' }} percent={singleProgress} />
+                <Col span={12} offset={6}>
+                    <Progress percent={singleProgress} />
                 </Col>
             </Row>
         </div>
