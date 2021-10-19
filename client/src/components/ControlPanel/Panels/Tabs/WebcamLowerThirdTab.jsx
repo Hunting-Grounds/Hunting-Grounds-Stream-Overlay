@@ -39,8 +39,8 @@ const WebcamLowerThirdTab = ({ currentId, setCurrentId, currentTeamId, setCurren
 
   const [panelData, setPanelData] = useState({
     webcamCasterName1: '', webcamCasterName2: '',
-    lowerThirdTitle: '', lowerThirdSubtitle: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '',
-    lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: ''
+    lowerThirdTitle: '', lowerThirdSubtitle: '', lowerThirdTeamName1: '',
+    lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamColor2: ''
   });
 
   const [teamData, setTeamData] = useState({ fullName: '', displayName: '', tag: '', themeColour: '', players: '', points: '', records: '', selectedFile: '' });
@@ -62,8 +62,8 @@ const WebcamLowerThirdTab = ({ currentId, setCurrentId, currentTeamId, setCurren
     setCurrentId(0);
     setPanelData({
       webcamCasterName1: '', webcamCasterName2: '',
-      lowerThirdTitle: '', lowerThirdSubtitle: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '',
-      lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: ''
+      lowerThirdTitle: '', lowerThirdSubtitle: '', lowerThirdTeamName1: '',
+      lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamColor2: ''
     });
   };
 

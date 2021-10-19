@@ -31,10 +31,8 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
   ///////////////////////////
 
-  const [panelData, setPanelData] = useState({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
-  lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '',
-  vetoMap1Icon: '', vetoMap2Icon: '', vetoMap3Icon: '',
-    vetoMap4Icon: '', vetoMap5Icon: '', vetoMap6Icon: ''
+  const [panelData, setPanelData] = useState({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '',
+  lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamColor2: '',
   });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
@@ -46,10 +44,8 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
   const clear = () => {
     setCurrentId(0);
-    setPanelData({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '', lowerThirdTeamLogo1: '', 
-    lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamLogo2: '', lowerThirdTeamColor2: '',
-    vetoMap1Icon: '', vetoMap2Icon: '', vetoMap3Icon: '',
-    vetoMap4Icon: '', vetoMap5Icon: '', vetoMap6Icon: ''
+    setPanelData({ webcamCasterName1: '', webcamCasterName2: '', lowerThirdTeamName1: '',
+    lowerThirdTeamColor1: '', lowerThirdTeamName2: '', lowerThirdTeamColor2: '',
     });
   };
 

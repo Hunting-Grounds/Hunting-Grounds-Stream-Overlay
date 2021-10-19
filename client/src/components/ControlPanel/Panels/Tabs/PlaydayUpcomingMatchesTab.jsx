@@ -35,10 +35,10 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
 
   const [panelData, setPanelData] = useState({
     upperThirdTitle: '', upperThirdSubtitle: '',
-    upcomingMatchesName1Row1: '', upcomingMatchesLogo1Row1: '', upcomingMatchesName2Row1: '', upcomingMatchesLogo2Row1: '',
-    upcomingMatchesName1Row2: '', upcomingMatchesLogo1Row2: '', upcomingMatchesName2Row2: '', upcomingMatchesLogo2Row2: '',
-    upcomingMatchesName1Row3: '', upcomingMatchesLogo1Row3: '', upcomingMatchesName2Row3: '', upcomingMatchesLogo2Row3: '',
-    upcomingMatchesName1Row4: '', upcomingMatchesLogo1Row4: '', upcomingMatchesName2Row4: '', upcomingMatchesLogo2Row4: ''
+    upcomingMatchesName1Row1: '', upcomingMatchesName2Row1: '',
+    upcomingMatchesName1Row2: '', upcomingMatchesName2Row2: '',
+    upcomingMatchesName1Row3: '', upcomingMatchesName2Row3: '',
+    upcomingMatchesName1Row4: '', upcomingMatchesName2Row4: ''
   });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
@@ -52,10 +52,10 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
     setCurrentId(0);
     setPanelData({
       upperThirdTitle: '', upperThirdSubtitle: '',
-      upcomingMatchesName1Row1: '', upcomingMatchesLogo1Row1: '', upcomingMatchesName2Row1: '', upcomingMatchesLogo2Row1: '',
-      upcomingMatchesName1Row2: '', upcomingMatchesLogo1Row2: '', upcomingMatchesName2Row2: '', upcomingMatchesLogo2Row2: '',
-      upcomingMatchesName1Row3: '', upcomingMatchesLogo1Row3: '', upcomingMatchesName2Row3: '', upcomingMatchesLogo2Row3: '',
-      upcomingMatchesName1Row4: '', upcomingMatchesLogo1Row4: '', upcomingMatchesName2Row4: '', upcomingMatchesLogo2Row4: ''
+      upcomingMatchesName1Row1: '', upcomingMatchesName2Row1: '',
+      upcomingMatchesName1Row2: '', upcomingMatchesName2Row2: '',
+      upcomingMatchesName1Row3: '', upcomingMatchesName2Row3: '',
+      upcomingMatchesName1Row4: '', upcomingMatchesName2Row4: ''
     });
   };
 

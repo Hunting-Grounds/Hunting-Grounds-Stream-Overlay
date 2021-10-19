@@ -17,63 +17,36 @@ const panelSchema = mongoose.Schema({
     lowerThirdSubtitle: String,
 
     lowerThirdTeamName1: String,
-    lowerThirdTeamLogo1: String,
     lowerThirdTeamColor1: String,
 
     lowerThirdTeamName2: String,
-    lowerThirdTeamLogo2: String,
     lowerThirdTeamColor2: String,
 
     //HUD
 
     hudLeftText: String,
     hudRightText: String,
-    hudLeftOperatorIcon1: String,
-    hudLeftOperatorIcon2: String,
-    hudRightOperatorIcon1: String,
-    hudRightOperatorIcon2: String,
-    hudLeftTeamLogo: String,
-    hudRightTeamLogo: String,
-
-    //VETO
-
-    vetoMap1Icon: String,
-    vetoMap2Icon: String,
-    vetoMap3Icon: String,
-    vetoMap4Icon: String,
-    vetoMap5Icon: String,
-    vetoMap6Icon: String,
 
     //CURRENT MATCHUP
 
-    currentMatchupLogo1: String,
     currentMatchupName1: String,
     currentMatchupColor1: String,
 
-    currentMatchupLogo2: String,
     currentMatchupName2: String,
     currentMatchupColor2: String,
 
     //PLAYDAY UPCOMING MATCHES
     upcomingMatchesName1Row1: String,
-    upcomingMatchesLogo1Row1: String,
     upcomingMatchesName2Row1: String,
-    upcomingMatchesLogo2Row1: String,
 
     upcomingMatchesName1Row2: String,
-    upcomingMatchesLogo1Row2: String,
     upcomingMatchesName2Row2: String,
-    upcomingMatchesLogo2Row2: String,
 
     upcomingMatchesName1Row3: String,
-    upcomingMatchesLogo1Row3: String,
     upcomingMatchesName2Row3: String,
-    upcomingMatchesLogo2Row3: String,
 
     upcomingMatchesName1Row4: String,
-    upcomingMatchesLogo1Row4: String,
     upcomingMatchesName2Row4: String,
-    upcomingMatchesLogo2Row4: String,
 
     //LEAGUE TABLE
 

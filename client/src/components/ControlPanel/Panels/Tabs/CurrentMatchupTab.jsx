@@ -36,8 +36,8 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
 
   const [panelData, setPanelData] = useState({
     upperThirdTitle: '', upperThirdSubtitle: '',
-    currentMatchupLogo1: '', currentMatchupName1: '', currentMatchupColor1: '',
-    currentMatchupLogo2: '', currentMatchupName2: '', currentMatchupColor2: ''
+    currentMatchupName1: '', currentMatchupColor1: '',
+    currentMatchupName2: '', currentMatchupColor2: ''
   });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const classes = useStyles();
@@ -50,8 +50,8 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
     setCurrentId(0);
     setPanelData({
       upperThirdTitle: '', upperThirdSubtitle: '',
-      currentMatchupLogo1: '', currentMatchupName1: '', currentMatchupColor1: '',
-      currentMatchupLogo2: '', currentMatchupName2: '', currentMatchupColor2: ''
+      currentMatchupName1: '', currentMatchupColor1: '',
+      currentMatchupName2: '', currentMatchupColor2: ''
     });
   };
 
