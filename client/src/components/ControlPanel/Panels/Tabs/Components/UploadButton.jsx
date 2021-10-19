@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'antd/dist/antd.css';
 import { Upload, Modal } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+
+import { singleFileUpload } from '../../../../../api/index';
 
 function getBase64(file) {
     return new Promise((resolve, reject) => {
@@ -15,30 +17,29 @@ function getBase64(file) {
 const[singleFile, setSingleFile] = useState({ });
 const[singleProgress, setSingleProgress] = useState(0);
 
+const SingleFileChange = (e) => {
+    setSingleFile(e.target.files[0]);
+    setSingleProgress(0);
+}
+
+const singleFileOptions = {
+    onUploadProgress: (progressEvent) => {
+        const { loaded, total } = progressEvent;
+        const percentage = Math.floor(((loaded / 1000) * 100) / (total / 1000));
+        setSingleProgress(percentage);
+    }
+}
+
+const uploadSingleFile = async (fileParent) => {
+    console.log(fileParent)
+    const formData = new FormData();
+    formData.append('file', singleFile);
+    formData.append('fileParent', fileParent)
+    await singleFileUpload(formData, singleFileOptions);
+    this.props.getsingle();
+}
+
 class UploadButton extends React.Component {
-
-    SingleFileChange = (e) => {
-        setSingleFile(e.target.files[0]);
-        setSingleProgress(0);
-    }
-
-    singleFileOptions = {
-        onUploadProgress: (progressEvent) => {
-            const { loaded, total } = progressEvent;
-            const percentage = Math.floor(((loaded / 1000) * 100) / (total / 1000));
-            setSingleProgress(percentage);
-        }
-    }
-
-    uploadSingleFile = async (fileParent) => {
-        console.log(fileParent)
-        const formData = new FormData();
-        formData.append('file', singleFile);
-        formData.append('fileParent', fileParent)
-        await singleFileUpload(formData, singleFileOptions);
-        this.props.getsingle();
-    }
-
 
     state = {
         previewVisible: false,
