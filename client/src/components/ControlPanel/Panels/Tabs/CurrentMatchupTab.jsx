@@ -76,7 +76,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo1" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
               <Card
-              style={{ width: 300 }}
+              style={{ width: '10vw' }}
               cover={
                 <img
                   alt={file.fileParent}
