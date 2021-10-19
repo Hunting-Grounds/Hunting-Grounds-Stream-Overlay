@@ -19,6 +19,7 @@ const FileCard = (props) => {
     return (
         <div>
             <Card
+                title={props.file.fileParent}
                 style={{ width: '20vw', height: '20vh', overflow: 'hidden'}}
                 cover={
                     <img style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', height: '100%', width: '100%', zIndex: '2'}}
