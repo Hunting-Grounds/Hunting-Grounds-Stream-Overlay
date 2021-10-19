@@ -20,14 +20,14 @@ const FileCard = (props) => {
         <div>
             <Card
                 title={props.fieldName}
-                style={{ width: '20vw', height: '25vh', overflow: 'hidden'}}
+                style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '20vw', height: '25vh', overflow: 'hidden'}}
                 cover={
                     <img style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', height: '100%', width: '100%', zIndex: '2'}}
                         src={`http://195.22.157.230:5000/${props.file.filePath}`}
                     />
                 }
             />
-            <Card style={{ width: '20vw'}}><a onClick={() => deleteSingleFile(props.file._id) }><DeleteOutlined key="delete" /></a></Card>
+            <Card style={{ width: '20vw', display: 'block', marginLeft: 'auto', marginRight: 'auto'}}><a onClick={() => deleteSingleFile(props.file._id) }><DeleteOutlined key="delete" /></a></Card>
         </div>
     )
 }
