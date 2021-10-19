@@ -87,13 +87,8 @@ const WebcamVetoTab = ({ currentId, setCurrentId }) => {
 
         <TextField name="lowerThirdTeamColor2" variant="outlined" label="Lower Third Team Color 2" fullWidth value={panelData.lowerThirdTeamColor2} onChange={(e) => setPanelData({ ...panelData, lowerThirdTeamColor2: e.target.value })} />
 
-        <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap1Icon" fieldName={"Map 1 Icon"} />
-        {singleFiles.filter(file => file.fileParent === "vetoMap1Icon").map((file, index) =>
-          <FileCard getsingle={() => getSingleFileslist()} file={file} />
-        )}
-
-        {!singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="lowerThirdTeamLogo2" fieldName={"Lower Third Team Logo 2"} /> : (
-          singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo2").map((file, index) =>
+        {!singleFiles.filter(file => file.fileParent === "vetoMap1Icon").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="vetoMap1Icon" fieldName={"Map 1 Icon"} /> : (
+          singleFiles.filter(file => file.fileParent === "vetoMap1Icon").map((file, index) =>
             <FileCard getsingle={() => getSingleFileslist()} file={file} />
           )
         )}
