@@ -6,6 +6,25 @@ import './style.css'
 
 const VetoMap = ({ currentId, setCurrentId }) => {
 
+    /////// IMAGE STUFF ////////
+
+    const [singleFiles, setSingleFiles] = useState([]);
+
+    const getSingleFileslist = async () => {
+        try {
+            const fileslist = await getSingleFiles();
+            setSingleFiles(fileslist);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getSingleFileslist();
+    }, []);
+
+    ///////////////////////////
+
     const panels = useSelector((state) => state.panels);
 
     const [panelData, setPanelData] = useState({
@@ -28,44 +47,56 @@ const VetoMap = ({ currentId, setCurrentId }) => {
                     <Row>
                         <Col span={4}>
                             <div className="VetoMapWhite">
-                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.lowerThirdTeamLogo1})`}}></div>
-                                <div className="VetoMapText" style={{color: '#c01e1e', width: '100%',}}>BAN</div>
-                                <div className="VetoMapImage" style={{ backgroundImage: `url(${panelData.vetoMap1Icon})`}}></div>
+                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.lowerThirdTeamLogo1})` }}></div>
+                                <div className="VetoMapText" style={{ color: '#c01e1e', width: '100%', }}>BAN</div>
+                                {singleFiles.filter(file => file.fileParent === "vetoMap1Icon").map((file, index) =>
+                                    <DBImage bgColor='inherit' cName="VetoMapImage" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                                )}
                             </div>
                         </Col>
                         <Col span={4}>
                             <div className="VetoMapGrey">
-                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor2, backgroundImage: `url(${panelData.lowerThirdTeamLogo2})`}}></div>
-                                <div className="VetoMapText" style={{color: '#c01e1e', width: '100%',}}>BAN</div>
-                                <div className="VetoMapImage" style={{ backgroundImage: `url(${panelData.vetoMap2Icon})`}}></div>
+                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor2, backgroundImage: `url(${panelData.lowerThirdTeamLogo2})` }}></div>
+                                <div className="VetoMapText" style={{ color: '#c01e1e', width: '100%', }}>BAN</div>
+                                {singleFiles.filter(file => file.fileParent === "vetoMap2Icon").map((file, index) =>
+                                    <DBImage bgColor='inherit' cName="VetoMapImage" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                                )}
                             </div>
                         </Col>
                         <Col span={4}>
                             <div className="VetoMapWhite">
-                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.lowerThirdTeamLogo1})`}}></div>
-                                <div className="VetoMapText" style={{color: '#c01e1e', width: '100%',}}>BAN</div>
-                                <div className="VetoMapImage" style={{ backgroundImage: `url(${panelData.vetoMap3Icon})`}}></div>
+                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.lowerThirdTeamLogo1})` }}></div>
+                                <div className="VetoMapText" style={{ color: '#c01e1e', width: '100%', }}>BAN</div>
+                                {singleFiles.filter(file => file.fileParent === "vetoMap3Icon").map((file, index) =>
+                                    <DBImage bgColor='inherit' cName="VetoMapImage" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                                )}
                             </div>
                         </Col>
                         <Col span={4}>
                             <div className="VetoMapGrey">
-                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor2, backgroundImage: `url(${panelData.lowerThirdTeamLogo2})`}}></div>
-                                <div className="VetoMapText" style={{color: '#c01e1e', width: '100%',}}>BAN</div>
-                                <div className="VetoMapImage" style={{ backgroundImage: `url(${panelData.vetoMap4Icon})`}}></div>
+                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor2, backgroundImage: `url(${panelData.lowerThirdTeamLogo2})` }}></div>
+                                <div className="VetoMapText" style={{ color: '#c01e1e', width: '100%', }}>BAN</div>
+                                {singleFiles.filter(file => file.fileParent === "vetoMap4Icon").map((file, index) =>
+                                    <DBImage bgColor='inherit' cName="VetoMapImage" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                                )}
                             </div>
                         </Col>
                         <Col span={4}>
                             <div className="VetoMapWhite">
-                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.lowerThirdTeamLogo1})`}}></div>
-                                <div className="VetoMapText" style={{color: '#46ad34', width: '100%'}}>PICK</div>
-                                <div className="VetoMapImage" style={{ backgroundImage: `url(${panelData.vetoMap5Icon})`}}></div>
+                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.lowerThirdTeamLogo1})` }}></div>
+                                <div className="VetoMapText" style={{ color: '#46ad34', width: '100%' }}>PICK</div>
+                                {singleFiles.filter(file => file.fileParent === "vetoMap5Icon").map((file, index) =>
+                                    <DBImage bgColor='inherit' cName="VetoMapImage" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                                )}
                             </div>
                         </Col>
                         <Col span={4}>
                             <div className="VetoMapGrey">
-                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor2, backgroundImage: `url(${panelData.lowerThirdTeamLogo2})`}}></div>
-                                <div className="VetoMapText" style={{color: '#46ad34', width: '100%'}}>PICK</div>
-                                <div className="VetoMapImage" style={{ backgroundImage: `url(${panelData.vetoMap6Icon})`}}></div>
+                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor2, backgroundImage: `url(${panelData.lowerThirdTeamLogo2})` }}></div>
+                                <div className="VetoMapText" style={{ color: '#46ad34', width: '100%' }}>PICK</div>
+                                {singleFiles.filter(file => file.fileParent === "vetoMap6Icon").map((file, index) =>
+                                    <DBImage bgColor='inherit' cName="VetoMapImage" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                                )}
                             </div>
                         </Col>
                     </Row>
