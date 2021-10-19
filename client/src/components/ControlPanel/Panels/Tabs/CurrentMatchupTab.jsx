@@ -16,6 +16,8 @@ const { Meta } = Card;
 
 const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
 
+  const dispatch = useDispatch();
+
   /////// IMAGE STUFF ////////
 
   const [singleFiles, setSingleFiles] = useState([]);
@@ -28,6 +30,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
       console.log(error);
     }
   }
+
   useEffect(() => {
     getSingleFileslist();
   }, []);
@@ -40,7 +43,6 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
     currentMatchupLogo2: '', currentMatchupName2: '', currentMatchupColor2: ''
   });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
-  const dispatch = useDispatch();
   const classes = useStyles();
 
   useEffect(() => {
@@ -101,7 +103,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
                   src={`http://195.22.157.230:5000/${file.filePath}`}
                 />
               }
-              actions={[<DeleteOutlined key="delete" />]}
+              actions={[<a onClick={() => dispatch(deleteTeam(file._id))}><DeleteOutlined key="delete" /></a>]}
             >
             </Card>
             )}
