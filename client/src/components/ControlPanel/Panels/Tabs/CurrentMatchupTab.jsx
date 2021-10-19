@@ -9,9 +9,10 @@ import { DeleteOutlined } from "@ant-design/icons";
 import useStyles from './styles';
 import { updatePanel } from '../../../../actions/panels';
 
-import FileUploadScreen from './FileUploadScreen';
+import FileUploadScreen from './Components/FileUploadScreen';
+import FileCard from './Components/FileCard';
+
 import { getSingleFiles } from '../../../../api/index.js';
-import { deleteFile } from '../../../../actions/file.js'
 
 const { Meta } = Card;
 
@@ -66,11 +67,6 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
     clear();
   };
 
-  const deleteSingleFile = async (fileId) => {
-    dispatch(deleteFile(fileId));
-    props.getSingleFileslist();
-  }
-
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
@@ -83,17 +79,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <TextField name="currentMatchupColor1" variant="outlined" label="Color 1" fullWidth value={panelData.currentMatchupColor1} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor1: e.target.value })} />
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo1" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
-              <Card
-              style={{ width: '20vw', left: '20%' }}
-              cover={
-                <img
-                  alt={file.fileParent}
-                  src={`http://195.22.157.230:5000/${file.filePath}`}
-                />
-              }
-              actions={[<a onClick={() => deleteSingleFile(file._id)}><DeleteOutlined key="delete" /></a>]}
-            >
-            </Card>
+              <FileCard getsingle={() => getSingleFileslist()} file={file}/>
             )}
           </Col>
           <Col span={12}>
@@ -101,17 +87,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <TextField name="currentMatchupColor2" variant="outlined" label="Color 2" fullWidth value={panelData.currentMatchupColor2} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor2: e.target.value })} />
             <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2" />
             {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
-              <Card
-              style={{ width: '20vw', left: '20%' }}
-              cover={
-                <img
-                  alt={file.fileParent}
-                  src={`http://195.22.157.230:5000/${file.filePath}`}
-                />
-              }
-              actions={[<a onClick={() => dispatch(deleteFile(file._id))}><DeleteOutlined key="delete" /></a>]}
-            >
-            </Card>
+              <FileCard getsingle={() => getSingleFileslist()} file={file}/>
             )}
           </Col>
         </Row>
