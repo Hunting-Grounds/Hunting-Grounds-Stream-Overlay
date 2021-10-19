@@ -96,13 +96,6 @@ const HUDTab = ({ currentId, setCurrentId }) => {
           <FileCard getsingle={() => getSingleFileslist()} file={file} />
         )}
 
-        <div className={classes.fileInput}>Left Operator Icon 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudLeftOperatorIcon1: base64 })} /></div>
-        <div className={classes.fileInput}>Left Operator Icon 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudLeftOperatorIcon2: base64 })} /></div>
-        <div className={classes.fileInput}>Right Operator Icon 1 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudRightOperatorIcon1: base64 })} /></div>
-        <div className={classes.fileInput}>Right Operator Icon 2 <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudRightOperatorIcon2: base64 })} /></div>
-        <div className={classes.fileInput}>Left Team Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudLeftTeamLogo: base64 })} /></div>
-        <div className={classes.fileInput}>Right Team Logo <FileBase type="file" multiple={false} onDone={({ base64 }) => setPanelData({ ...panelData, hudRightTeamLogo: base64 })} /></div>
-
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
       </form>
