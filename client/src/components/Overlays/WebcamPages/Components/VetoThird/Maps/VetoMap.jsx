@@ -50,7 +50,9 @@ const VetoMap = ({ currentId, setCurrentId }) => {
                     <Row>
                         <Col span={4}>
                             <div className="VetoMapWhite">
-                                <div className="VetoMapTeam" style={{ backgroundColor: panelData.lowerThirdTeamColor1, backgroundImage: `url(${panelData.lowerThirdTeamLogo1})` }}></div>
+                                {singleFiles.filter(file => file.fileParent === "lowerThirdTeamLogo1").map((file, index) =>
+                                    <DBImage bgColor={panelData.lowerThirdTeamColor1} cName="VetoMapTeam" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                                )}
                                 <div className="VetoMapText" style={{ color: '#c01e1e', width: '100%', }}>BAN</div>
                                 {singleFiles.filter(file => file.fileParent === "vetoMap1Icon").map((file, index) =>
                                     <DBImage bgColor='inherit' cName="VetoMapImage" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
