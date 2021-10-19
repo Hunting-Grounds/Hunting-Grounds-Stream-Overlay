@@ -7,7 +7,7 @@ import { DeleteOutlined } from "@ant-design/icons";
 
 import { deleteFile } from '../../../../../actions/file.js'
 
-const FileCard = (props, file) => {
+const FileCard = (props) => {
 
     const dispatch = useDispatch();
 
@@ -21,11 +21,10 @@ const FileCard = (props, file) => {
             style={{ width: '20vw', left: '20%' }}
             cover={
                 <img
-                    alt={file.fileParent}
-                    src={`http://195.22.157.230:5000/${file.filePath}`}
+                    src={`http://195.22.157.230:5000/${props.file.filePath}`}
                 />
             }
-            actions={[<a onClick={() => deleteSingleFile(file._id)}><DeleteOutlined key="delete" /></a>]}
+            actions={[<a onClick={() => deleteSingleFile(props.file._id)}><DeleteOutlined key="delete" /></a>]}
         >
         </Card>
     )
