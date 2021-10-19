@@ -79,23 +79,13 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
               style={{ width: 300 }}
               cover={
                 <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                  alt={file.fileParent}
+                  src={`http://195.22.157.230:5000/${file.filePath}`}
                 />
               }
               actions={[<DeleteOutlined key="delete" />]}
             >
-              <Meta
-                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
-              />
             </Card>
-              // <div className="col-6">
-              //   <div className="card mb-2 border-0 p-0">
-              //     <img src={`http://195.22.157.230:5000/${file.filePath}`} height="200" className="card-img-top img-responsive" alt="img" />
-              //   </div>
-              // </div>
             )}
           </Col>
           <Col span={12}>
