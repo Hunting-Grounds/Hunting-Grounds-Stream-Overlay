@@ -2,12 +2,14 @@ import React from 'react'
 
 import { useDispatch } from 'react-redux';
 
-import { Card, Avatar } from "antd";
+import { Card } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 
 import { deleteFile } from '../../../../actions/file.js'
 
 const FileCard = (props, file) => {
+
+    const dispatch = useDispatch();
 
     const deleteSingleFile = async (fileId) => {
         await dispatch(deleteFile(fileId));
