@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { getPanels } from '../../../actions/panels';
+
 import UpperThird from '../Components/UpperThird/UpperThird'
 import MatchupBody from './MatchupBody';
 

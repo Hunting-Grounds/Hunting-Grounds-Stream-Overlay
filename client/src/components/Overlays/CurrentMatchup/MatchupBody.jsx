@@ -3,9 +3,32 @@ import { useSelector } from 'react-redux';
 
 import "./CurrentMatchup.css"
 
+import MatchupLeftTeam from './MatchupLeftTeam';
+import MatchupRightTeam from './MatchupRightTeam';
 import Clock from '../Components/Clock/Clock';
 
+import { getSingleFiles } from '../../../api/index.js';
+
 const MatchupBody = ({ currentId, setCurrentId }) => {
+
+    /////// IMAGE STUFF ////////
+
+    const [singleFiles, setSingleFiles] = useState([]);
+
+    const getSingleFileslist = async () => {
+        try {
+            const fileslist = await getSingleFiles();
+            setSingleFiles(fileslist);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getSingleFileslist();
+    }, []);
+
+    ///////////////////////////
 
     const panels = useSelector((state) => state.panels);
 
@@ -26,20 +49,14 @@ const MatchupBody = ({ currentId, setCurrentId }) => {
                 <div>
                     <div className="UpNext">UP NEXT</div>
                     <div className="CurrentMatchupBox">
-                        <div className="leftTeam" style={{ backgroundColor: panelData.currentMatchupColor1}}>
-                            <div className="LeftTeamLogo" style={{ backgroundImage: `url(${panelData.currentMatchupLogo1})`}}/>
-                            <div className="LeftTeamName">
-                                <h1 className="LeftTeamNameText">{panelData.currentMatchupName1}</h1>
-                            </div>
-                        </div>
-                        <div className="rightTeam" style={{ backgroundColor: panelData.currentMatchupColor2}}>
-                            <div className="RightTeamLogo" style={{ backgroundImage: `url(${panelData.currentMatchupLogo2})`}}/>
-                            <div className="RightTeamName">
-                                <h1 className="RightTeamNameText">{panelData.currentMatchupName2}</h1>
-                            </div>
-                        </div>
+                        {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
+                            <MatchupLeftTeam panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                        )}
+                        {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
+                            <MatchupRightTeam panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                        )}
                     </div>
-                    <div className="ClockText"><Clock/></div>
+                    <div className="ClockText"><Clock /></div>
                 </div>
             ))}
         </div>

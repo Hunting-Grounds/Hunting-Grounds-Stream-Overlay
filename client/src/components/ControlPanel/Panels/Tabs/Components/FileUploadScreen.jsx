@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { singleFileUpload } from '../../../../../api/index';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { Progress, Row, Col } from 'antd';
 
