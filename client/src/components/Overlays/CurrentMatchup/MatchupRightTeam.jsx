@@ -2,7 +2,7 @@ import React from 'react'
 
 const MatchupRightTeam = (props) => {
 
-    currentMacthupLogoURL = props.file.filePath
+    const currentMacthupLogoURL = props.file.filePath
 
     return (
         <div className="rightTeam" style={{ backgroundColor: props.panelData.currentMatchupColor2 }}>
