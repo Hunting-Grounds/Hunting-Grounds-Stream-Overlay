@@ -41,11 +41,12 @@ const FileUploadScreen = (props) => {
                     <div className="col-10">
                         <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
                     </div>
-                    {/* <div className="col-2">
+                    <div className="col-2">
                         <CircularProgressbar
                             value={singleProgress}
                             text={`${singleProgress}%`}
                             styles={buildStyles({
+                                width: '10%',
                                 rotation: 0.25,
                                 strokeLinecap: 'butt',
                                 textSize: '16px',
@@ -56,7 +57,7 @@ const FileUploadScreen = (props) => {
                                 backgroundColor: '#3e98c7',
                             })}
                         />
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>
