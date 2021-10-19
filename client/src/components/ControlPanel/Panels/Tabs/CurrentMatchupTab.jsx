@@ -73,9 +73,10 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <TextField name="currentMatchupName1" variant="outlined" label="Name 1" fullWidth value={panelData.currentMatchupName1} onChange={(e) => setPanelData({ ...panelData, currentMatchupName1: e.target.value })} />
             <TextField name="currentMatchupColor1" variant="outlined" label="Color 1" fullWidth value={panelData.currentMatchupColor1} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor1: e.target.value })} />
 
-            <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo1" fieldName={"Logo 1"}/>
-            {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
-              <FileCard getsingle={() => getSingleFileslist()} file={file}/>
+            {!singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo1" fieldName={"Logo 1"} /> : (
+              singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
+                <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Logo 1"} />
+              )
             )}
 
           </Col>
@@ -83,9 +84,10 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
             <TextField name="currentMatchupName2" variant="outlined" label="Name 2" fullWidth value={panelData.currentMatchupName2} onChange={(e) => setPanelData({ ...panelData, currentMatchupName2: e.target.value })} />
             <TextField name="currentMatchupColor2" variant="outlined" label="Color 2" fullWidth value={panelData.currentMatchupColor2} onChange={(e) => setPanelData({ ...panelData, currentMatchupColor2: e.target.value })} />
 
-            <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2" fieldName={"Logo 2"}/>
-            {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
-              <FileCard getsingle={() => getSingleFileslist()} file={file}/>
+            {!singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="currentMatchupLogo2" fieldName={"Logo 2"} /> : (
+              singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
+                <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Logo 2"} />
+              )
             )}
 
           </Col>
