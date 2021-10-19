@@ -66,6 +66,11 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
     clear();
   };
 
+  const deleteSingleFile = async => {
+    dispatch(deleteFile(file._id));
+    getSingleFileslist();
+  }
+
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
@@ -86,7 +91,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
                   src={`http://195.22.157.230:5000/${file.filePath}`}
                 />
               }
-              actions={[<DeleteOutlined key="delete" />]}
+              actions={[<a onClick={() => deleteSingleFile()}><DeleteOutlined key="delete" /></a>]}
             >
             </Card>
             )}
@@ -104,7 +109,7 @@ const CurrentMatchupTab = ({ currentId, setCurrentId }) => {
                   src={`http://195.22.157.230:5000/${file.filePath}`}
                 />
               }
-              actions={[<a onClick={() => dispatch(deleteFile(file._id)) && getSingleFileslist()}><DeleteOutlined key="delete" /></a>]}
+              actions={[<a onClick={() => deleteSingleFile()}><DeleteOutlined key="delete" /></a>]}
             >
             </Card>
             )}
