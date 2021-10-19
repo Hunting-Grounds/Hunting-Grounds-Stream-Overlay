@@ -8,12 +8,8 @@ const FileUploadScreen = (props) => {
     const [singleFile, setSingleFile] = useState({});
     const [singleProgress, setSingleProgress] = useState(0);
 
-    const SingleFileChange = (e, fileParent) => {
-        //setSingleFile(e.target.files[0]);
-        console.log(e.target.files[0]);
-        var parentOfFile = {fileParent: fileParent};
-        var uploadData = [...e.target.files[0],...parentOfFile];
-        setSingleFile({uploadData});
+    const SingleFileChange = (e) => {
+        setSingleFile(e.target.files[0]);
         setSingleProgress(0);
     }
 
@@ -25,10 +21,11 @@ const FileUploadScreen = (props) => {
         }
     }
 
-    const uploadSingleFile = async () => {
+    const uploadSingleFile = async (fileParent) => {
         const formData = new FormData();
         console.log('file', singleFile);
         formData.append('file', singleFile);
+        formData.append('fileParent', {fileParent: fileParent})
         await singleFileUpload(formData, singleFileOptions);
         props.getsingle();
     }
