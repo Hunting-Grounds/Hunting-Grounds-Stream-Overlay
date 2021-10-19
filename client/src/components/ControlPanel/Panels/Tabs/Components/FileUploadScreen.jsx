@@ -42,7 +42,7 @@ const FileUploadScreen = (props) => {
                     <div className="col-10">
                         <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile(props.fileParent)} >Upload</button>
                     </div>
-                    <div style={{ width: '50%'}}>
+                    <div style={{ width: '50%', left: '20%'}}>
                         <Progress percent={singleProgress} />
                     </div>
                 </div>
