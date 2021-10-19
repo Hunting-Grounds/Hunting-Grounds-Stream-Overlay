@@ -6,7 +6,7 @@ export const singleFileUpload = async (req, res, next) => {
     try{
         const file = new SingleFile({
             fileName: req.file.originalname,
-            filePath: req.file.path,
+            filePath: req.file.path.replace(/\\/g, '/'),
             fileType: req.file.mimetype,
             fileSize: fileSizeFormatter(req.file.size, 2), // 0.00
             fileParent: req.body.fileParent,
