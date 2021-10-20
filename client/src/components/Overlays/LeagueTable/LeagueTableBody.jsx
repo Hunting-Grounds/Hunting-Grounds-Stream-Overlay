@@ -50,7 +50,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     {panelData.leagueTablePTSRow1}
                 </Col>
             </Row>
-            <Row className="LeagueTableRow">
+            <Row className="LeagueTableRow2">
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow2}
                 </Col>
