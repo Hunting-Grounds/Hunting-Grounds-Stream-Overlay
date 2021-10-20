@@ -40,7 +40,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow">
-                <Col span={14} className="LeagueTableCol1" style={{backgroundColor: 'orange !important'}}>
+                <Col span={14} className="LeagueTableCol1" style={{backgroundColor: 'orange'}}>
                     {panelData.leagueTableNameRow1}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Black">
