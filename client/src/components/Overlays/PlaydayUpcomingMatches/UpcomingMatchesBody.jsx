@@ -111,7 +111,9 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
 
                     <div className="UpcomingRow4">
                         <div className="UpcomingRowTag">.</div>
-                        <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row4}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row4}</div>
+                        </div>
                         <div className="UpcomingRowVsText">VS</div>
                         <div className="UpcomingRowTeamName2">{panelData.upcomingMatchesName2Row4}</div>
                         <div className="UpcomingRowTeamLogoBackground1">
