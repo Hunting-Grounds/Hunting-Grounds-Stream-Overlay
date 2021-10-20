@@ -88,6 +88,15 @@ const panelSchema = mongoose.Schema({
     leagueTableWLRow8: String,
     leagueTablePTSRow8: String,
 
+    leagueTableColorRow1: String,
+    leagueTableColorRow2: String,
+    leagueTableColorRow3: String,
+    leagueTableColorRow4: String,
+    leagueTableColorRow5: String,
+    leagueTableColorRow6: String,
+    leagueTableColorRow7: String,
+    leagueTableColorRow8: String,
+
 })
 
 var Panel = mongoose.model('Panel', panelSchema);

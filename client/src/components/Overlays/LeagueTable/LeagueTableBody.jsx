@@ -10,14 +10,14 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
     const panels = useSelector((state) => state.panels);
 
     const [panelData, setPanelData] = useState({
-        leagueTableNameRow1: '', leagueTableWLRow1: '', leagueTablePTSRow1: '',
-        leagueTableNameRow2: '', leagueTableWLRow2: '', leagueTablePTSRow2: '',
-        leagueTableNameRow3: '', leagueTableWLRow3: '', leagueTablePTSRow3: '',
-        leagueTableNameRow4: '', leagueTableWLRow4: '', leagueTablePTSRow4: '',
-        leagueTableNameRow5: '', leagueTableWLRow5: '', leagueTablePTSRow5: '',
-        leagueTableNameRow6: '', leagueTableWLRow6: '', leagueTablePTSRow6: '',
-        leagueTableNameRow7: '', leagueTableWLRow7: '', leagueTablePTSRow7: '',
-        leagueTableNameRow8: '', leagueTableWLRow8: '', leagueTablePTSRow8: ''
+        leagueTableNameRow1: '', leagueTableWLRow1: '', leagueTablePTSRow1: '', leagueTableColorRow1: '',
+        leagueTableNameRow2: '', leagueTableWLRow2: '', leagueTablePTSRow2: '', leagueTableColorRow2: '',
+        leagueTableNameRow3: '', leagueTableWLRow3: '', leagueTablePTSRow3: '', leagueTableColorRow3: '',
+        leagueTableNameRow4: '', leagueTableWLRow4: '', leagueTablePTSRow4: '', leagueTableColorRow4: '',
+        leagueTableNameRow5: '', leagueTableWLRow5: '', leagueTablePTSRow5: '', leagueTableColorRow5: '',
+        leagueTableNameRow6: '', leagueTableWLRow6: '', leagueTablePTSRow6: '', leagueTableColorRow6: '',
+        leagueTableNameRow7: '', leagueTableWLRow7: '', leagueTablePTSRow7: '', leagueTableColorRow7: '',
+        leagueTableNameRow8: '', leagueTableWLRow8: '', leagueTablePTSRow8: '', leagueTableColorRow8: '',
     });
 
     const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
@@ -40,7 +40,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row1">
-                <Col span={14} className="LeagueTableCol1" style={{ backgroundColor: 'orange' }}>
+                <Col span={14} className="LeagueTableCol1" style={{ backgroundColor: panelData.leagueTableColorRow1 }}>
                     {panelData.leagueTableNameRow1}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Black">
@@ -54,7 +54,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     </span>
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row2" style={{ backgroundColor: 'lightskyblue' }}>
+            <Row className="LeagueTableRow Row2" style={{ backgroundColor: panelData.leagueTableColorRow2 }}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow2}
                 </Col>
@@ -69,7 +69,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     </span>
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row3" style={{ backgroundColor: 'lightskyblue' }}>
+            <Row className="LeagueTableRow Row3" style={{ backgroundColor: panelData.leagueTableColorRow3 }}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow3}
                 </Col>
@@ -84,7 +84,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     </span>
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row4" style={{ backgroundColor: 'lightskyblue' }}>
+            <Row className="LeagueTableRow Row4" style={{ backgroundColor: panelData.leagueTableColorRow4 }}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow4}
                 </Col>
@@ -99,7 +99,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     </span>
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row5" style={{ backgroundColor: 'lightskyblue' }}>
+            <Row className="LeagueTableRow Row5" style={{ backgroundColor: panelData.leagueTableColorRow5 }}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow5}
                 </Col>
@@ -114,7 +114,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     </span>
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row6" style={{ backgroundColor: 'lightskyblue' }}>
+            <Row className="LeagueTableRow Row6" style={{ backgroundColor: panelData.leagueTableColorRow6 }}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow6}
                 </Col>
@@ -129,7 +129,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     </span>
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row7" style={{ backgroundColor: 'lightskyblue' }}>
+            <Row className="LeagueTableRow Row7" style={{ backgroundColor: panelData.leagueTableColorRow7 }}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow7}
                 </Col>
@@ -144,7 +144,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     </span>
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row8" style={{ backgroundColor: 'lightskyblue' }}>
+            <Row className="LeagueTableRow Row8" style={{ backgroundColor: panelData.leagueTableColorRow8 }}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow8}
                 </Col>

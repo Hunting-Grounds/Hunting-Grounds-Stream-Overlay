@@ -42,14 +42,14 @@ export const createPanel = async (req, res) => {
         upcomingMatchesColor1Row2, upcomingMatchesColor2Row2,
         upcomingMatchesColor1Row3, upcomingMatchesColor2Row3,
         upcomingMatchesColor1Row4, upcomingMatchesColor2Row4,
-        leagueTableNameRow1, leagueTableWLRow1, leagueTablePTSRow1,
-        leagueTableNameRow2, leagueTableWLRow2, leagueTablePTSRow2,
-        leagueTableNameRow3, leagueTableWLRow3, leagueTablePTSRow3,
-        leagueTableNameRow4, leagueTableWLRow4, leagueTablePTSRow4,
-        leagueTableNameRow5, leagueTableWLRow5, leagueTablePTSRow5,
-        leagueTableNameRow6, leagueTableWLRow6, leagueTablePTSRow6,
-        leagueTableNameRow7, leagueTableWLRow7, leagueTablePTSRow7,
-        leagueTableNameRow8, leagueTableWLRow8, leagueTablePTSRow8} = req.body;
+        leagueTableNameRow1, leagueTableColorRow1, leagueTableWLRow1, leagueTablePTSRow1,
+        leagueTableNameRow2, leagueTableColorRow2, leagueTableWLRow2, leagueTablePTSRow2,
+        leagueTableNameRow3, leagueTableColorRow3, leagueTableWLRow3, leagueTablePTSRow3,
+        leagueTableNameRow4, leagueTableColorRow4, leagueTableWLRow4, leagueTablePTSRow4,
+        leagueTableNameRow5, leagueTableColorRow5, leagueTableWLRow5, leagueTablePTSRow5,
+        leagueTableNameRow6, leagueTableColorRow6, leagueTableWLRow6, leagueTablePTSRow6,
+        leagueTableNameRow7, leagueTableColorRow7, leagueTableWLRow7, leagueTablePTSRow7,
+        leagueTableNameRow8, leagueTableColorRow8, leagueTableWLRow8, leagueTablePTSRow8} = req.body;
 
     const newPanel = new Panel({ webcamCasterName1, webcamCasterName2, upperThirdTitle, upperThirdSubtitle, 
         lowerThirdTitle, lowerThirdSubtitle, lowerThirdTeamName1,
@@ -65,14 +65,14 @@ export const createPanel = async (req, res) => {
         upcomingMatchesColor1Row2, upcomingMatchesColor2Row2,
         upcomingMatchesColor1Row3, upcomingMatchesColor2Row3,
         upcomingMatchesColor1Row4, upcomingMatchesColor2Row4,
-        leagueTableNameRow1, leagueTableWLRow1, leagueTablePTSRow1,
-        leagueTableNameRow2, leagueTableWLRow2, leagueTablePTSRow2,
-        leagueTableNameRow3, leagueTableWLRow3, leagueTablePTSRow3,
-        leagueTableNameRow4, leagueTableWLRow4, leagueTablePTSRow4,
-        leagueTableNameRow5, leagueTableWLRow5, leagueTablePTSRow5,
-        leagueTableNameRow6, leagueTableWLRow6, leagueTablePTSRow6,
-        leagueTableNameRow7, leagueTableWLRow7, leagueTablePTSRow7,
-        leagueTableNameRow8, leagueTableWLRow8, leagueTablePTSRow8})
+        leagueTableNameRow1, leagueTableColorRow1, leagueTableWLRow1, leagueTablePTSRow1,
+        leagueTableNameRow2, leagueTableColorRow2, leagueTableWLRow2, leagueTablePTSRow2,
+        leagueTableNameRow3, leagueTableColorRow3, leagueTableWLRow3, leagueTablePTSRow3,
+        leagueTableNameRow4, leagueTableColorRow4, leagueTableWLRow4, leagueTablePTSRow4,
+        leagueTableNameRow5, leagueTableColorRow5, leagueTableWLRow5, leagueTablePTSRow5,
+        leagueTableNameRow6, leagueTableColorRow6, leagueTableWLRow6, leagueTablePTSRow6,
+        leagueTableNameRow7, leagueTableColorRow7, leagueTableWLRow7, leagueTablePTSRow7,
+        leagueTableNameRow8, leagueTableColorRow8, leagueTableWLRow8, leagueTablePTSRow8})
 
     try {
         await newPanel.save();
@@ -99,14 +99,14 @@ export const updatePanel = async (req, res) => {
         upcomingMatchesColor1Row2, upcomingMatchesColor2Row2,
         upcomingMatchesColor1Row3, upcomingMatchesColor2Row3,
         upcomingMatchesColor1Row4, upcomingMatchesColor2Row4,
-        leagueTableNameRow1, leagueTableWLRow1, leagueTablePTSRow1,
-        leagueTableNameRow2, leagueTableWLRow2, leagueTablePTSRow2,
-        leagueTableNameRow3, leagueTableWLRow3, leagueTablePTSRow3,
-        leagueTableNameRow4, leagueTableWLRow4, leagueTablePTSRow4,
-        leagueTableNameRow5, leagueTableWLRow5, leagueTablePTSRow5,
-        leagueTableNameRow6, leagueTableWLRow6, leagueTablePTSRow6,
-        leagueTableNameRow7, leagueTableWLRow7, leagueTablePTSRow7,
-        leagueTableNameRow8, leagueTableWLRow8, leagueTablePTSRow8} = req.body;
+        leagueTableNameRow1, leagueTableColorRow1, leagueTableWLRow1, leagueTablePTSRow1,
+        leagueTableNameRow2, leagueTableColorRow2, leagueTableWLRow2, leagueTablePTSRow2,
+        leagueTableNameRow3, leagueTableColorRow3, leagueTableWLRow3, leagueTablePTSRow3,
+        leagueTableNameRow4, leagueTableColorRow4, leagueTableWLRow4, leagueTablePTSRow4,
+        leagueTableNameRow5, leagueTableColorRow5, leagueTableWLRow5, leagueTablePTSRow5,
+        leagueTableNameRow6, leagueTableColorRow6, leagueTableWLRow6, leagueTablePTSRow6,
+        leagueTableNameRow7, leagueTableColorRow7, leagueTableWLRow7, leagueTablePTSRow7,
+        leagueTableNameRow8, leagueTableColorRow8, leagueTableWLRow8, leagueTablePTSRow8} = req.body;
     
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No panel with id: ${id}`);
 
@@ -124,14 +124,14 @@ export const updatePanel = async (req, res) => {
         upcomingMatchesColor1Row2, upcomingMatchesColor2Row2,
         upcomingMatchesColor1Row3, upcomingMatchesColor2Row3,
         upcomingMatchesColor1Row4, upcomingMatchesColor2Row4,
-        leagueTableNameRow1, leagueTableWLRow1, leagueTablePTSRow1,
-        leagueTableNameRow2, leagueTableWLRow2, leagueTablePTSRow2,
-        leagueTableNameRow3, leagueTableWLRow3, leagueTablePTSRow3,
-        leagueTableNameRow4, leagueTableWLRow4, leagueTablePTSRow4,
-        leagueTableNameRow5, leagueTableWLRow5, leagueTablePTSRow5,
-        leagueTableNameRow6, leagueTableWLRow6, leagueTablePTSRow6,
-        leagueTableNameRow7, leagueTableWLRow7, leagueTablePTSRow7,
-        leagueTableNameRow8, leagueTableWLRow8, leagueTablePTSRow8, _id: id };
+        leagueTableNameRow1, leagueTableColorRow1, leagueTableWLRow1, leagueTablePTSRow1,
+        leagueTableNameRow2, leagueTableColorRow2, leagueTableWLRow2, leagueTablePTSRow2,
+        leagueTableNameRow3, leagueTableColorRow3, leagueTableWLRow3, leagueTablePTSRow3,
+        leagueTableNameRow4, leagueTableColorRow4, leagueTableWLRow4, leagueTablePTSRow4,
+        leagueTableNameRow5, leagueTableColorRow5, leagueTableWLRow5, leagueTablePTSRow5,
+        leagueTableNameRow6, leagueTableColorRow6, leagueTableWLRow6, leagueTablePTSRow6,
+        leagueTableNameRow7, leagueTableColorRow7, leagueTableWLRow7, leagueTablePTSRow7,
+        leagueTableNameRow8, leagueTableColorRow8, leagueTableWLRow8, leagueTablePTSRow8, _id: id };
 
     await Panel.findByIdAndUpdate(id, updatedPanel, { new: true });
 
