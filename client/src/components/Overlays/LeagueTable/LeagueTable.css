@@ -78,6 +78,14 @@
     vertical-align: middle;
 }
 
+.LeagueTableLogo{
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .LeagueTableTeamTitle{
     text-align: left;
     padding-left: 2.5%;
