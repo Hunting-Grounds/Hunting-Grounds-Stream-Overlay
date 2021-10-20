@@ -79,6 +79,7 @@
     font-size: 2.25vw;
     white-space: nowrap;
     font-family: "purista-web",sans-serif;
+    vertical-align: middle;
     font-weight: 700;
     z-index: 1;
 }
@@ -92,10 +93,12 @@
     font-family: "purista-web",sans-serif;
     font-weight: 700;
     background-color: rgb(28, 28, 28);
+    vertical-align: middle;
 }
 
 .UpcomingRowTeamName2{
     text-align: center;
+    vertical-align: middle;
     color: black;
     font-size: 2.25vw;
     white-space: nowrap;
@@ -106,15 +109,11 @@
 
 .UpcomingRowTeamLogoBackground1{
     background-color: orange;
-    width: 10%;
-    height: 100%;
     z-index: 1;
 }
 
 .UpcomingRowTeamLogoBackground2{
     background-color: lightskyblue;
-    width: 10%;
-    height: 100%;
     z-index: 1;
 }
 

@@ -143,7 +143,7 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
                                     )}
                                 </div>
                             </Col>
-                            <Col span={3} className="UpcomingCol">>
+                            <Col span={3} className="UpcomingCol">
                                 <div className="UpcomingRowTeamLogoBackground2">
                                     {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo2Row4").map((file, index) =>
                                         <DBImage bgColor='inherit' cName="UpcomingRowTeamLogo2" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
