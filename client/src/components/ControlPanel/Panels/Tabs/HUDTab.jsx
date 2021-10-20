@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import useStyles from './styles';
 import { updatePanel } from '../../../../actions/panels';
 
+import { Row, Col } from 'antd';
+
 import FileUploadScreen from './Components/FileUploadScreen';
 import FileCard from './Components/FileCard';
 import { getSingleFiles } from '../../../../api/index.js';
@@ -59,9 +61,14 @@ const HUDTab = ({ currentId, setCurrentId }) => {
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
         <Typography variant="h6">Editing HUD</Typography>
-
-        <TextField name="hudLeftText" variant="outlined" label="HUD Left Text" fullWidth value={panelData.hudLeftText} onChange={(e) => setPanelData({ ...panelData, hudLeftText: e.target.value })} />
-        <TextField name="hudRightText" variant="outlined" label="HUD Right Text" fullWidth value={panelData.hudRightText} onChange={(e) => setPanelData({ ...panelData, hudRightText: e.target.value })} />
+        <Row style={{ width: '100%' }}>
+          <Col span={12}>
+            <TextField name="hudLeftText" variant="outlined" label="HUD Left Text" fullWidth value={panelData.hudLeftText} onChange={(e) => setPanelData({ ...panelData, hudLeftText: e.target.value })} />
+          </Col>
+          <Col span={12}>
+            <TextField name="hudRightText" variant="outlined" label="HUD Right Text" fullWidth value={panelData.hudRightText} onChange={(e) => setPanelData({ ...panelData, hudRightText: e.target.value })} />
+          </Col>
+        </Row>
 
         {!singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon1").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="hudLeftOperatorIcon1" fieldName={"Left Operator Icon 1"} /> : (
           singleFiles.filter(file => file.fileParent === "hudLeftOperatorIcon1").map((file, index) =>
