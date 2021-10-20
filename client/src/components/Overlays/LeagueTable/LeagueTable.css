@@ -75,10 +75,7 @@
 }
 
 .VertialAlign{
-    white-space: normal;
-    word-break: break-word;
-    display: flex;
-    align-items: center;
+    vertical-align: middle;
 }
 
 .LeagueTableTeamTitle{
