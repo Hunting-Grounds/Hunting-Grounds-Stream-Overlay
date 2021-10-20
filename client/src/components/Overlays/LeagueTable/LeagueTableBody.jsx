@@ -5,7 +5,29 @@ import { Col, Row } from 'antd';
 
 import './LeagueTable.css'
 
+import DBImage from '../Components/DBImage/DBImage';
+import { getSingleFiles } from '../../../api/index.js';
+
 const LeagueTableBody = ({ currentId, setCurrentId }) => {
+
+    /////// IMAGE STUFF ////////
+
+    const [singleFiles, setSingleFiles] = useState([]);
+
+    const getSingleFileslist = async () => {
+        try {
+            const fileslist = await getSingleFiles();
+            setSingleFiles(fileslist);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getSingleFileslist();
+    }, []);
+
+    ///////////////////////////
 
     const panels = useSelector((state) => state.panels);
 
