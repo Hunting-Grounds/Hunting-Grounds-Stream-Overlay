@@ -56,13 +56,13 @@
 
 .LowerThirdTeam2Name{
     top: 50%;
-    left: 20%;
+    left: 25%;
     color: black;
     font-weight: 700;
     text-align: right;
     position: absolute;
     font-size: 2vw;
-    margin-top: -2vw;
+    margin-top: -1.5vw;
     font-family: "purista-web",sans-serif;
 }
 
