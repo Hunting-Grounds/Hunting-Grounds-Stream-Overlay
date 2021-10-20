@@ -101,7 +101,7 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
             <TextField name="leagueTableNameRow5" variant="outlined" label="Row 5 Team Name" fullWidth value={panelData.leagueTableNameRow5} onChange={(e) => setPanelData({ ...panelData, leagueTableNameRow5: e.target.value })} />
             <TextField name="leagueTableWLRow5" variant="outlined" label="Row 5 Win / Loss" fullWidth value={panelData.leagueTableWLRow5} onChange={(e) => setPanelData({ ...panelData, leagueTableWLRow5: e.target.value })} />
             <TextField name="leagueTablePTSRow5" variant="outlined" label="Row 5 Points" fullWidth value={panelData.leagueTablePTSRow5} onChange={(e) => setPanelData({ ...panelData, leagueTablePTSRow5: e.target.value })} />
-            <TextField name="leagueTableColorRow2" variant="outlined" label="Row 2 Color" fullWidth value={panelData.leagueTableColorRow2} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow2: e.target.value })} />
+            <TextField name="leagueTableColorRow5" variant="outlined" label="Row 5 Color" fullWidth value={panelData.leagueTableColorRow5} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow5: e.target.value })} />
             {!singleFiles.filter(file => file.fileParent === "leagueTableLogoRow5").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="leagueTableLogoRow5" fieldName={"Row 5 Logo"} /> : (
               singleFiles.filter(file => file.fileParent === "leagueTableLogoRow5").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Row 5 Logo"} />
@@ -113,7 +113,7 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
             <TextField name="leagueTableNameRow2" variant="outlined" label="Row 2 Team Name" fullWidth value={panelData.leagueTableNameRow2} onChange={(e) => setPanelData({ ...panelData, leagueTableNameRow2: e.target.value })} />
             <TextField name="leagueTableWLRow2" variant="outlined" label="Row 2 Win / Loss" fullWidth value={panelData.leagueTableWLRow2} onChange={(e) => setPanelData({ ...panelData, leagueTableWLRow2: e.target.value })} />
             <TextField name="leagueTablePTSRow2" variant="outlined" label="Row 2 Points" fullWidth value={panelData.leagueTablePTSRow2} onChange={(e) => setPanelData({ ...panelData, leagueTablePTSRow2: e.target.value })} />
-            <TextField name="leagueTableColorRow3" variant="outlined" label="Row 3 Color" fullWidth value={panelData.leagueTableColorRow3} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow3: e.target.value })} />
+            <TextField name="leagueTableColorRow2" variant="outlined" label="Row 2 Color" fullWidth value={panelData.leagueTableColorRow2} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow2: e.target.value })} />
             {!singleFiles.filter(file => file.fileParent === "leagueTableLogoRow2").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="leagueTableLogoRow2" fieldName={"Row 2 Logo"} /> : (
               singleFiles.filter(file => file.fileParent === "leagueTableLogoRow2").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Row 2 Logo"} />
@@ -123,7 +123,7 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
             <TextField name="leagueTableNameRow6" variant="outlined" label="Row 6 Team Name" fullWidth value={panelData.leagueTableNameRow6} onChange={(e) => setPanelData({ ...panelData, leagueTableNameRow6: e.target.value })} />
             <TextField name="leagueTableWLRow6" variant="outlined" label="Row 6 Win / Loss" fullWidth value={panelData.leagueTableWLRow6} onChange={(e) => setPanelData({ ...panelData, leagueTableWLRow6: e.target.value })} />
             <TextField name="leagueTablePTSRow6" variant="outlined" label="Row 6 Points" fullWidth value={panelData.leagueTablePTSRow6} onChange={(e) => setPanelData({ ...panelData, leagueTablePTSRow6: e.target.value })} />
-            <TextField name="leagueTableColorRow4" variant="outlined" label="Row 4 Color" fullWidth value={panelData.leagueTableColorRow4} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow4: e.target.value })} />
+            <TextField name="leagueTableColorRow6" variant="outlined" label="Row 6 Color" fullWidth value={panelData.leagueTableColorRow6} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow6: e.target.value })} />
             {!singleFiles.filter(file => file.fileParent === "leagueTableLogoRow6").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="leagueTableLogoRow6" fieldName={"Row 6 Logo"} /> : (
               singleFiles.filter(file => file.fileParent === "leagueTableLogoRow6").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Row 6 Logo"} />
@@ -134,7 +134,7 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
             <TextField name="leagueTableNameRow3" variant="outlined" label="Row 3 Team Name" fullWidth value={panelData.leagueTableNameRow3} onChange={(e) => setPanelData({ ...panelData, leagueTableNameRow3: e.target.value })} />
             <TextField name="leagueTableWLRow3" variant="outlined" label="Row 3 Win / Loss" fullWidth value={panelData.leagueTableWLRow3} onChange={(e) => setPanelData({ ...panelData, leagueTableWLRow3: e.target.value })} />
             <TextField name="leagueTablePTSRow3" variant="outlined" label="Row 3 Points" fullWidth value={panelData.leagueTablePTSRow3} onChange={(e) => setPanelData({ ...panelData, leagueTablePTSRow3: e.target.value })} />
-            <TextField name="leagueTableColorRow5" variant="outlined" label="Row 5 Color" fullWidth value={panelData.leagueTableColorRow5} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow5: e.target.value })} />
+            <TextField name="leagueTableColorRow3" variant="outlined" label="Row 3 Color" fullWidth value={panelData.leagueTableColorRow3} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow3: e.target.value })} />
             {!singleFiles.filter(file => file.fileParent === "leagueTableLogoRow3").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="leagueTableLogoRow3" fieldName={"Row 3 Logo"} /> : (
               singleFiles.filter(file => file.fileParent === "leagueTableLogoRow3").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Row 3 Logo"} />
@@ -144,7 +144,7 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
             <TextField name="leagueTableNameRow7" variant="outlined" label="Row 7 Team Name" fullWidth value={panelData.leagueTableNameRow7} onChange={(e) => setPanelData({ ...panelData, leagueTableNameRow7: e.target.value })} />
             <TextField name="leagueTableWLRow7" variant="outlined" label="Row 7 Win / Loss" fullWidth value={panelData.leagueTableWLRow7} onChange={(e) => setPanelData({ ...panelData, leagueTableWLRow7: e.target.value })} />
             <TextField name="leagueTablePTSRow7" variant="outlined" label="Row 7 Points" fullWidth value={panelData.leagueTablePTSRow7} onChange={(e) => setPanelData({ ...panelData, leagueTablePTSRow7: e.target.value })} />
-            <TextField name="leagueTableColorRow6" variant="outlined" label="Row 6 Color" fullWidth value={panelData.leagueTableColorRow6} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow6: e.target.value })} />
+            <TextField name="leagueTableColorRow7" variant="outlined" label="Row 7 Color" fullWidth value={panelData.leagueTableColorRow7} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow7: e.target.value })} />
             {!singleFiles.filter(file => file.fileParent === "leagueTableLogoRow7").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="leagueTableLogoRow7" fieldName={"Row 7 Logo"} /> : (
               singleFiles.filter(file => file.fileParent === "leagueTableLogoRow7").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Row 7 Logo"} />
@@ -155,7 +155,7 @@ const LeagueTableTab = ({ currentId, setCurrentId }) => {
             <TextField name="leagueTableNameRow4" variant="outlined" label="Row 4 Team Name" fullWidth value={panelData.leagueTableNameRow4} onChange={(e) => setPanelData({ ...panelData, leagueTableNameRow4: e.target.value })} />
             <TextField name="leagueTableWLRow4" variant="outlined" label="Row 4 Win / Loss" fullWidth value={panelData.leagueTableWLRow4} onChange={(e) => setPanelData({ ...panelData, leagueTableWLRow4: e.target.value })} />
             <TextField name="leagueTablePTSRow4" variant="outlined" label="Row 4 Points" fullWidth value={panelData.leagueTablePTSRow4} onChange={(e) => setPanelData({ ...panelData, leagueTablePTSRow4: e.target.value })} />
-            <TextField name="leagueTableColorRow7" variant="outlined" label="Row 7 Color" fullWidth value={panelData.leagueTableColorRow7} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow7: e.target.value })} />
+            <TextField name="leagueTableColorRow4" variant="outlined" label="Row 4 Color" fullWidth value={panelData.leagueTableColorRow4} onChange={(e) => setPanelData({ ...panelData, leagueTableColorRow4: e.target.value })} />
             {!singleFiles.filter(file => file.fileParent === "leagueTableLogoRow4").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="leagueTableLogoRow4" fieldName={"Row 4 Logo"} /> : (
               singleFiles.filter(file => file.fileParent === "leagueTableLogoRow4").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Row 4 Logo"} />
