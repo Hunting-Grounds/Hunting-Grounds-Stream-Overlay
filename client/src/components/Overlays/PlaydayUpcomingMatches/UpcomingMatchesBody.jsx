@@ -123,34 +123,30 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
                         </div>
                     </div> */}
 
-                        <Row className="UpcomingRow4">
-                            <Col span={1} className="UpcomingCol">
-                                <div className="UpcomingRowTag">.</div>
-                            </Col>
-                            <Col span={7} className="UpcomingCol">
-                                <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row4}</div>
-                            </Col>
-                            <Col span={3} className="UpcomingCol">
-                                <div className="UpcomingRowVsText">VS</div>
-                            </Col>
-                            <Col span={7} className="UpcomingCol">
-                                <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName2Row4}</div>
-                            </Col>
-                            <Col span={3} className="UpcomingCol">
-                                <div className="UpcomingRowTeamLogoBackground1">
-                                    {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row4").map((file, index) =>
-                                        <DBImage bgColor='inherit' cName="UpcomingRowTeamLogo1" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
-                                    )}
-                                </div>
-                            </Col>
-                            <Col span={3} className="UpcomingCol">
-                                <div className="UpcomingRowTeamLogoBackground2">
-                                    {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo2Row4").map((file, index) =>
-                                        <DBImage bgColor='inherit' cName="UpcomingRowTeamLogo2" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
-                                    )}
-                                </div>
-                            </Col>
-                        </Row>
+                    <Row className="UpcomingRow4">
+                        <Col span={1} className="UpcomingCol">
+                            <div className="UpcomingRowTag">.</div>
+                        </Col>
+                        <Col span={7} className="UpcomingCol">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row4}</div>
+                        </Col>
+                        <Col span={3} className="UpcomingCol">
+                            <div className="UpcomingRowVsText">VS</div>
+                        </Col>
+                        <Col span={7} className="UpcomingCol">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName2Row4}</div>
+                        </Col>
+                        <Col span={3} className="UpcomingCol">
+                            {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row4").map((file, index) =>
+                                <DBImage bgColor='orange' cName="UpcomingRowTeamLogo1" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                            )}
+                        </Col>
+                        <Col span={3} className="UpcomingCol">
+                            {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo2Row4").map((file, index) =>
+                                <DBImage bgColor='lightskyblue' cName="UpcomingRowTeamLogo2" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
+                            )}
+                        </Col>
+                    </Row>
 
                 </div>
             ))}
