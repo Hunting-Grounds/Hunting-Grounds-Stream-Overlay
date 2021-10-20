@@ -70,6 +70,8 @@
 
 .LeagueTableCol3{
     background-color: white;
+    font-weight: 700;
+    font-size: 3vh;
 }
 
 .LeagueTableTeamTitle{
@@ -89,9 +91,13 @@
 .LeagueTableCol2Black{
     color: white;
     background-color: #171617;
+    font-weight: 700;
+    font-size: 3vh;
 }
 
 .LeagueTableCol2Grey{
     color: white;
     background-color: #22282c;
+    font-weight: 700;
+    font-size: 3vh;
 }
