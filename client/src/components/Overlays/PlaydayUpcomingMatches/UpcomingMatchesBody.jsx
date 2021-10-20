@@ -124,7 +124,7 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
                     </div> */}
 
                     <div className="UpcomingRow4">
-                        <Row style={{width: '50%', height: '9%'}}>
+                        <Row>
                             <Col span={1}>
                                 <div className="UpcomingRowTag">.</div>
                             </Col>
