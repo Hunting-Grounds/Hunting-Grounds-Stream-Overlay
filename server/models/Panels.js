@@ -38,15 +38,21 @@ const panelSchema = mongoose.Schema({
     //PLAYDAY UPCOMING MATCHES
     upcomingMatchesName1Row1: String,
     upcomingMatchesName2Row1: String,
-
     upcomingMatchesName1Row2: String,
     upcomingMatchesName2Row2: String,
-
     upcomingMatchesName1Row3: String,
     upcomingMatchesName2Row3: String,
-
     upcomingMatchesName1Row4: String,
     upcomingMatchesName2Row4: String,
+
+    upcomingMatchesColor1Row1: String,
+    upcomingMatchesColor2Row1: String,
+    upcomingMatchesColor1Row2: String,
+    upcomingMatchesColor2Row2: String,
+    upcomingMatchesColor1Row3: String,
+    upcomingMatchesColor2Row3: String,
+    upcomingMatchesColor1Row4: String,
+    upcomingMatchesColor2Row4: String,
 
     //LEAGUE TABLE
 

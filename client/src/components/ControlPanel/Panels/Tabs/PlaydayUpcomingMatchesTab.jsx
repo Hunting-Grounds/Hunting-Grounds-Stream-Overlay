@@ -38,7 +38,11 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
     upcomingMatchesName1Row1: '', upcomingMatchesName2Row1: '',
     upcomingMatchesName1Row2: '', upcomingMatchesName2Row2: '',
     upcomingMatchesName1Row3: '', upcomingMatchesName2Row3: '',
-    upcomingMatchesName1Row4: '', upcomingMatchesName2Row4: ''
+    upcomingMatchesName1Row4: '', upcomingMatchesName2Row4: '',
+    upcomingMatchesColor1Row1: '', upcomingMatchesColor2Row1: '',
+    upcomingMatchesColor1Row2: '', upcomingMatchesColor2Row2: '',
+    upcomingMatchesColor1Row3: '', upcomingMatchesColor2Row3: '',
+    upcomingMatchesColor1Row4: '', upcomingMatchesColor2Row4: ''
   });
   const panel = useSelector((state) => (currentId ? state.panels.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
@@ -55,7 +59,11 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
       upcomingMatchesName1Row1: '', upcomingMatchesName2Row1: '',
       upcomingMatchesName1Row2: '', upcomingMatchesName2Row2: '',
       upcomingMatchesName1Row3: '', upcomingMatchesName2Row3: '',
-      upcomingMatchesName1Row4: '', upcomingMatchesName2Row4: ''
+      upcomingMatchesName1Row4: '', upcomingMatchesName2Row4: '',
+      upcomingMatchesColor1Row1: '', upcomingMatchesColor2Row1: '',
+      upcomingMatchesColor1Row2: '', upcomingMatchesColor2Row2: '',
+      upcomingMatchesColor1Row3: '', upcomingMatchesColor2Row3: '',
+      upcomingMatchesColor1Row4: '', upcomingMatchesColor2Row4: ''
     });
   };
 
@@ -77,15 +85,19 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
         <Row style={{ width: '100%' }}>
           <Col span={6}>
             <TextField name="upcomingMatchesName1Row1" variant="outlined" label="Name 1 Row 1" fullWidth value={panelData.upcomingMatchesName1Row1} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row1: e.target.value })} />
+            <TextField name="upcomingMatchesColor1Row1" variant="outlined" label="Color 1 Row 1" fullWidth value={panelData.upcomingMatchesColor1Row1} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor1Row1: e.target.value })} />
           </Col>
           <Col span={6}>
             <TextField name="upcomingMatchesName2Row1" variant="outlined" label="Name 2 Row 1" fullWidth value={panelData.upcomingMatchesName2Row1} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row1: e.target.value })} />
+            <TextField name="upcomingMatchesColor2Row1" variant="outlined" label="Color 2 Row 1" fullWidth value={panelData.upcomingMatchesColor2Row1} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor2Row1: e.target.value })} />
           </Col>
           <Col span={6}>
             <TextField name="upcomingMatchesName1Row2" variant="outlined" label="Name 1 Row 2" fullWidth value={panelData.upcomingMatchesName1Row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row2: e.target.value })} />
+            <TextField name="upcomingMatchesColor1Row2" variant="outlined" label="Color 1 Row 2" fullWidth value={panelData.upcomingMatchesColor1Row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor1Row2: e.target.value })} />
           </Col>
           <Col span={6}>
             <TextField name="upcomingMatchesName2Row2" variant="outlined" label="Name 2 Row 2" fullWidth value={panelData.upcomingMatchesName2Row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row2: e.target.value })} />
+            <TextField name="upcomingMatchesColor2Row2" variant="outlined" label="Color 2 Row 2" fullWidth value={panelData.upcomingMatchesColor2Row2} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor2Row2: e.target.value })} />
           </Col>
         </Row>
 
@@ -123,20 +135,24 @@ const PlaydayUpcomingMatchesTab = ({ currentId, setCurrentId }) => {
         <Row style={{ width: '100%' }}>
           <Col span={6}>
             <TextField name="upcomingMatchesName1Row3" variant="outlined" label="Name 1 Row 3" fullWidth value={panelData.upcomingMatchesName1Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row3: e.target.value })} />
+            <TextField name="upcomingMatchesColor1Row3" variant="outlined" label="Color 1 Row 3" fullWidth value={panelData.upcomingMatchesColor1Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor1Row3: e.target.value })} />
           </Col>
           <Col span={6}>
             <TextField name="upcomingMatchesName2Row3" variant="outlined" label="Name 2 Row 3" fullWidth value={panelData.upcomingMatchesName2Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row3: e.target.value })} />
+            <TextField name="upcomingMatchesColor2Row3" variant="outlined" label="Color 2 Row 3" fullWidth value={panelData.upcomingMatchesColor2Row3} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor2Row3: e.target.value })} />
           </Col>
           <Col span={6}>
             <TextField name="upcomingMatchesName1Row4" variant="outlined" label="Name 1 Row 4" fullWidth value={panelData.upcomingMatchesName1Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName1Row4: e.target.value })} />
+            <TextField name="upcomingMatchesColor1Row4" variant="outlined" label="Color 1 Row 4" fullWidth value={panelData.upcomingMatchesColor1Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor1Row4: e.target.value })} />
           </Col>
           <Col span={6}>
             <TextField name="upcomingMatchesName2Row4" variant="outlined" label="Name 2 Row 4" fullWidth value={panelData.upcomingMatchesName2Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesName2Row4: e.target.value })} />
+            <TextField name="upcomingMatchesColor2Row4" variant="outlined" label="Color 2 Row 4" fullWidth value={panelData.upcomingMatchesColor2Row4} onChange={(e) => setPanelData({ ...panelData, upcomingMatchesColor2Row4: e.target.value })} />
           </Col>
         </Row>
 
         <Row style={{ width: '100%' }}>
-        <Col span={6}>
+          <Col span={6}>
             {!singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row3").length ? <FileUploadScreen getsingle={() => getSingleFileslist()} fileParent="upcomingMatchesLogo1Row3" fieldName={"Logo 1 Row 3"} /> : (
               singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row3").map((file, index) =>
                 <FileCard getsingle={() => getSingleFileslist()} file={file} fieldName={"Logo 1 Row 3"} />
