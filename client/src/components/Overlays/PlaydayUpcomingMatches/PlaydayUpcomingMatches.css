@@ -52,8 +52,6 @@
 
 .UpcomingRow4{
     position: absolute;
-    height: 9%;
-    width: 50%;
     left: 25%;
     top: 77.5%;
     background-color: white;
@@ -69,16 +67,7 @@
     writing-mode: vertical-lr;
 }
 
-.wrapper {
-    position: relative;
-    left: 25%;
-    float: left;
- }
-
 .UpcomingRowTeamName1{
-    position: relative;
-    top: 15%;
-    left: -50%;
     text-align: center;
     color: black;
     font-size: 2.25vw;
@@ -89,10 +78,6 @@
 }
 
 .UpcomingRowVsText{
-    position: absolute;
-    top: 0%;
-    left: 35%;
-    width: 11%;
     height: 100%;
     text-align: center;
     color: orange;
@@ -104,9 +89,6 @@
 }
 
 .UpcomingRowTeamName2{
-    position: absolute;
-    top: 15%;
-    left: 57.5%;
     text-align: center;
     color: black;
     font-size: 2.25vw;
@@ -118,30 +100,21 @@
 
 .UpcomingRowTeamLogoBackground1{
     background-color: orange;
-    position: absolute;
     width: 10%;
     height: 100%;
-    right: 10%;
-    top: 0%;
     z-index: 1;
 }
 
 .UpcomingRowTeamLogoBackground2{
     background-color: lightskyblue;
-    position: absolute;
     width: 10%;
     height: 100%;
-    right: 0%;
-    top: 0%;
     z-index: 1;
 }
 
 .UpcomingRowTeamLogo1{
     width: 70%;
     height: 70%;
-    left: 15%;
-    top: 15%;
-    position: absolute;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -151,9 +124,6 @@
 .UpcomingRowTeamLogo2{
     width: 70%;
     height: 70%;
-    left: 15%;
-    top: 15%;
-    position: absolute;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
