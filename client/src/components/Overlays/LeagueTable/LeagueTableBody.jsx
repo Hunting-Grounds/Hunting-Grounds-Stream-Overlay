@@ -39,7 +39,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     PTS
                 </Col>
             </Row>
-            <Row className="LeagueTableRow">
+            <Row className="LeagueTableRow Row1">
                 <Col span={14} className="LeagueTableCol1" style={{backgroundColor: 'orange'}}>
                     {panelData.leagueTableNameRow1}
                 </Col>
@@ -50,7 +50,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     {panelData.leagueTablePTSRow1}
                 </Col>
             </Row>
-            <Row className="LeagueTableRow2" style={{backgroundColor: 'lightskyblue'}}>
+            <Row className="LeagueTableRow Row2" style={{backgroundColor: 'lightskyblue'}}>
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow2}
                 </Col>
