@@ -62,12 +62,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row1" style={{ backgroundColor: panelData.leagueTableColorRow1 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow1").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow1} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1" style={{ backgroundColor: panelData.leagueTableColorRow1 }}>
+                <Col span={12} className="LeagueTableCol1" style={{ backgroundColor: panelData.leagueTableColorRow1 }}>
                     {panelData.leagueTableNameRow1}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Black">
@@ -82,12 +82,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row2" style={{ backgroundColor: panelData.leagueTableColorRow2 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow2").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow2} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1">
+                <Col span={12} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow2}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Grey">
@@ -102,12 +102,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row3" style={{ backgroundColor: panelData.leagueTableColorRow3 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow3").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow3} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1">
+                <Col span={12} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow3}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Black">
@@ -122,12 +122,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row4" style={{ backgroundColor: panelData.leagueTableColorRow4 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow4").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow4} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1">
+                <Col span={12} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow4}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Grey">
@@ -142,12 +142,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row5" style={{ backgroundColor: panelData.leagueTableColorRow5 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow5").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow5} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1">
+                <Col span={12} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow5}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Black">
@@ -162,12 +162,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row6" style={{ backgroundColor: panelData.leagueTableColorRow6 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow6").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow6} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1">
+                <Col span={12} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow6}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Grey">
@@ -182,12 +182,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row7" style={{ backgroundColor: panelData.leagueTableColorRow7 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow7").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow7} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1">
+                <Col span={12} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow7}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Black">
@@ -202,12 +202,12 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 </Col>
             </Row>
             <Row className="LeagueTableRow Row8" style={{ backgroundColor: panelData.leagueTableColorRow8 }}>
-                <Col span={1}>
+                <Col span={2}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow8").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow8} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                     )}
                 </Col>
-                <Col span={13} className="LeagueTableCol1">
+                <Col span={12} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow8}
                 </Col>
                 <Col span={6} className="LeagueTableCol2Grey">
