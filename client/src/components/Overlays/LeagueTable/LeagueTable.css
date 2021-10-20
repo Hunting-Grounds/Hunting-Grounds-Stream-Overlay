@@ -81,7 +81,7 @@
 .LeagueTableLogo{
     height: 100%;
     width: 100%;
-    background-size: contain;
+    background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
 }
