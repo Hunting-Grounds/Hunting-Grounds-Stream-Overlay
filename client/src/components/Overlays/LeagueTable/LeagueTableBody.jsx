@@ -65,7 +65,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow3}
                 </Col>
-                <Col span={6} className="LeagueTableCol2Grey">
+                <Col span={6} className="LeagueTableCol2Black">
                     {panelData.leagueTableWLRow3}
                 </Col>
                 <Col span={4} className="LeagueTableCol3">
@@ -87,7 +87,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow5}
                 </Col>
-                <Col span={6} className="LeagueTableCol2Grey">
+                <Col span={6} className="LeagueTableCol2Black">
                     {panelData.leagueTableWLRow5}
                 </Col>
                 <Col span={4} className="LeagueTableCol3">
@@ -109,7 +109,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                 <Col span={14} className="LeagueTableCol1">
                     {panelData.leagueTableNameRow7}
                 </Col>
-                <Col span={6} className="LeagueTableCol2Grey">
+                <Col span={6} className="LeagueTableCol2Black">
                     {panelData.leagueTableWLRow7}
                 </Col>
                 <Col span={4} className="LeagueTableCol3">
