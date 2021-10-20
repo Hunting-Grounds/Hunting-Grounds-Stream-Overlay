@@ -52,6 +52,7 @@ const MatchupBody = ({ currentId, setCurrentId }) => {
                         {singleFiles.filter(file => file.fileParent === "currentMatchupLogo1").map((file, index) =>
                             <MatchupLeftTeam panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                         )}
+                        <div className="VSText">VS</div>
                         {singleFiles.filter(file => file.fileParent === "currentMatchupLogo2").map((file, index) =>
                             <MatchupRightTeam panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
                         )}
