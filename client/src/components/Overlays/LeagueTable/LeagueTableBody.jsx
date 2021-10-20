@@ -61,7 +61,7 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     PTS
                 </Col>
             </Row>
-            <Row className="LeagueTableRow Row1">
+            <Row className="LeagueTableRow Row1" style={{ backgroundColor: panelData.leagueTableColorRow1 }}>
                 <Col span={1}>
                     {singleFiles.filter(file => file.fileParent === "leagueTableLogoRow1").map((file, index) =>
                         <DBImage bgColor={panelData.leagueTableColorRow1} cName="LeagueTableLogo" panelData={panelData} getsingle={() => getSingleFileslist()} file={file} />
