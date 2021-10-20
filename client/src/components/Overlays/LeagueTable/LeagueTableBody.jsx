@@ -61,7 +61,72 @@ const LeagueTableBody = ({ currentId, setCurrentId }) => {
                     {panelData.leagueTablePTSRow2}
                 </Col>
             </Row>
-
+            <Row className="LeagueTableRow Row3" style={{backgroundColor: 'lightskyblue'}}>
+                <Col span={14} className="LeagueTableCol1">
+                    {panelData.leagueTableNameRow3}
+                </Col>
+                <Col span={6} className="LeagueTableCol2Grey">
+                    {panelData.leagueTableWLRow3}
+                </Col>
+                <Col span={4} className="LeagueTableCol3">
+                    {panelData.leagueTablePTSRow3}
+                </Col>
+            </Row>
+            <Row className="LeagueTableRow Row4" style={{backgroundColor: 'lightskyblue'}}>
+                <Col span={14} className="LeagueTableCol1">
+                    {panelData.leagueTableNameRow4}
+                </Col>
+                <Col span={6} className="LeagueTableCol2Grey">
+                    {panelData.leagueTableWLRow4}
+                </Col>
+                <Col span={4} className="LeagueTableCol3">
+                    {panelData.leagueTablePTSRow4}
+                </Col>
+            </Row>
+            <Row className="LeagueTableRow Row5" style={{backgroundColor: 'lightskyblue'}}>
+                <Col span={14} className="LeagueTableCol1">
+                    {panelData.leagueTableNameRow5}
+                </Col>
+                <Col span={6} className="LeagueTableCol2Grey">
+                    {panelData.leagueTableWLRow5}
+                </Col>
+                <Col span={4} className="LeagueTableCol3">
+                    {panelData.leagueTablePTSRow5}
+                </Col>
+            </Row>
+            <Row className="LeagueTableRow Row6" style={{backgroundColor: 'lightskyblue'}}>
+                <Col span={14} className="LeagueTableCol1">
+                    {panelData.leagueTableNameRow6}
+                </Col>
+                <Col span={6} className="LeagueTableCol2Grey">
+                    {panelData.leagueTableWLRow6}
+                </Col>
+                <Col span={4} className="LeagueTableCol3">
+                    {panelData.leagueTablePTSRow6}
+                </Col>
+            </Row>
+            <Row className="LeagueTableRow Row7" style={{backgroundColor: 'lightskyblue'}}>
+                <Col span={14} className="LeagueTableCol1">
+                    {panelData.leagueTableNameRow7}
+                </Col>
+                <Col span={6} className="LeagueTableCol2Grey">
+                    {panelData.leagueTableWLRow7}
+                </Col>
+                <Col span={4} className="LeagueTableCol3">
+                    {panelData.leagueTablePTSRow7}
+                </Col>
+            </Row>
+            <Row className="LeagueTableRow Row8" style={{backgroundColor: 'lightskyblue'}}>
+                <Col span={14} className="LeagueTableCol1">
+                    {panelData.leagueTableNameRow8}
+                </Col>
+                <Col span={6} className="LeagueTableCol2Grey">
+                    {panelData.leagueTableWLRow8}
+                </Col>
+                <Col span={4} className="LeagueTableCol3">
+                    {panelData.leagueTablePTSRow8}
+                </Col>
+            </Row>
         </div>
     )
 }
