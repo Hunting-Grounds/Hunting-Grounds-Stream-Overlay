@@ -48,9 +48,13 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
                     <div className="Upcoming">UPCOMING</div>
                     <div className="UpcomingRow1">
                         <div className="UpcomingRowTag">.</div>
-                        <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row1}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row1}</div>
+                        </div>
                         <div className="UpcomingRowVsText">VS</div>
-                        <div className="UpcomingRowTeamName2">{panelData.upcomingMatchesName2Row1}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName2Row1}</div>
+                        </div>
                         <div className="UpcomingRowTeamLogoBackground1">
 
                             {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row1").map((file, index) =>
@@ -69,9 +73,13 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
 
                     <div className="UpcomingRow2">
                         <div className="UpcomingRowTag">.</div>
-                        <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row2}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row2}</div>
+                        </div>
                         <div className="UpcomingRowVsText">VS</div>
-                        <div className="UpcomingRowTeamName2">{panelData.upcomingMatchesName2Row2}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName2Row2}</div>
+                        </div>
                         <div className="UpcomingRowTeamLogoBackground1">
 
                             {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row2").map((file, index) =>
@@ -90,9 +98,13 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
 
                     <div className="UpcomingRow3">
                         <div className="UpcomingRowTag">.</div>
-                        <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row3}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row3}</div>
+                        </div>
                         <div className="UpcomingRowVsText">VS</div>
-                        <div className="UpcomingRowTeamName2">{panelData.upcomingMatchesName2Row3}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName2Row3}</div>
+                        </div>
                         <div className="UpcomingRowTeamLogoBackground1">
 
                             {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row3").map((file, index) =>
@@ -115,7 +127,9 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
                             <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row4}</div>
                         </div>
                         <div className="UpcomingRowVsText">VS</div>
-                        <div className="UpcomingRowTeamName2">{panelData.upcomingMatchesName2Row4}</div>
+                        <div className="wrapper">
+                            <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName2Row4}</div>
+                        </div>
                         <div className="UpcomingRowTeamLogoBackground1">
 
                             {singleFiles.filter(file => file.fileParent === "upcomingMatchesLogo1Row4").map((file, index) =>
