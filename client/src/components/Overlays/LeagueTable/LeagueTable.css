@@ -49,6 +49,10 @@
     font-size: 4vh;
 }
 
+.LeagueTableCol3{
+    background-color: white;
+}
+
 .LeagueTableTeamTitle{
     text-align: left;
     padding-left: 2.5%;
