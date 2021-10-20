@@ -48,7 +48,7 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
             {panels.map((panel) => (setCurrentId(panel._id),
                 <div>
                     <div className="Upcoming">UPCOMING</div>
-                    <div className="UpcomingRow1">
+                    {/* <div className="UpcomingRow1">
                         <div className="UpcomingRowTag">.</div>
                         <div className="wrapper">
                             <div className="UpcomingRowTeamName1">{panelData.upcomingMatchesName1Row1}</div>
@@ -121,10 +121,10 @@ const UpcomingMatchesBody = ({ currentId, setCurrentId }) => {
                             )}
 
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="UpcomingRow4">
-                        <Row>
+                        <Row style={{width: '50%', height: '9%'}}>
                             <Col span={1}>
                                 <div className="UpcomingRowTag">.</div>
                             </Col>
