@@ -12,7 +12,7 @@
     "antd": "^4.16.12",
     "antd-img-crop": "^3.14.3",
     "axios": "^0.21.2",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "react": "^16.12.0",
     "react-circular-progressbar": "^2.0.4",
     "react-dom": "^16.12.0",
